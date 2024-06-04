@@ -17,30 +17,40 @@ html {
 
 body {
 	font-family: 'Poiret One', sans-serif;
-	background-color: #fff;
+	color: colors.$dark;
+	// background-color: #fff;
 	font-size: 1.6rem;
 }
 
 nav {
+	position: absolute;
 	text-transform: uppercase;
+	z-index: 1;
 
 	.nav-link {
+		position: relative;
 		margin: 0 20px;
 		text-decoration: none;
 		font-size: 2.8rem;
-		color: colors.$dark;
+
+		&::before {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 3px;
+			transform: scaleX(0);
+			background-color: colors.$dark;
+			transition: transform 0.3s;
+			content: '';
+		}
+
+		&:hover::before {
+			transform: scaleX(1);
+		}
 	}
 
 	.navbar-toggler {
 		padding: 10px 15px;
-	}
-
-	.navbar-brand {
-		font-weight: bold;
-	}
-
-	.nav-link:hover {
-		text-decoration: underline tomato;
 	}
 }
 
@@ -56,8 +66,9 @@ header.hero-img {
 	z-index: 0;
 
 	h1 {
-		font-size: 3.2rem;
+		font-size: 2.2rem;
 		text-transform: uppercase;
+		margin: 0;
 	}
 
 	.hero-shadow {
@@ -71,7 +82,7 @@ header.hero-img {
 	}
 
 	.hero-text {
-		font-size: 2.8rem;
+		font-size: 1.8rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -80,14 +91,13 @@ header.hero-img {
 		text-shadow: 1px 1px 3px rgb(0, 0, 0);
 
 		.header-description {
-			margin: 40px 0 ;
-			width: 50%;
+			margin: 30px 0;
+			width: 75%;
 		}
 
-		a {
-			font-size: 2.4rem;
-			margin: 10px 20px;
-			padding: 10px 40px;
+		.btn {
+			font-size: 2rem;
+			padding: 10px 20px;
 		}
 
 		a:hover {
@@ -95,8 +105,6 @@ header.hero-img {
 			color: colors.$dark;
 			text-shadow: 1px 1px 3px rgb(104, 104, 104);
 		}
-
-
 	}
 	.fa-chevron-down {
 		position: absolute;
