@@ -17,40 +17,28 @@ html {
 
 body {
 	font-family: 'Poiret One', sans-serif;
-	color: colors.$dark;
-	// background-color: #fff;
+	background-color: #fff;
 	font-size: 1.6rem;
 }
 
 nav {
-	position: absolute;
 	text-transform: uppercase;
 	z-index: 1;
 
 	.nav-link {
-		position: relative;
 		margin: 0 20px;
 		text-decoration: none;
 		font-size: 2.8rem;
-
-		&::before {
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			height: 3px;
-			transform: scaleX(0);
-			background-color: colors.$dark;
-			transition: transform 0.3s;
-			content: '';
-		}
-
-		&:hover::before {
-			transform: scaleX(1);
-		}
+		color: colors.$main-color;
 	}
 
 	.navbar-toggler {
 		padding: 10px 15px;
+	}
+
+	.nav-link:hover {
+		color: colors.$main-color;
+		text-decoration: underline tomato;
 	}
 }
 
