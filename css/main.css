@@ -55,7 +55,7 @@ header.hero-img {
   z-index: 0;
 }
 header.hero-img h1 {
-  font-size: 40px;
+  font-size: 3.2rem;
   text-transform: uppercase;
 }
 header.hero-img .hero-shadow {
@@ -68,7 +68,7 @@ header.hero-img .hero-shadow {
   z-index: -5;
 }
 header.hero-img .hero-text {
-  font-size: 40px;
+  font-size: 2.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,11 +77,11 @@ header.hero-img .hero-text {
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
 }
 header.hero-img .hero-text .header-description {
-  margin: 10px 20px;
+  margin: 40px 0;
   width: 50%;
 }
 header.hero-img .hero-text a {
-  font-size: 36px;
+  font-size: 2.4rem;
   margin: 10px 20px;
   padding: 10px 40px;
 }
@@ -90,7 +90,7 @@ header.hero-img .hero-text a:hover {
   color: #2e2e2e;
   text-shadow: 1px 1px 3px rgb(104, 104, 104);
 }
-header.hero-img .hero-text .fa-chevron-down {
+header.hero-img .fa-chevron-down {
   position: absolute;
   bottom: 10px;
   left: 50%;
