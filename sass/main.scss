@@ -17,28 +17,43 @@ html {
 
 body {
 	font-family: 'Poiret One', sans-serif;
-	background-color: #fff;
+	color: colors.$black;
 	font-size: 1.6rem;
 }
 
 nav {
 	text-transform: uppercase;
 	z-index: 1;
-
+	height: 100px;
 	.nav-link {
-		margin: 0 20px;
-		text-decoration: none;
-		font-size: 2.8rem;
-		color: colors.$main-color;
+		&__item {
+			position: relative;
+			margin: 0 1.5em;
+			font-size: 2.2rem;
+			color: colors.$black;
+			text-decoration: none;
+
+			&::before {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 3px;
+				transform: scaleX(0);
+				background-color: colors.$third-color;
+				transition: transform 0.3s;
+				content: '';
+			}
+
+			&:hover::before,
+			&:focus::before {
+				transform: scaleX(1);
+			}
+		}
 	}
 
 	.navbar-toggler {
 		padding: 10px 15px;
-	}
-
-	.nav-link:hover {
-		color: colors.$main-color;
-		text-decoration: underline tomato;
 	}
 }
 
@@ -50,48 +65,25 @@ header.hero-img {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	color: colors.$main-color;
 	z-index: 0;
 
 	h1 {
-		font-size: 2.2rem;
 		text-transform: uppercase;
-		margin: 0;
-	}
-
-	.hero-shadow {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgb(0, 0, 0, 0.8);
-		z-index: -5;
+		font-size: 4rem;
+		margin: 20px 0;
 	}
 
 	.hero-text {
-		font-size: 1.8rem;
+		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
 		height: 100%;
-		text-shadow: 1px 1px 3px rgb(0, 0, 0);
-
-		.header-description {
-			margin: 30px 0;
-			width: 75%;
-		}
 
 		.btn {
 			font-size: 2rem;
 			padding: 10px 20px;
-		}
-
-		a:hover {
-			background-color: colors.$main-color;
-			color: colors.$dark;
-			text-shadow: 1px 1px 3px rgb(104, 104, 104);
 		}
 	}
 	.fa-chevron-down {
@@ -99,7 +91,7 @@ header.hero-img {
 		bottom: 10px;
 		left: 50%;
 		transform: translate(-50%);
-		font-size: 30px;
+		font-size: 3rem;
 		color: colors.$main-color;
 	}
 }
