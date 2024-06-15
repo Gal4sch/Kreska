@@ -35,51 +35,77 @@ nav {
 }
 nav .nav-link__item {
   position: relative;
-  margin: 0 1.5em;
+  margin: 0 0.5em;
   font-size: 2.2rem;
   color: #000;
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
-nav .nav-link__item:focus {
-  color: #9e9d89;
+nav .nav-link__item::before {
+  position: absolute;
+  bottom: 3px;
+  height: 3px;
+  transform: scaleX(0);
+  background-color: #b67162;
+  transition: transform 0.3s;
+  content: "";
+}
+nav .nav-link__item:hover::before, nav .nav-link__item:focus::before {
+  transform: scaleX(1);
+}
+nav .nav-link__item:hover, nav .nav-link__item:focus {
+  color: black;
+}
+nav .nav-link__projects::before {
+  width: 89px;
+}
+nav .nav-link__offer::before {
+  width: 70px;
+}
+nav .nav-link__about::before {
+  width: 76px;
+}
+nav .nav-link__contact::before {
+  width: 94px;
 }
 nav .navbar-toggler {
   padding: 10px 15px;
 }
 
-.hero-img {
-  position: absolute;
-  top: 90px;
-  height: 100vh;
+header.hero-img {
+  position: relative;
+  height: 100%;
   width: 100%;
+  margin: 4em 0em;
+  padding: 4em 2em;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   z-index: 0;
 }
-.hero-img h1 {
+header.hero-img h1 {
   text-transform: uppercase;
   font-size: 2.5rem;
-  margin: 50px 0 20px 0;
+  margin: 2em 0 1em 0;
 }
-.hero-img .hero-text {
-  position: relative;
+header.hero-img .item {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 100%;
+  max-height: 500px;
 }
-.hero-img .hero-text .btn {
+header.hero-img .hero-text .btn {
   font-size: 1.5rem;
   padding: 10px 20px;
   color: #000;
   border-color: black;
 }
-.hero-img .hero-text .btn:hover {
+header.hero-img .hero-text .btn:hover {
   background-color: #e4d3cf;
 }
-.hero-img .fa-chevron-down {
+header.hero-img .fa-chevron-down {
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -88,12 +114,33 @@ nav .navbar-toggler {
   color: #e4d3cf;
 }
 
+.about {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  max-height: 600px;
+  background-image: url(../img/pexels-vlada-karpovich-4050284.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 @media (min-width: 576px) {
-  .hero-img h1 {
-    font-size: 3.2rem;
+  header.hero-img h1 {
+    font-size: 3rem;
+    margin: 1.5em 0 0.75em 0;
+  }
+  header.hero-img .hero-text .btn {
+    font-size: 2rem;
+    padding: 10px 20px;
+    color: #000;
+    border-color: black;
   }
 }
 @media (min-width: 992px) {
+  nav .nav-link__item {
+    font-size: 2.5rem;
+  }
   nav .nav-link__item::before {
     position: absolute;
     bottom: 3px;
@@ -112,10 +159,25 @@ nav .navbar-toggler {
   nav .nav-link__item:hover, nav .nav-link__item:focus {
     color: black;
   }
+  header.hero-img .item {
+    max-height: 550px;
+  }
   header.hero-img h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    margin: 1em 0 0.5em 0;
   }
   header.hero-img .hero-text .btn {
     font-size: 2rem;
+  }
+}
+@media (min-width: 1400px) {
+  nav .navbar-brand {
+    margin-left: 10px;
+  }
+  nav .nav-link__item {
+    margin-left: 2em;
+  }
+  header.hero-img {
+    padding: 5em 10em;
   }
 }/*# sourceMappingURL=main.css.map */
