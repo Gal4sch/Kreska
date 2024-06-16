@@ -20,12 +20,24 @@ html {
 
 body {
   font-family: "Poiret One", sans-serif;
-  color: #000;
   font-size: 1.6rem;
+  color: #000;
 }
 
-.bg-color {
+.navbar-bg-color {
   background-color: #e4d3cf;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  margin: 0 auto 10px;
+  width: 50px;
+  height: 3px;
+  background-color: #b67162;
 }
 
 nav {
@@ -55,7 +67,7 @@ nav .nav-link__item:hover::before, nav .nav-link__item:focus::before {
   transform: scaleX(1);
 }
 nav .nav-link__item:hover, nav .nav-link__item:focus {
-  color: black;
+  color: #000;
 }
 nav .nav-link__projects::before {
   width: 89px;
@@ -77,7 +89,7 @@ header.hero-img {
   position: relative;
   height: 100%;
   width: 100%;
-  margin: 4em 0em;
+  margin: 4em 0em 2em 0em;
   padding: 4em 2em;
   background-size: cover;
   background-position: center;
@@ -100,18 +112,41 @@ header.hero-img .hero-text .btn {
   font-size: 1.5rem;
   padding: 10px 20px;
   color: #000;
-  border-color: black;
+  border-color: #000;
 }
 header.hero-img .hero-text .btn:hover {
   background-color: #e4d3cf;
 }
 header.hero-img .fa-chevron-down {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   left: 50%;
   transform: translate(-50%);
   font-size: 3rem;
   color: #e4d3cf;
+}
+
+.projects__box {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0em;
+}
+.projects__img {
+  width: 100%;
+  margin-bottom: 1em;
+  transition: transform 0.3s;
+}
+.projects__img:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+.projects__title {
+  text-align: center;
+}
+
+.offer__img {
+  position: relative;
+  width: 100%;
 }
 
 .about {
@@ -124,6 +159,77 @@ header.hero-img .fa-chevron-down {
   background-position: center;
   background-attachment: fixed;
 }
+.about__info {
+  padding: 2em;
+  margin: 2em 1em;
+  background-color: rgba(228, 211, 207, 0.5);
+}
+.about p {
+  text-align: center;
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+}
+.contact h2 {
+  margin-top: 2em;
+}
+.contact__form, .contact__fotm-top {
+  display: flex;
+  flex-direction: column;
+}
+.contact__form-label {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+.contact__form-input {
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  border: 1px solid #b67162;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  width: 100%;
+}
+.contact__form-textarea {
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  border: 1px solid #b67162;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 150px;
+}
+.contact__form-btn {
+  align-self: flex-end;
+  padding: 1em;
+  width: 100%;
+  min-width: 300px;
+  border: 1px solid #b67162;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.contact__form-btn:hover {
+  background-color: #e4d3cf;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-content: space-evenly;
+  margin-top: 5em;
+  width: 100%;
+  background-color: #9e9d89;
+}
+.footer strong {
+  margin: 70px;
+}
+.footer i {
+  margin: 5px;
+  color: #000;
+}
 
 @media (min-width: 576px) {
   header.hero-img h1 {
@@ -134,7 +240,22 @@ header.hero-img .fa-chevron-down {
     font-size: 2rem;
     padding: 10px 20px;
     color: #000;
-    border-color: black;
+    border-color: #000;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .projects__box {
+    margin: 3em 0;
+  }
+  .projects__box-img--right {
+    position: relative;
+    left: 50%;
+  }
+  .projects__img {
+    max-width: 380px;
   }
 }
 @media (min-width: 992px) {
@@ -157,7 +278,7 @@ header.hero-img .fa-chevron-down {
     transform: scaleX(1);
   }
   nav .nav-link__item:hover, nav .nav-link__item:focus {
-    color: black;
+    color: #000;
   }
   header.hero-img .item {
     max-height: 550px;
@@ -169,6 +290,23 @@ header.hero-img .fa-chevron-down {
   header.hero-img .hero-text .btn {
     font-size: 2rem;
   }
+  .projects__img {
+    max-width: 480px;
+  }
+  .projects__title {
+    font-size: 2rem;
+  }
+  .projects__title-left {
+    text-align: left;
+  }
+  .projects__title-right {
+    text-align: right;
+  }
+}
+@media (min-width: 1200px) {
+  .projects__img {
+    max-width: 580px;
+  }
 }
 @media (min-width: 1400px) {
   nav .navbar-brand {
@@ -178,6 +316,9 @@ header.hero-img .fa-chevron-down {
     margin-left: 2em;
   }
   header.hero-img {
-    padding: 5em 10em;
+    padding: 5em 10em 4em;
+  }
+  .projects__img {
+    max-width: 680px;
   }
 }/*# sourceMappingURL=main.css.map */

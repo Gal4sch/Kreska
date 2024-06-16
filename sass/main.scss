@@ -18,12 +18,24 @@ html {
 
 body {
 	font-family: 'Poiret One', sans-serif;
-	color: colors.$black;
 	font-size: 1.6rem;
+	color: colors.$black;
 }
 
-.bg-color {
+.navbar-bg-color {
 	background-color: rgba($color: colors.$main-color, $alpha: 1);
+}
+
+.section-title {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 10px;
+	width: 50px;
+	height: 3px;
+	background-color: colors.$secondary-color;
 }
 
 nav {
@@ -58,7 +70,7 @@ nav {
 
 			&:hover,
 			&:focus {
-				color: black;
+				color: colors.$black;
 			}
 		}
 		&__projects {
@@ -92,7 +104,7 @@ header.hero-img {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	margin: 4em 0em;
+	margin: 4em 0em 2em 0em;
 	padding: 4em 2em;
 	background-size: cover;
 	background-position: center;
@@ -118,7 +130,7 @@ header.hero-img {
 			font-size: 1.5rem;
 			padding: 10px 20px;
 			color: colors.$black;
-			border-color: black;
+			border-color: colors.$black;
 		}
 
 		.btn:hover {
@@ -128,7 +140,7 @@ header.hero-img {
 
 	.fa-chevron-down {
 		position: absolute;
-		bottom: 10px;
+		bottom: 5px;
 		left: 50%;
 		transform: translate(-50%);
 		font-size: 3rem;
@@ -136,7 +148,37 @@ header.hero-img {
 	}
 }
 
-.about{
+.projects {
+	&__box {
+		display: flex;
+		flex-direction: row;
+		margin: 1em 0em;
+	}
+
+	&__img {
+		width: 100%;
+		margin-bottom: 1em;
+		transition: transform 0.3s;
+	}
+
+	&__img:hover {
+		transform: scale(1.02);
+		opacity: 0.9;
+	}
+
+	&__title {
+		text-align: center;
+	}
+}
+
+.offer {
+	&__img {
+		position: relative;
+		width: 100%;
+	}
+}
+
+.about {
 	position: relative;
 	height: 100vh;
 	width: 100%;
@@ -145,6 +187,82 @@ header.hero-img {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+
+	&__info {
+		padding: 2em;
+		margin: 2em 1em;
+		background-color: rgba($color: colors.$main-color, $alpha: 0.5);
+	}
+
+	p {
+		text-align: center;
+	}
+}
+
+.contact {
+	position: relative;
+	overflow: hidden;
+
+	h2 {
+		margin-top: 2em;
+	}
+
+	&__form,
+	&__fotm-top {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form-label {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+
+	&__form-input {
+		@include mixins.contactForm;
+		width: 100%;
+	}
+
+	&__form-textarea {
+		@include mixins.contactForm;
+		max-width: 100%;
+		min-width: 100%;
+		// width: 100%;
+		min-height: 150px;
+	}
+
+	&__form-btn {
+		align-self: flex-end;
+		padding: 1em;
+		width: 100%;
+		min-width: 300px;
+		border: 1px solid colors.$secondary-color;
+		border-radius: 5px;
+		background-color: #fff;
+		cursor: pointer;
+	}
+
+	&__form-btn:hover {
+		background-color: colors.$main-color;
+	}
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-content: space-evenly;
+	margin-top: 5em;
+	width: 100%;
+	background-color: colors.$third-color;
+
+	strong {
+		margin: 70px;
+	}
+
+	i {
+		margin: 5px;
+		color: #000;
+	}
 }
 
 // ======================================
@@ -163,8 +281,30 @@ header.hero-img {
 				font-size: 2rem;
 				padding: 10px 20px;
 				color: colors.$black;
-				border-color: black;
+				border-color: colors.$black;
 			}
+		}
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.projects {
+		&__box {
+			margin: 3em 0;
+			&-img {
+				&--right {
+					position: relative;
+					left: 50%;
+				}
+			}
+		}
+
+		&__img {
+			max-width: 380px;
 		}
 	}
 }
@@ -194,7 +334,7 @@ header.hero-img {
 
 				&:hover,
 				&:focus {
-					color: black;
+					color: colors.$black;
 				}
 			}
 		}
@@ -216,22 +356,52 @@ header.hero-img {
 			}
 		}
 	}
+
+	.projects {
+		&__img {
+			max-width: 480px;
+		}
+
+		&__title {
+			font-size: 2rem;
+			&-left {
+				text-align: left;
+			}
+
+			&-right {
+				text-align: right;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.projects {
+		&__img {
+			max-width: 580px;
+		}
+	}
 }
 
 @media (min-width: 1400px) {
-	
 	nav {
 		.navbar-brand {
 			margin-left: 10px;
 		}
-		.nav-link{
-			&__item{
+		.nav-link {
+			&__item {
 				margin-left: 2em;
 			}
 		}
 	}
 
 	header.hero-img {
-		padding: 5em 10em;
+		padding: 5em 10em 4em;
+	}
+
+	.projects {
+		&__img {
+			max-width: 680px;
+		}
 	}
 }
