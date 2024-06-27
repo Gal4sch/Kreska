@@ -38,12 +38,54 @@ body {
 	background-color: colors.$secondary-color;
 }
 
-nav {
+.brand {
+	h2 {
+		position: fixed;
+		top: 0;
+		left: 100%;
+		writing-mode: vertical-rl;
+		font-size: 2.7rem;
+		height: 100vh;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		padding-top: 0.75em;
+		line-height: 1em;
+		margin: -1.25em -2em;
+		z-index: 2;
+	}
+
+	&__social {
+		position: fixed;
+		left: 2em;
+		top: 50%;
+		font-size: 2rem;
+		transform: translateY(-50%);
+		writing-mode: vertical-rl;
+		z-index: 2;
+
+		a {
+			margin: 10px;
+			color: colors.$black;
+		}
+
+		a:hover{
+			color: #676767;
+		}
+	}
+}
+
+
+.nav {
 	text-transform: uppercase;
 	transition: background-color 0.6s;
 	z-index: 1;
-
 	.nav-link {
+		padding: 1.5em 0.75em;
+
+		// &__items {
+		// 	padding-top: 1.5em;
+		// }
 		&__item {
 			position: relative;
 			margin: 0 0.5em;
@@ -104,8 +146,8 @@ header.hero-img {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	margin: 4em 0em 2em 0em;
-	padding: 4em 2em;
+	margin-top: 4em;
+	padding: 6em 2em;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -149,6 +191,10 @@ header.hero-img {
 }
 
 .projects {
+	position: relative;
+	h2 {
+		padding-top: 2em;
+	}
 	&__box {
 		display: flex;
 		flex-direction: row;
@@ -172,9 +218,13 @@ header.hero-img {
 }
 
 .offer {
+	h2 {
+		margin-top: 2em;
+	}
 	&__img {
 		position: relative;
 		width: 100%;
+		margin-bottom: 2em;
 	}
 }
 
@@ -190,8 +240,8 @@ header.hero-img {
 
 	&__info {
 		padding: 2em;
-		margin: 2em 1em;
-		background-color: rgba($color: colors.$main-color, $alpha: 0.5);
+		margin: 4em 1em;
+		background-color: rgba($color: colors.$main-color, $alpha: 0.9);
 	}
 
 	p {
@@ -202,16 +252,7 @@ header.hero-img {
 .contact {
 	position: relative;
 	overflow: hidden;
-
-	h2 {
-		margin-top: 2em;
-	}
-
-	&__form,
-	&__fotm-top {
-		display: flex;
-		flex-direction: column;
-	}
+	margin: 0 2em;
 
 	&__form-label {
 		margin-bottom: 0.5em;
@@ -227,7 +268,6 @@ header.hero-img {
 		@include mixins.contactForm;
 		max-width: 100%;
 		min-width: 100%;
-		// width: 100%;
 		min-height: 150px;
 	}
 
@@ -235,7 +275,6 @@ header.hero-img {
 		align-self: flex-end;
 		padding: 1em;
 		width: 100%;
-		min-width: 300px;
 		border: 1px solid colors.$secondary-color;
 		border-radius: 5px;
 		background-color: #fff;
@@ -248,20 +287,37 @@ header.hero-img {
 }
 
 .footer {
-	display: flex;
-	justify-content: center;
-	align-content: space-evenly;
-	margin-top: 5em;
-	width: 100%;
-	background-color: colors.$third-color;
+	position: relative;
+	&__box {
+		// position: absolute;
+		width: 100%;
+		margin-top: 2em;
+		padding: 3em 1.5em;
+		background-color: colors.$third-color;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 
-	strong {
-		margin: 70px;
-	}
+		&-brand {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
-	i {
-		margin: 5px;
-		color: #000;
+		&-copy {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&-icons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			a {
+				color: colors.$black;
+				margin: 0 0.5em;
+			}
+		}
 	}
 }
 
@@ -307,47 +363,37 @@ header.hero-img {
 			max-width: 380px;
 		}
 	}
+
+	.contact {
+		margin: 0 6em;
+	}
 }
 
 @media (min-width: 992px) {
 	nav {
 		.nav-link {
+			&__items {
+				padding-top: 0;
+			}
+
 			&__item {
 				font-size: 2.5rem;
 				&::before {
-					position: absolute;
-					bottom: 3px;
 					width: 100%;
-					height: 3px;
-					display: flex;
-					align-items: center;
-					transform: scaleX(0);
-					background-color: colors.$secondary-color;
-					transition: transform 0.3s;
-					content: '';
-				}
-
-				&:hover::before,
-				&:focus::before {
-					transform: scaleX(1);
-				}
-
-				&:hover,
-				&:focus {
-					color: colors.$black;
 				}
 			}
 		}
 	}
 
 	header.hero-img {
+		padding: 0 4em 5em;
 		.item {
-			max-height: 550px;
+			max-height: 750px;
 		}
 
 		h1 {
 			font-size: 3.5rem;
-			margin: 1em 0 0.5em 0;
+			margin: 3em 0 0.5em 0;
 		}
 
 		.hero-text {
@@ -373,6 +419,10 @@ header.hero-img {
 			}
 		}
 	}
+
+	.contact {
+		margin: 5em 10em;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -396,7 +446,7 @@ header.hero-img {
 	}
 
 	header.hero-img {
-		padding: 5em 10em 4em;
+		padding: 8em 8em 8em;
 	}
 
 	.projects {
