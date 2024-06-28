@@ -1,7 +1,7 @@
 @keyframes load-out {
   100% {
     opacity: 0;
-    display: none;
+    z-index: 1;
   }
   0% {
     opacity: 1;
@@ -61,7 +61,7 @@ body {
   top: 0;
   left: 0;
   z-index: 3;
-  animation: load-out 1s forwards;
+  animation: load-out 3s forwards;
 }
 .loading img {
   position: relative;
@@ -72,7 +72,7 @@ body {
 .loading p {
   position: relative;
   left: 50%;
-  font-size: 4rem;
+  font-size: 2rem;
   transform: translate(-50%);
 }
 
@@ -81,21 +81,21 @@ body {
   top: 0;
   left: 100%;
   writing-mode: vertical-rl;
-  font-size: 2.7rem;
+  font-size: 1.7rem;
   height: 100vh;
   display: flex;
   text-align: center;
   justify-content: center;
   padding-top: 0.75em;
   line-height: 1em;
-  margin: -1.25em -2em;
+  margin: -1.25em -1.3em;
   z-index: 2;
 }
 .brand__social {
   position: fixed;
-  left: 2em;
+  left: 0.3em;
   top: 50%;
-  font-size: 2rem;
+  font-size: 1.4rem;
   transform: translateY(-50%);
   writing-mode: vertical-rl;
   z-index: 2;
