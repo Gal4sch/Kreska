@@ -1,10 +1,9 @@
 @keyframes load-out {
-    100% {
-        opacity: 0;
-        z-index: 1;
-    }
-
-    0%{
+	100% {
+		opacity: 0;
+        display: none;
+	}
+	0% {
         opacity: 1;
-    }
+	}
 }

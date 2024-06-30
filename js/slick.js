@@ -4,8 +4,8 @@ $('.hero-carousel').slick({
 	fade: true,
 	cssEase: 'linear',
 	autoplay: true,
-	autoplaySpeed: 2000,
-	speed: 2000,
+	autoplaySpeed: 4000,
+	speed: 3000,
 	arrows: false,
 	mobileFirst: true,
 });
