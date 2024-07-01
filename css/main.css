@@ -95,7 +95,7 @@ body {
   position: fixed;
   left: 0.3em;
   top: 50%;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   transform: translateY(-50%);
   writing-mode: vertical-rl;
   z-index: 2;
@@ -160,7 +160,7 @@ header.hero-img {
   position: relative;
   height: 100%;
   width: 100%;
-  margin-top: 4em;
+  margin: 5em 0 0;
   padding: 6em 2em;
   background-size: cover;
   background-position: center;
@@ -248,7 +248,7 @@ header.hero-img .fa-chevron-down {
   cursor: pointer;
 }
 .offer__popup-section-coffee:hover {
-  color: #535353;
+  color: #9e9d89;
 }
 .offer__popup-section-title {
   position: absolute;
@@ -265,6 +265,9 @@ header.hero-img .fa-chevron-down {
   -ms-transform: translate(-50%, -50%);
   cursor: pointer;
 }
+.offer__popup-section-ruler:hover {
+  color: #9e9d89;
+}
 .offer__popup-section-title2 {
   position: absolute;
   left: 53%;
@@ -279,6 +282,9 @@ header.hero-img .fa-chevron-down {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   cursor: pointer;
+}
+.offer__popup-section-house:hover {
+  color: #9e9d89;
 }
 .offer__popup-section-title3 {
   position: absolute;
@@ -295,6 +301,9 @@ header.hero-img .fa-chevron-down {
   -ms-transform: translate(-50%, -50%);
   cursor: pointer;
 }
+.offer__popup-section-furniture:hover {
+  color: #9e9d89;
+}
 .offer__popup-section-title4 {
   position: absolute;
   left: 77%;
@@ -310,6 +319,9 @@ header.hero-img .fa-chevron-down {
   -ms-transform: translate(-50%, -50%);
   cursor: pointer;
 }
+.offer__popup-section-brick:hover {
+  color: #9e9d89;
+}
 .offer__popup-section-title5 {
   position: absolute;
   left: 50%;
@@ -324,6 +336,9 @@ header.hero-img .fa-chevron-down {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   cursor: pointer;
+}
+.offer__popup-section-key:hover {
+  color: #9e9d89;
 }
 .offer__popup-section-title6 {
   position: absolute;
@@ -368,6 +383,7 @@ header.hero-img .fa-chevron-down {
   position: relative;
   overflow: hidden;
   margin: 0 2em;
+  padding: 2.3em 0;
 }
 .contact__form-label {
   margin-bottom: 0.5em;
@@ -410,10 +426,10 @@ header.hero-img .fa-chevron-down {
 .footer__box {
   width: 100%;
   margin-top: 2em;
-  padding: 3em 1.5em;
+  padding: 3em 0;
   background-color: #9e9d89;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-around;
 }
 .footer__box-brand {
   display: flex;
@@ -424,21 +440,27 @@ header.hero-img .fa-chevron-down {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0 10px;
 }
-.footer__box-icons {
+.footer__box-privacy {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.footer__box-icons a {
+  text-decoration: none;
   color: #000;
-  margin: 0 0.5em;
+}
+.footer__box-privacy:hover {
+  color: #292929;
 }
 
 @media (min-width: 576px) {
+  header.hero-img {
+    padding: 6em 3em;
+  }
   header.hero-img h1 {
     font-size: 3rem;
-    margin: 1.5em 0 0.75em 0;
+    margin: 1.5em 0 0.75em;
   }
   header.hero-img .hero-text .btn {
     font-size: 2rem;
@@ -449,8 +471,22 @@ header.hero-img .fa-chevron-down {
   .section-title {
     font-size: 2.5rem;
   }
+  .brand h2 {
+    margin: -1.25em -1.7em;
+  }
+  .brand__social {
+    left: 0.7em;
+  }
 }
 @media (min-width: 768px) {
+  .brand h2 {
+    margin: -1.25em -1.4em;
+    font-size: 2rem;
+  }
+  .brand__social {
+    left: 0.5em;
+    font-size: 1.6rem;
+  }
   .projects__box {
     margin: 3em 0;
   }
@@ -459,16 +495,20 @@ header.hero-img .fa-chevron-down {
     left: 50%;
   }
   .projects__img {
+    padding-left: 1em;
+    padding-right: 2.5em;
     max-width: 380px;
   }
   .projects__title {
     font-size: 2rem;
+    padding-left: 1em;
   }
   .projects__title-left {
     text-align: left;
   }
   .projects__title-right {
     text-align: right;
+    padding-right: 2em;
   }
   .contact {
     margin: 0 6em;
@@ -484,24 +524,34 @@ header.hero-img .fa-chevron-down {
   nav .nav-link__item::before {
     width: 100%;
   }
-  header.hero-img {
-    padding: 0 4em 5em;
+  .brand h2 {
+    margin: -1.25em -1.3em;
+    font-size: 2.2rem;
   }
-  header.hero-img .item {
-    max-height: 750px;
+  .brand__social {
+    left: 0.7em;
+    font-size: 1.8rem;
   }
   header.hero-img h1 {
     font-size: 3.5rem;
-    margin: 3em 0 0.5em 0;
+    margin: 1em 0 0.5em 0;
   }
   header.hero-img .hero-text .btn {
     font-size: 2rem;
   }
   .projects__img {
+    padding-left: 0.8em;
+    padding-right: 2.2em;
     max-width: 480px;
   }
+  .projects__title {
+    padding-left: 0.8em;
+  }
+  .projects__title-right {
+    padding-right: 2.2em;
+  }
   .contact {
-    margin: 5em 10em;
+    margin: 2em 10em;
   }
 }
 @media (min-width: 1200px) {
@@ -516,8 +566,16 @@ header.hero-img .fa-chevron-down {
   nav .nav-link__item {
     margin-left: 2em;
   }
+  .brand h2 {
+    margin: -1.25em -1.3em;
+    font-size: 2.4rem;
+  }
+  .brand__social {
+    left: 0.7em;
+    font-size: 2rem;
+  }
   header.hero-img {
-    padding: 8em 8em 8em;
+    padding: 7.5em 8em 4.5em;
   }
   .projects__img {
     max-width: 680px;

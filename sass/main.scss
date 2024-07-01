@@ -89,7 +89,7 @@ body {
 		position: fixed;
 		left: 0.3em;
 		top: 50%;
-		font-size: 1.4rem;
+		font-size: 1.5rem;
 		transform: translateY(-50%);
 		writing-mode: vertical-rl;
 		z-index: 2;
@@ -175,7 +175,7 @@ header.hero-img {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	margin-top: 4em;
+	margin: 5em 0 0;
 	padding: 6em 2em;
 	background-size: cover;
 	background-position: center;
@@ -275,7 +275,7 @@ header.hero-img {
 				cursor: pointer;
 			}
 			&-coffee:hover {
-				color: #535353;
+				color: colors.$third-color;
 			}
 			&-title {
 				position: absolute;
@@ -293,6 +293,9 @@ header.hero-img {
 				-ms-transform: translate(-50%, -50%);
 				cursor: pointer;
 			}
+			&-ruler:hover {
+				color: colors.$third-color;
+			}
 			&-title2 {
 				position: absolute;
 				left: 53%;
@@ -307,6 +310,9 @@ header.hero-img {
 				transform: translate(-50%, -50%);
 				-ms-transform: translate(-50%, -50%);
 				cursor: pointer;
+			}
+			&-house:hover {
+				color: colors.$third-color;
 			}
 			&-title3 {
 				position: absolute;
@@ -323,6 +329,9 @@ header.hero-img {
 				-ms-transform: translate(-50%, -50%);
 				cursor: pointer;
 			}
+			&-furniture:hover {
+				color: colors.$third-color;
+			}
 			&-title4 {
 				position: absolute;
 				left: 77%;
@@ -338,6 +347,9 @@ header.hero-img {
 				-ms-transform: translate(-50%, -50%);
 				cursor: pointer;
 			}
+			&-brick:hover {
+				color: colors.$third-color;
+			}
 			&-title5 {
 				position: absolute;
 				left: 50%;
@@ -352,6 +364,9 @@ header.hero-img {
 				transform: translate(-50%, -50%);
 				-ms-transform: translate(-50%, -50%);
 				cursor: pointer;
+			}
+			&-key:hover {
+				color: colors.$third-color;
 			}
 			&-title6 {
 				position: absolute;
@@ -402,6 +417,7 @@ header.hero-img {
 	position: relative;
 	overflow: hidden;
 	margin: 0 2em;
+	padding: 2.3em 0;
 
 	&__form-label {
 		margin-bottom: 0.5em;
@@ -441,10 +457,10 @@ header.hero-img {
 		// position: absolute;
 		width: 100%;
 		margin-top: 2em;
-		padding: 3em 1.5em;
+		padding: 3em 0;
 		background-color: colors.$third-color;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		display: flex;
+		justify-content: space-around;
 
 		&-brand {
 			display: flex;
@@ -456,16 +472,20 @@ header.hero-img {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			margin: 0;
+			padding: 0 10px;
 		}
 
-		&-icons {
+		&-privacy {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			a {
-				color: colors.$black;
-				margin: 0 0.5em;
-			}
+			text-decoration: none;
+			color: colors.$black;
+		}
+
+		&-privacy:hover {
+			color: #292929;
 		}
 	}
 }
@@ -476,9 +496,10 @@ header.hero-img {
 
 @media (min-width: 576px) {
 	header.hero-img {
+		padding: 6em 3em;
 		h1 {
 			font-size: 3rem;
-			margin: 1.5em 0 0.75em 0;
+			margin: 1.5em 0 0.75em;
 		}
 
 		.hero-text {
@@ -494,9 +515,31 @@ header.hero-img {
 	.section-title {
 		font-size: 2.5rem;
 	}
+
+	.brand {
+		h2 {
+			margin: -1.25em -1.7em;
+		}
+
+		&__social {
+			left: 0.7em;
+		}
+	}
 }
 
 @media (min-width: 768px) {
+	.brand {
+		h2 {
+			margin: -1.25em -1.4em;
+			font-size: 2rem;
+		}
+
+		&__social {
+			left: 0.5em;
+			font-size: 1.6rem;
+		}
+	}
+
 	.projects {
 		&__box {
 			margin: 3em 0;
@@ -509,17 +552,21 @@ header.hero-img {
 		}
 
 		&__img {
+			padding-left: 1em;
+			padding-right: 2.5em;
 			max-width: 380px;
 		}
 
 		&__title {
 			font-size: 2rem;
+			padding-left: 1em;
 			&-left {
 				text-align: left;
 			}
 
 			&-right {
 				text-align: right;
+				padding-right: 2em;
 			}
 		}
 	}
@@ -545,15 +592,22 @@ header.hero-img {
 		}
 	}
 
-	header.hero-img {
-		padding: 0 4em 5em;
-		.item {
-			max-height: 750px;
+	.brand {
+		h2 {
+			margin: -1.25em -1.3em;
+			font-size: 2.2rem;
 		}
 
+		&__social {
+			left: 0.7em;
+			font-size: 1.8rem;
+		}
+	}
+
+	header.hero-img {
 		h1 {
 			font-size: 3.5rem;
-			margin: 3em 0 0.5em 0;
+			margin: 1em 0 0.5em 0;
 		}
 
 		.hero-text {
@@ -565,12 +619,21 @@ header.hero-img {
 
 	.projects {
 		&__img {
+			padding-left: 0.8em;
+			padding-right: 2.2em;
 			max-width: 480px;
+		}
+
+		&__title {
+			padding-left: 0.8em;
+			&-right {
+				padding-right: 2.2em;
+			}
 		}
 	}
 
 	.contact {
-		margin: 5em 10em;
+		margin: 2em 10em;
 	}
 }
 
@@ -594,8 +657,20 @@ header.hero-img {
 		}
 	}
 
+	.brand {
+		h2 {
+			margin: -1.25em -1.3em;
+			font-size: 2.4rem;
+		}
+
+		&__social {
+			left: 0.7em;
+			font-size: 2rem;
+		}
+	}
+
 	header.hero-img {
-		padding: 8em 8em 8em;
+		padding: 7.5em 8em 4.5em;
 	}
 
 	.projects {
