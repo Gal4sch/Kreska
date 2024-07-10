@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kreska - projektowanie wnętrz</title>
+    <link rel="icon" href="./img/icon.svg" type="image/x-icon" />
+    <title>Kreska</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/8b7ee2cf3e.js" crossorigin="anonymous"></script>
@@ -18,45 +19,195 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="./img/KRESKA.svg" alt="Logo firmy"></a>
+    <div class="loading">
+        <div class="loading__brand">
+            <img src="./img/KRESKA.svg" alt="Kreska">
+            <p class="loading__brand-title">Projektowanie historii z duszą.</p>
+        </div>
+    </div>
+
+    <nav class="navbar nav navbar-expand-lg position-fixed top-0 w-100 py-3 navbar-bg-color">
+        <div class="container nav-link">
+            <a href="#" class="navbar-brand"><img src="./img/KRESKA.svg" alt="Logo firmy"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <a href="#projects" class="nav-link__item">projekty</a>
-                    <a href="#offer" class="nav-link__item">oferta</a>
-                    <a href="#about" class="nav-link__item">o mnie</a>
-                    <a href="#contact" class="nav-link__item">kontakt</a>
+                <div class="navbar-nav ms-auto nav-link__items">
+                    <a href="#projects" class="nav-link__item nav-link__projects">projekty</a>
+                    <a href="#offer" class="nav-link__item nav-link__offer">oferta</a>
+                    <a href="#studio" class="nav-link__item nav-link__studio">studio</a>
+                    <a href="#contact" class="nav-link__item nav-link__contact">kontakt</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <header class="hero-img">
-        <div class="hero-shadow"></div>
-        <div class="hero-text text-center p-2">
-            <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">projektowanie wnętrz</h1>
-            <a href="#contact" class="btn btn-outline-light mt-2 text-uppercase" data-aos="fade-up" data-aos-delay="300"
-                data-aos-duration="1000">zamów projekt</a>
+    <div id="brand" class="brand">
+        <div id="social" class="brand__social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
-        <a href="#contact"><i class="fa-solid fa-chevron-down bounce-top"></i></a>
+        <div id="slogan" class="brand__slogan">
+            <h2 class="brand__slogan-title">Projektowanie historii z duszą.</h2>
+        </div>
+    </div>
+    <div class="hero-before"></div>
+
+    <header class="hero-img">
+        <div class="hero-carousel">
+            <div class="item1">
+                <!-- <img src="./img/Kreska_projekt_1c.png" alt="design"> -->
+            </div>
+            <div class="item2">
+                <!-- <img src="./img/Kreska_projekt_1e.png" alt="design"> -->
+            </div>
+            <div class="item3">
+                <!-- <img src="./img/Kreska_projekt_3a.png" alt="design"> -->
+            </div>
+            <div class="item4">
+                <!-- <img src="./img/Kreska_projekt_1d.png" alt="design"> -->
+            </div>
+            <div class="item5">
+                <!-- <img src="./img/Kreska_projekt_2b.png" alt="design"> -->
+            </div>
+        </div>
+        <div class="hero-text text-center" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="500">
+            <h1>projektowanie wnętrz</h1>
+            <a href="#contact" class="btn btn-outline-light mt-2 text-uppercase">zamów projekt</a>
+        </div>
+        <a href="#offer" data-aos="fade-up" data-aos-delay="3200" data-aos-duration="500"><i
+                class="fa-solid fa-chevron-down bounce-top"></i></a>
+
     </header>
 
     <main class="main">
 
+        <section id="projects" class="projects bg-light  p-5">
+            <div class="container">
+
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">projekty
+                </h2>
+                <div class="underline" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500"></div>
+
+                <div class="projects__box">
+                    <div class="projects__box-img" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500">
+                        <a href="#projects-one"><img src="./img/Kreska_projekt_1a.png" alt="design"
+                                class="projects__img"></a>
+                        <h3 class="projects__title projects__title-left">
+                            Projekt nr 1</h3>
+                    </div>
+
+                </div>
+
+                <div class="projects__box">
+
+                    <div class="projects__box-img projects__box-img--right" data-aos="fade-up" data-aos-delay="500"
+                        data-aos-duration="500">
+                        <a href="#projects-two"><img src="./img/Kreska_projekt_2a.png" alt="design"
+                                class="projects__img"></a>
+                        <h3 class="projects__title projects__title-right">
+                            Projekt nr 2</h3>
+                    </div>
+                </div>
+
+
+                <div class="projects__box">
+                    <div class="projects__box-img" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500">
+                        <a href="#projects-three"><img src="./img/Kreska_projekt_3a.png" alt="design"
+                                class="projects__img"></a>
+                        <h3 class="projects__title projects__title-left">
+                            Projekt nr 3</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="offer" class="offer p-5">
+            <div class="container">
+                <div>
+                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">oferta
+                    </h2>
+                    <p class="underline" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500"></p>
+                </div>
+                <div class="offer__popup" data-aos="fade-up" data-aos-delay="700" data-aos-duration="500">
+                    <div class="offer__popup-section">
+                        <img src="./img/home-plan.jpg" alt="offer" class="offer__popup-section-img">
+                        <p class="offer__popup-section-coffee"><i class="fa-solid fa-mug-hot"></i></p>
+                        <p class="offer__popup-section-title">Etap 1</p>
+                        <p class="offer__popup-section-ruler"><i class="fa-solid fa-ruler-vertical"></i></p>
+                        <p class="offer__popup-section-title2">Etap 2</p>
+                        <p class="offer__popup-section-house"><i class="fa-solid fa-house"></i></i></p>
+                        <p class="offer__popup-section-title3">Etap 3</p>
+                        <p class="offer__popup-section-furniture"><i class="fa-solid fa-couch"></i></p>
+                        <p class="offer__popup-section-title4">Etap 4</p>
+                        <p class="offer__popup-section-brick"><i class="fa-solid fa-trowel-bricks"></i></p>
+                        <p class="offer__popup-section-title5">Etap 5</p>
+                        <p class="offer__popup-section-key"><i class="fa-solid fa-key"></i></p>
+                        <p class="offer__popup-section-title6">Etap 6</p>
+                    </div>
+
+                    <p class="offer__popup-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia impedit
+                        laboriosam ut unde earum corporis voluptates quaerat recusandae fugiat saepe.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="studio" class="studio p-5">
+            <div class="container">
+                <div class="studio__info" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500">
+                    <h2 class="section-title">studio
+                    </h2>
+                    <p class="studio-info">Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Quis fuga ducimus adipisci sint, deleniti sequi
+                        doloremque officiis suscipit quidem impedit quisquam ipsum laudantium placeat architecto tempora
+                        nesciunt sed quas vel.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">kontakt
+                </h2>
+                <div class="underline"></div>
+
+                <form action="" class="contact_form">
+
+                    <div class="contact__form-top">
+                        <label for="name" class="contact__form-label"></label>
+                        <input type="text" class="contact__form-input" id="name" placeholder="Imię i nazwisko">
+
+                        <label for="e-mail" class="contact__form-label"></label>
+                        <input type="email" class="contact__form-input" placeholder="Adres e-mail">
+                    </div>
+                    <label for="msg" class="contact__form-label"></label>
+                    <textarea id="msg" class="contact__form-textarea" placeholder="Wiadomość"></textarea>
+
+                    <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
+
+                </form>
+
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-
+        <div class="footer__box">
+            <a href="#" class="footer__box-brand"><img src="./img/KRESKA.svg" alt="Logo firmy"></a>
+            <p class="footer__box-copy"><strong>© 2024</strong></p>
+            <a href="#privacy" class="footer__box-privacy"><strong>Polityka prywatności</strong></a>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/aos.js"></script>
     <script src="js/slick.js"></script>
