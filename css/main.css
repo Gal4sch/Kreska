@@ -61,7 +61,7 @@ body {
   top: 0;
   left: 0;
   z-index: 3;
-  animation: load-out 3s forwards;
+  animation: load-out 5s forwards;
 }
 .loading img {
   position: relative;
@@ -80,6 +80,7 @@ body {
   position: fixed;
   top: 0;
   left: 100%;
+  transform: translate(-50%);
   writing-mode: vertical-rl;
   font-size: 1.7rem;
   height: 100vh;
@@ -87,13 +88,15 @@ body {
   text-align: center;
   justify-content: center;
   padding-top: 0.75em;
-  line-height: 1em;
+  line-height: 0.5em;
   margin: -1.25em -1.3em;
   z-index: 2;
 }
 .brand__social {
   position: fixed;
-  left: 0.3em;
+  display: flex;
+  text-align: center;
+  justify-content: center;
   top: 50%;
   font-size: 1.5rem;
   transform: translateY(-50%);
@@ -156,41 +159,79 @@ body {
   padding: 10px 15px;
 }
 
-header.hero-img {
+.hero-img {
   position: relative;
   height: 100%;
   width: 100%;
-  margin: 5em 0 0;
-  padding: 6em 2em;
+  margin: 7em 0 0;
+  padding: 6em 3em;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   z-index: 0;
 }
-header.hero-img h1 {
+.hero-img h1 {
   text-transform: uppercase;
   font-size: 2.5rem;
-  margin: 2em 0 1em 0;
+  margin: 4em 0 1em 0;
 }
-header.hero-img .item {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-height: 500px;
+.hero-img .item1 {
+  position: relative;
+  height: 360px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(../img/Kreska_projekt_1c_640.jpg);
 }
-header.hero-img .hero-text .btn {
+.hero-img .item2 {
+  position: relative;
+  height: 360px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(../img/Kreska_projekt_1e_640.jpg);
+}
+.hero-img .item3 {
+  position: relative;
+  height: 360px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(../img/Kreska_projekt_3a_640.jpg);
+}
+.hero-img .item4 {
+  position: relative;
+  height: 360px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(../img/Kreska_projekt_1d_640.jpg);
+}
+.hero-img .item5 {
+  position: relative;
+  height: 360px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(../img/Kreska_projekt_2b_640.jpg);
+}
+.hero-img .hero-text .btn {
   font-size: 1.5rem;
   padding: 10px 20px;
   color: #000;
   border-color: #000;
 }
-header.hero-img .hero-text .btn:hover {
+.hero-img .hero-text .btn:hover {
   background-color: #e4d3cf;
 }
-header.hero-img .fa-chevron-down {
+.hero-img .fa-chevron-down {
   position: absolute;
-  bottom: 5px;
+  bottom: 30px;
   left: 50%;
   transform: translate(-50%);
   font-size: 3rem;
@@ -455,14 +496,14 @@ header.hero-img .fa-chevron-down {
 }
 
 @media (min-width: 576px) {
-  header.hero-img {
+  .hero-img {
     padding: 6em 3em;
   }
-  header.hero-img h1 {
+  .hero-img h1 {
     font-size: 3rem;
     margin: 1.5em 0 0.75em;
   }
-  header.hero-img .hero-text .btn {
+  .hero-img .hero-text .btn {
     font-size: 2rem;
     padding: 10px 20px;
     color: #000;
@@ -470,12 +511,6 @@ header.hero-img .fa-chevron-down {
   }
   .section-title {
     font-size: 2.5rem;
-  }
-  .brand h2 {
-    margin: -1.25em -1.7em;
-  }
-  .brand__social {
-    left: 0.7em;
   }
 }
 @media (min-width: 768px) {
@@ -486,6 +521,30 @@ header.hero-img .fa-chevron-down {
   .brand__social {
     left: 0.5em;
     font-size: 1.6rem;
+  }
+  .hero-img {
+    margin: 6.5em 0 0;
+    padding: 6em 4em;
+  }
+  .hero-img .item1 {
+    height: 51vh;
+    background-image: url(../img/Kreska_projekt_1c.png);
+  }
+  .hero-img .item2 {
+    height: 51vh;
+    background-image: url(../img/Kreska_projekt_1e.png);
+  }
+  .hero-img .item3 {
+    height: 51vh;
+    background-image: url(../img/Kreska_projekt_3a.png);
+  }
+  .hero-img .item4 {
+    height: 51vh;
+    background-image: url(../img/Kreska_projekt_1d.png);
+  }
+  .hero-img .item5 {
+    height: 51vh;
+    background-image: url(../img/Kreska_projekt_2b.png);
   }
   .projects__box {
     margin: 3em 0;
@@ -532,11 +591,11 @@ header.hero-img .fa-chevron-down {
     left: 0.7em;
     font-size: 1.8rem;
   }
-  header.hero-img h1 {
+  .hero-img h1 {
     font-size: 3.5rem;
     margin: 1em 0 0.5em 0;
   }
-  header.hero-img .hero-text .btn {
+  .hero-img .hero-text .btn {
     font-size: 2rem;
   }
   .projects__img {
@@ -567,15 +626,15 @@ header.hero-img .fa-chevron-down {
     margin-left: 2em;
   }
   .brand h2 {
-    margin: -1.25em -1.3em;
+    margin: -1.25em -2em;
     font-size: 2.4rem;
   }
   .brand__social {
-    left: 0.7em;
+    left: 2em;
     font-size: 2rem;
   }
-  header.hero-img {
-    padding: 7.5em 8em 4.5em;
+  .hero-img {
+    padding: 6em 8em 6.5em;
   }
   .projects__img {
     max-width: 680px;
