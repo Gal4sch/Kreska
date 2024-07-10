@@ -170,9 +170,8 @@ body {
 	}
 }
 
-
 .hero-img {
-	&::before{
+	&::before {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -180,13 +179,12 @@ body {
 		height: 100px;
 		background: colors.$main-color;
 		content: '';
-
 	}
 	position: relative;
 	height: 100%;
 	width: 100%;
 	margin: 6em 0 0 0;
-	padding: 2.5em 3em ;
+	padding: 2.5em 3em;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -195,8 +193,7 @@ body {
 	h1 {
 		text-transform: uppercase;
 		font-size: 2.5rem;
-		margin: 1.2em 0 .5em 0;
-		
+		margin: 1.2em 0 0.5em 0;
 	}
 
 	.item1 {
@@ -549,7 +546,7 @@ body {
 
 @media (min-width: 576px) {
 	.hero-img {
-		padding: 6em 3em;
+		padding: 2em 3em;
 		h1 {
 			font-size: 3rem;
 			margin: 1.5em 0 0.75em;
@@ -568,16 +565,6 @@ body {
 	.section-title {
 		font-size: 2.5rem;
 	}
-
-	.brand {
-		h2 {
-			// margin: -1.25em -1.7em;
-		}
-
-		&__social {
-			// left: 0.7em;
-		}
-	}
 }
 
 @media (min-width: 768px) {
@@ -594,26 +581,26 @@ body {
 	}
 
 	.hero-img {
-		margin: 6.5em 0 0;
-		padding: 6em 4em;
+		margin: 4.5em 0 0;
+		padding: 3em 4em;
 		.item1 {
-			height: 51vh;
+			height: 50vh;
 			background-image: url(../img/Kreska_projekt_1c.png);
 		}
 		.item2 {
-			height: 51vh;
+			height: 50vh;
 			background-image: url(../img/Kreska_projekt_1e.png);
 		}
 		.item3 {
-			height: 51vh;
+			height: 50vh;
 			background-image: url(../img/Kreska_projekt_3a.png);
 		}
 		.item4 {
-			height: 51vh;
+			height: 50vh;
 			background-image: url(../img/Kreska_projekt_1d.png);
 		}
 		.item5 {
-			height: 51vh;
+			height: 50vh;
 			background-image: url(../img/Kreska_projekt_2b.png);
 		}
 	}
@@ -683,6 +670,23 @@ body {
 	}
 
 	.hero-img {
+		margin: 5em 0 0;
+		padding: 2.5em 4em 3.5em;
+		.item1 {
+			height: 60vh;
+		}
+		.item2 {
+			height: 60vh;
+		}
+		.item3 {
+			height: 60vh;
+		}
+		.item4 {
+			height: 60vh;
+		}
+		.item5 {
+			height: 60vh;
+		}
 		h1 {
 			font-size: 3.5rem;
 			margin: 1em 0 0.5em 0;
@@ -691,6 +695,7 @@ body {
 		.hero-text {
 			.btn {
 				font-size: 2rem;
+				margin: 3em;
 			}
 		}
 	}
@@ -738,7 +743,7 @@ body {
 	.brand {
 		h2 {
 			margin: -1.25em -2em;
-			font-size: 2.4rem;
+			font-size: 2.5rem;
 		}
 
 		&__social {
@@ -748,11 +753,9 @@ body {
 	}
 
 	.hero-img {
-		padding: 6em 8em 6.5em;
+		margin-top: 5em;
+		padding: 3em 8em;
 
-		// h1{
-		// 	margin: 1.5em 0 0;
-		// }
 	}
 
 	.projects {
