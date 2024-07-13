@@ -51,19 +51,19 @@ body {
 	top: 0;
 	left: 0;
 	z-index: 3;
-	animation: load-out 5s forwards;
+	animation: load-out 1s forwards;
 
 	img {
 		position: relative;
-		width: 20vw;
+		width: 200px;
 		left: 50%;
 		transform: translateX(-50%);
 	}
 
 	p {
-		position: relative;
+		position: absolute;
 		left: 50%;
-		font-size: 2rem;
+		font-size: 1.4rem;
 		transform: translate(-50%);
 	}
 }
@@ -183,7 +183,7 @@ body {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	margin: 6em 0 0 0;
+	margin: 4.5em 0 0 0;
 	padding: 2.5em 3em;
 	background-size: cover;
 	background-position: center;
@@ -192,54 +192,54 @@ body {
 
 	h1 {
 		text-transform: uppercase;
-		font-size: 2.5rem;
+		font-size: 2.2rem;
 		margin: 1.2em 0 0.5em 0;
 	}
 
 	.item1 {
 		position: relative;
-		height: 360px;
+		height: 60vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
-		background-image: url(../img/Kreska_projekt_1c_640.jpg);
+		background-image: url(../img/Kreska_projekt_1c.png);
 	}
 	.item2 {
 		position: relative;
-		height: 360px;
+		height: 60vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
-		background-image: url(../img/Kreska_projekt_1e_640.jpg);
+		background-image: url(../img/Kreska_projekt_1e.png);
 	}
 	.item3 {
 		position: relative;
-		height: 360px;
+		height: 60vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
-		background-image: url(../img/Kreska_projekt_3a_640.jpg);
+		background-image: url(../img/Kreska_projekt_3a.png);
 	}
 	.item4 {
 		position: relative;
-		height: 360px;
+		height: 60vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
-		background-image: url(../img/Kreska_projekt_1d_640.jpg);
+		background-image: url(../img/Kreska_projekt_1d.png);
 	}
 	.item5 {
 		position: relative;
-		height: 360px;
+		height: 60vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
-		background-image: url(../img/Kreska_projekt_2b_640.jpg);
+		background-image: url(../img/Kreska_projekt_2b.png);
 	}
 
 	.hero-text {
@@ -249,6 +249,7 @@ body {
 			margin-bottom: 10px;
 			color: colors.$black;
 			border-color: colors.$black;
+			transition: background-color 0.3s;
 		}
 
 		.btn:hover {
@@ -273,7 +274,7 @@ body {
 	&__box {
 		display: flex;
 		flex-direction: row;
-		margin: 1em 0em;
+		margin: 1em 0.5em;
 	}
 
 	&__img {
@@ -283,7 +284,7 @@ body {
 	}
 
 	&__img:hover {
-		transform: scale(1.02);
+		transform: scale(0.98);
 		opacity: 0.9;
 	}
 
@@ -294,146 +295,136 @@ body {
 
 .offer {
 	position: relative;
-	width: 100%;
-	h2 {
+	height: 600px;
+	margin-bottom: 50px;
+
+	.section-title {
 		margin-top: 1em;
 	}
-
 	&__popup {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+
 		&-section {
-			font-size: 1.2rem;
+			position: relative;
+			font-size: 1rem;
+			width: 300px;
+			height: auto;
 
 			&-img {
-				position: relative;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: 100%;
+				max-width: 100%;
+				height: auto;
 				margin: 0 auto 2em;
 			}
 
 			&-coffee {
 				position: absolute;
-				left: 20%;
-				bottom: 63%;
-				transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
-				cursor: pointer;
+				left: 50px;
+				top: 80px;
 			}
-			&-coffee:hover {
-				color: colors.$third-color;
-			}
-			&-title {
+
+			&-coffee-title {
 				position: absolute;
-				left: 20%;
-				bottom: 59%;
-				transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
+				top: 100px;
+				left: 48px;
 			}
 
 			&-ruler {
 				position: absolute;
-				left: 53%;
-				bottom: 63%;
-				transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
-				cursor: pointer;
+				left: 150px;
+				top: 80px;
 			}
-			&-ruler:hover {
-				color: colors.$third-color;
-			}
-			&-title2 {
+			&-ruler-title {
 				position: absolute;
-				left: 53%;
-				bottom: 59%;
-				transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
+				top: 100px;
+				left: 142px;
 			}
 			&-house {
 				position: absolute;
-				left: 81%;
-				bottom: 63%;
-				transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
-				cursor: pointer;
+				left: 232px;
+				top: 80px;
 			}
-			&-house:hover {
-				color: colors.$third-color;
-			}
-			&-title3 {
+			&-house-title {
 				position: absolute;
-				left: 81%;
-				bottom: 59%;
-				transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
+				top: 100px;
+				left: 230px;
 			}
 			&-furniture {
 				position: absolute;
-				left: 77%;
-				bottom: 28%;
-				transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
-				cursor: pointer;
+				left: 220px;
+				top: 200px;
 			}
-			&-furniture:hover {
-				color: colors.$third-color;
-			}
-			&-title4 {
+			&-furniture-title {
 				position: absolute;
-				left: 77%;
-				bottom: 24%;
-				transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
+				top: 220px;
+				left: 218px;
 			}
 			&-brick {
 				position: absolute;
-				left: 50%;
-				bottom: 27%;
-				transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
-				cursor: pointer;
+				left: 130px;
+				top: 200px;
 			}
-			&-brick:hover {
-				color: colors.$third-color;
-			}
-			&-title5 {
+			&-brick-title {
 				position: absolute;
-				left: 50%;
-				bottom: 24%;
-				transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
+				top: 220px;
+				left: 128px;
 			}
 			&-key {
 				position: absolute;
-				left: 20%;
-				bottom: 19%;
-				transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
+				left: 50px;
+				top: 225px;
+			}
+			&-key-title {
+				position: absolute;
+				top: 245px;
+				left: 47px;
+			}
+
+			&-resize {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: #ddd;
+				border-radius: 50%;
+				padding: 5px;
+				transition: color 0.3s, scale 0.3s, background-color 0.3s;
 				cursor: pointer;
 			}
-			&-key:hover {
-				color: colors.$third-color;
-			}
-			&-title6 {
-				position: absolute;
-				left: 20%;
-				bottom: 15%;
-				transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
+
+			&-resize:hover {
+				color: #fff;
+				scale: 1.2;
+				background-color: colors.$black;
 			}
 		}
 
 		&-info {
-			display: none;
-			position: absolute;
-			width: 20vw;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			background-color: rgba($color: colors.$main-color, $alpha: 1);
-			border-radius: 10px;
-			padding: 30px;
-			z-index: 1;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 40px;
+			&-start {
+				position: absolute;
+				margin: 10px 20px;
+				width: 250px;
+				height: auto;
+				font-size: 1.4rem;
+				padding: 5px;
+				z-index: 1;
+			}
+
+			&-coffee {
+				display: none;
+				position: absolute;
+				margin: 10px 20px;
+				width: 250px;
+				height: auto;
+				font-size: 1.2rem;
+				padding: 5px;
+				z-index: 1;
+			}
 		}
 	}
 }
@@ -462,8 +453,8 @@ body {
 .contact {
 	position: relative;
 	overflow: hidden;
-	margin: 0 2em;
-	padding: 2.3em 0;
+	margin: 0 2.5em;
+	padding: 2.5em 0;
 
 	h2 {
 		margin-top: 1em;
@@ -548,16 +539,14 @@ body {
 	.hero-img {
 		padding: 2em 3em;
 		h1 {
-			font-size: 3rem;
+			// font-size: 3rem;
 			margin: 1.5em 0 0.75em;
 		}
 
 		.hero-text {
 			.btn {
-				font-size: 2rem;
+				// font-size: 2rem;
 				padding: 10px 20px;
-				color: colors.$black;
-				border-color: colors.$black;
 			}
 		}
 	}
@@ -568,6 +557,16 @@ body {
 }
 
 @media (min-width: 768px) {
+	.loading {
+		img {
+			width: 300px;
+		}
+
+		p {
+			font-size: 3rem;
+		}
+	}
+
 	.brand {
 		h2 {
 			margin: -1.25em -1.4em;
@@ -584,24 +583,30 @@ body {
 		margin: 4.5em 0 0;
 		padding: 3em 4em;
 		.item1 {
-			height: 50vh;
-			background-image: url(../img/Kreska_projekt_1c.png);
+			height: 41vh;
 		}
 		.item2 {
-			height: 50vh;
-			background-image: url(../img/Kreska_projekt_1e.png);
+			height: 41vh;
 		}
 		.item3 {
-			height: 50vh;
-			background-image: url(../img/Kreska_projekt_3a.png);
+			height: 41vh;
 		}
 		.item4 {
-			height: 50vh;
-			background-image: url(../img/Kreska_projekt_1d.png);
+			height: 41vh;
 		}
 		.item5 {
-			height: 50vh;
-			background-image: url(../img/Kreska_projekt_2b.png);
+			height: 41vh;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			margin: 1em 0 0.75em;
+		}
+
+		.hero-text {
+			.btn {
+				font-size: 1.7rem;
+			}
 		}
 	}
 
@@ -672,30 +677,31 @@ body {
 	.hero-img {
 		margin: 5em 0 0;
 		padding: 2.5em 4em 3.5em;
-		.item1 {
-			height: 60vh;
-		}
-		.item2 {
-			height: 60vh;
-		}
-		.item3 {
-			height: 60vh;
-		}
-		.item4 {
-			height: 60vh;
-		}
-		.item5 {
-			height: 60vh;
-		}
 		h1 {
 			font-size: 3.5rem;
 			margin: 1em 0 0.5em 0;
 		}
 
+		.item1 {
+			height: 38vh;
+		}
+		.item2 {
+			height: 38vh;
+		}
+		.item3 {
+			height: 38vh;
+		}
+		.item4 {
+			height: 38vh;
+		}
+		.item5 {
+			height: 38vh;
+		}
+
 		.hero-text {
 			.btn {
 				font-size: 2rem;
-				margin: 3em;
+				margin: 3em 0 1em;
 			}
 		}
 	}
@@ -715,12 +721,39 @@ body {
 		}
 	}
 
+	.offer {
+		&__popup {
+			l30p
+			&-section {
+				width: 400px;
+			}
+		}
+	}
+
 	.contact {
 		margin: 2em 10em;
 	}
 }
 
 @media (min-width: 1200px) {
+	.hero-img {
+		.item1 {
+			height: 60vh;
+		}
+		.item2 {
+			height: 60vh;
+		}
+		.item3 {
+			height: 60vh;
+		}
+		.item4 {
+			height: 60vh;
+		}
+		.item5 {
+			height: 60vh;
+		}
+	}
+
 	.projects {
 		&__img {
 			max-width: 580px;
@@ -756,6 +789,21 @@ body {
 		margin-top: 5em;
 		padding: 3em 8em;
 
+		.item1 {
+			height: 64vh;
+		}
+		.item2 {
+			height: 64vh;
+		}
+		.item3 {
+			height: 64vh;
+		}
+		.item4 {
+			height: 64vh;
+		}
+		.item5 {
+			height: 64vh;
+		}
 	}
 
 	.projects {

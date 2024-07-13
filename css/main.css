@@ -61,18 +61,18 @@ body {
   top: 0;
   left: 0;
   z-index: 3;
-  animation: load-out 5s forwards;
+  animation: load-out 1s forwards;
 }
 .loading img {
   position: relative;
-  width: 20vw;
+  width: 200px;
   left: 50%;
   transform: translateX(-50%);
 }
 .loading p {
-  position: relative;
+  position: absolute;
   left: 50%;
-  font-size: 2rem;
+  font-size: 1.4rem;
   transform: translate(-50%);
 }
 
@@ -160,7 +160,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
-  margin: 6em 0 0 0;
+  margin: 4.5em 0 0 0;
   padding: 2.5em 3em;
   background-size: cover;
   background-position: center;
@@ -178,53 +178,53 @@ body {
 }
 .hero-img h1 {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin: 1.2em 0 0.5em 0;
 }
 .hero-img .item1 {
   position: relative;
-  height: 360px;
+  height: 60vh;
   width: 100%;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(../img/Kreska_projekt_1c_640.jpg);
+  background-image: url(../img/Kreska_projekt_1c.png);
 }
 .hero-img .item2 {
   position: relative;
-  height: 360px;
+  height: 60vh;
   width: 100%;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(../img/Kreska_projekt_1e_640.jpg);
+  background-image: url(../img/Kreska_projekt_1e.png);
 }
 .hero-img .item3 {
   position: relative;
-  height: 360px;
+  height: 60vh;
   width: 100%;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(../img/Kreska_projekt_3a_640.jpg);
+  background-image: url(../img/Kreska_projekt_3a.png);
 }
 .hero-img .item4 {
   position: relative;
-  height: 360px;
+  height: 60vh;
   width: 100%;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(../img/Kreska_projekt_1d_640.jpg);
+  background-image: url(../img/Kreska_projekt_1d.png);
 }
 .hero-img .item5 {
   position: relative;
-  height: 360px;
+  height: 60vh;
   width: 100%;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(../img/Kreska_projekt_2b_640.jpg);
+  background-image: url(../img/Kreska_projekt_2b.png);
 }
 .hero-img .hero-text .btn {
   font-size: 1.5rem;
@@ -232,6 +232,7 @@ body {
   margin-bottom: 10px;
   color: #000;
   border-color: #000;
+  transition: background-color 0.3s;
 }
 .hero-img .hero-text .btn:hover {
   background-color: #e4d3cf;
@@ -253,7 +254,7 @@ body {
 .projects__box {
   display: flex;
   flex-direction: row;
-  margin: 1em 0em;
+  margin: 1em 0.5em;
 }
 .projects__img {
   width: 100%;
@@ -261,7 +262,7 @@ body {
   transition: transform 0.3s;
 }
 .projects__img:hover {
-  transform: scale(1.02);
+  transform: scale(0.98);
   opacity: 0.9;
 }
 .projects__title {
@@ -270,140 +271,127 @@ body {
 
 .offer {
   position: relative;
-  width: 100%;
+  height: 600px;
+  margin-bottom: 50px;
 }
-.offer h2 {
+.offer .section-title {
   margin-top: 1em;
 }
+.offer__popup {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
 .offer__popup-section {
-  font-size: 1.2rem;
+  position: relative;
+  font-size: 1rem;
+  width: 300px;
+  height: auto;
 }
 .offer__popup-section-img {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   margin: 0 auto 2em;
 }
 .offer__popup-section-coffee {
   position: absolute;
-  left: 20%;
-  bottom: 63%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  cursor: pointer;
+  left: 50px;
+  top: 80px;
 }
-.offer__popup-section-coffee:hover {
-  color: #9e9d89;
-}
-.offer__popup-section-title {
+.offer__popup-section-coffee-title {
   position: absolute;
-  left: 20%;
-  bottom: 59%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  top: 100px;
+  left: 48px;
 }
 .offer__popup-section-ruler {
   position: absolute;
-  left: 53%;
-  bottom: 63%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  cursor: pointer;
+  left: 150px;
+  top: 80px;
 }
-.offer__popup-section-ruler:hover {
-  color: #9e9d89;
-}
-.offer__popup-section-title2 {
+.offer__popup-section-ruler-title {
   position: absolute;
-  left: 53%;
-  bottom: 59%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  top: 100px;
+  left: 142px;
 }
 .offer__popup-section-house {
   position: absolute;
-  left: 81%;
-  bottom: 63%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  cursor: pointer;
+  left: 232px;
+  top: 80px;
 }
-.offer__popup-section-house:hover {
-  color: #9e9d89;
-}
-.offer__popup-section-title3 {
+.offer__popup-section-house-title {
   position: absolute;
-  left: 81%;
-  bottom: 59%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  top: 100px;
+  left: 230px;
 }
 .offer__popup-section-furniture {
   position: absolute;
-  left: 77%;
-  bottom: 28%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  cursor: pointer;
+  left: 220px;
+  top: 200px;
 }
-.offer__popup-section-furniture:hover {
-  color: #9e9d89;
-}
-.offer__popup-section-title4 {
+.offer__popup-section-furniture-title {
   position: absolute;
-  left: 77%;
-  bottom: 24%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  top: 220px;
+  left: 218px;
 }
 .offer__popup-section-brick {
   position: absolute;
-  left: 50%;
-  bottom: 27%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  cursor: pointer;
+  left: 130px;
+  top: 200px;
 }
-.offer__popup-section-brick:hover {
-  color: #9e9d89;
-}
-.offer__popup-section-title5 {
+.offer__popup-section-brick-title {
   position: absolute;
-  left: 50%;
-  bottom: 24%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  top: 220px;
+  left: 128px;
 }
 .offer__popup-section-key {
   position: absolute;
-  left: 20%;
-  bottom: 19%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  left: 50px;
+  top: 225px;
+}
+.offer__popup-section-key-title {
+  position: absolute;
+  top: 245px;
+  left: 47px;
+}
+.offer__popup-section-resize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  border-radius: 50%;
+  padding: 5px;
+  transition: color 0.3s, scale 0.3s, background-color 0.3s;
   cursor: pointer;
 }
-.offer__popup-section-key:hover {
-  color: #9e9d89;
-}
-.offer__popup-section-title6 {
-  position: absolute;
-  left: 20%;
-  bottom: 15%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+.offer__popup-section-resize:hover {
+  color: #fff;
+  scale: 1.2;
+  background-color: #000;
 }
 .offer__popup-info {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.offer__popup-info-start {
+  position: absolute;
+  margin: 10px 20px;
+  width: 250px;
+  height: auto;
+  font-size: 1.4rem;
+  padding: 5px;
+  z-index: 1;
+}
+.offer__popup-info-coffee {
   display: none;
   position: absolute;
-  width: 20vw;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #e4d3cf;
-  border-radius: 10px;
-  padding: 30px;
+  margin: 10px 20px;
+  width: 250px;
+  height: auto;
+  font-size: 1.2rem;
+  padding: 5px;
   z-index: 1;
 }
 
@@ -429,8 +417,8 @@ body {
 .contact {
   position: relative;
   overflow: hidden;
-  margin: 0 2em;
-  padding: 2.3em 0;
+  margin: 0 2.5em;
+  padding: 2.5em 0;
 }
 .contact h2 {
   margin-top: 1em;
@@ -509,20 +497,22 @@ body {
     padding: 2em 3em;
   }
   .hero-img h1 {
-    font-size: 3rem;
     margin: 1.5em 0 0.75em;
   }
   .hero-img .hero-text .btn {
-    font-size: 2rem;
     padding: 10px 20px;
-    color: #000;
-    border-color: #000;
   }
   .section-title {
     font-size: 2.5rem;
   }
 }
 @media (min-width: 768px) {
+  .loading img {
+    width: 300px;
+  }
+  .loading p {
+    font-size: 3rem;
+  }
   .brand h2 {
     margin: -1.25em -1.4em;
     font-size: 2rem;
@@ -536,24 +526,26 @@ body {
     padding: 3em 4em;
   }
   .hero-img .item1 {
-    height: 50vh;
-    background-image: url(../img/Kreska_projekt_1c.png);
+    height: 41vh;
   }
   .hero-img .item2 {
-    height: 50vh;
-    background-image: url(../img/Kreska_projekt_1e.png);
+    height: 41vh;
   }
   .hero-img .item3 {
-    height: 50vh;
-    background-image: url(../img/Kreska_projekt_3a.png);
+    height: 41vh;
   }
   .hero-img .item4 {
-    height: 50vh;
-    background-image: url(../img/Kreska_projekt_1d.png);
+    height: 41vh;
   }
   .hero-img .item5 {
-    height: 50vh;
-    background-image: url(../img/Kreska_projekt_2b.png);
+    height: 41vh;
+  }
+  .hero-img h1 {
+    font-size: 2.5rem;
+    margin: 1em 0 0.75em;
+  }
+  .hero-img .hero-text .btn {
+    font-size: 1.7rem;
   }
   .projects__box {
     margin: 3em 0;
@@ -604,6 +596,48 @@ body {
     margin: 5em 0 0;
     padding: 2.5em 4em 3.5em;
   }
+  .hero-img h1 {
+    font-size: 3.5rem;
+    margin: 1em 0 0.5em 0;
+  }
+  .hero-img .item1 {
+    height: 38vh;
+  }
+  .hero-img .item2 {
+    height: 38vh;
+  }
+  .hero-img .item3 {
+    height: 38vh;
+  }
+  .hero-img .item4 {
+    height: 38vh;
+  }
+  .hero-img .item5 {
+    height: 38vh;
+  }
+  .hero-img .hero-text .btn {
+    font-size: 2rem;
+    margin: 3em 0 1em;
+  }
+  .projects__img {
+    padding-left: 0.8em;
+    padding-right: 2.2em;
+    max-width: 480px;
+  }
+  .projects__title {
+    padding-left: 0.8em;
+  }
+  .projects__title-right {
+    padding-right: 2.2em;
+  }
+  l30p .offer__popup-section {
+    width: 400px;
+  }
+  .contact {
+    margin: 2em 10em;
+  }
+}
+@media (min-width: 1200px) {
   .hero-img .item1 {
     height: 60vh;
   }
@@ -619,30 +653,6 @@ body {
   .hero-img .item5 {
     height: 60vh;
   }
-  .hero-img h1 {
-    font-size: 3.5rem;
-    margin: 1em 0 0.5em 0;
-  }
-  .hero-img .hero-text .btn {
-    font-size: 2rem;
-    margin: 3em;
-  }
-  .projects__img {
-    padding-left: 0.8em;
-    padding-right: 2.2em;
-    max-width: 480px;
-  }
-  .projects__title {
-    padding-left: 0.8em;
-  }
-  .projects__title-right {
-    padding-right: 2.2em;
-  }
-  .contact {
-    margin: 2em 10em;
-  }
-}
-@media (min-width: 1200px) {
   .projects__img {
     max-width: 580px;
   }
@@ -665,6 +675,21 @@ body {
   .hero-img {
     margin-top: 5em;
     padding: 3em 8em;
+  }
+  .hero-img .item1 {
+    height: 64vh;
+  }
+  .hero-img .item2 {
+    height: 64vh;
+  }
+  .hero-img .item3 {
+    height: 64vh;
+  }
+  .hero-img .item4 {
+    height: 64vh;
+  }
+  .hero-img .item5 {
+    height: 64vh;
   }
   .projects__img {
     max-width: 680px;
