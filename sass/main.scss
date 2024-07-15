@@ -30,10 +30,11 @@ body {
 .section-title {
 	text-align: center;
 	text-transform: uppercase;
+	font-size: 2rem;
 }
 
 .underline {
-	margin: 0 auto 10px;
+	margin: 0 auto;
 	width: 50px;
 	height: 3px;
 	background-color: colors.$secondary-color;
@@ -148,7 +149,7 @@ body {
 				width: 89px;
 			}
 		}
-		&__offer {
+		&__offers {
 			&::before {
 				width: 70px;
 			}
@@ -192,7 +193,7 @@ body {
 
 	h1 {
 		text-transform: uppercase;
-		font-size: 2.2rem;
+		font-size: 2.3rem;
 		margin: 1.2em 0 0.5em 0;
 	}
 
@@ -274,7 +275,7 @@ body {
 	&__box {
 		display: flex;
 		flex-direction: row;
-		margin: 1em 0.5em;
+		margin: 2em 1em;
 	}
 
 	&__img {
@@ -284,7 +285,7 @@ body {
 	}
 
 	&__img:hover {
-		transform: scale(0.98);
+		transform: scale(1.02);
 		opacity: 0.9;
 	}
 
@@ -293,137 +294,104 @@ body {
 	}
 }
 
-.offer {
+.offers {
 	position: relative;
-	height: 600px;
-	margin-bottom: 50px;
+	height: 900px;
 
-	.section-title {
-		margin-top: 1em;
+	&__box {
+		margin: 1em;
 	}
 	&__popup {
 		position: absolute;
 		left: 50%;
 		transform: translate(-50%);
-
 		&-section {
 			position: relative;
-			font-size: 1rem;
+			font-size: 1.2rem;
 			width: 300px;
 			height: auto;
 
 			&-img {
+				margin-top: 0.5em;
 				max-width: 100%;
 				height: auto;
-				margin: 0 auto 2em;
+			}
+
+			&-title {
+				font-size: 1.2rem;
 			}
 
 			&-coffee {
 				position: absolute;
-				left: 50px;
+				left: 45px;
 				top: 80px;
 			}
-
-			&-coffee-title {
-				position: absolute;
-				top: 100px;
-				left: 48px;
-			}
-
 			&-ruler {
 				position: absolute;
-				left: 150px;
+				left: 145px;
 				top: 80px;
-			}
-			&-ruler-title {
-				position: absolute;
-				top: 100px;
-				left: 142px;
 			}
 			&-house {
 				position: absolute;
-				left: 232px;
+				left: 228px;
 				top: 80px;
-			}
-			&-house-title {
-				position: absolute;
-				top: 100px;
-				left: 230px;
 			}
 			&-furniture {
 				position: absolute;
-				left: 220px;
+				left: 215px;
 				top: 200px;
-			}
-			&-furniture-title {
-				position: absolute;
-				top: 220px;
-				left: 218px;
 			}
 			&-brick {
 				position: absolute;
 				left: 130px;
 				top: 200px;
 			}
-			&-brick-title {
-				position: absolute;
-				top: 220px;
-				left: 128px;
-			}
 			&-key {
 				position: absolute;
-				left: 50px;
+				left: 45px;
 				top: 225px;
-			}
-			&-key-title {
-				position: absolute;
-				top: 245px;
-				left: 47px;
 			}
 
 			&-resize {
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				text-align: center;
 				background-color: #ddd;
 				border-radius: 50%;
-				padding: 5px;
+				padding: 2px;
+				margin: 1px;
 				transition: color 0.3s, scale 0.3s, background-color 0.3s;
 				cursor: pointer;
 			}
 
 			&-resize:hover {
 				color: #fff;
-				scale: 1.2;
+				scale: 1.11;
 				background-color: colors.$black;
 			}
 		}
 
 		&-info {
-			position: relative;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-top: 40px;
-			&-start {
-				position: absolute;
-				margin: 10px 20px;
-				width: 250px;
-				height: auto;
-				font-size: 1.4rem;
-				padding: 5px;
-				z-index: 1;
+			margin-top: 2em;
+			&-header {
+				margin-top: 1em;
+				display: flex;
+				justify-content: center;
+				font-size: 2rem;
 			}
 
-			&-coffee {
+			&-text {
+				display: flex;
+				text-align: justify;
+				justify-content: center;
+				margin-top: 0.5em;
+				font-size: 1.4rem;
+			}
+
+			&-two {
 				display: none;
-				position: absolute;
-				margin: 10px 20px;
-				width: 250px;
-				height: auto;
-				font-size: 1.2rem;
-				padding: 5px;
-				z-index: 1;
+			}
+
+			&-three {
+				display: none;
 			}
 		}
 	}
@@ -447,6 +415,8 @@ body {
 
 	p {
 		text-align: center;
+		font-size: 1.4rem;
+		padding: 1em 0 0;
 	}
 }
 
@@ -539,7 +509,7 @@ body {
 	.hero-img {
 		padding: 2em 3em;
 		h1 {
-			// font-size: 3rem;
+			font-size: 2.5rem;
 			margin: 1.5em 0 0.75em;
 		}
 
@@ -551,8 +521,38 @@ body {
 		}
 	}
 
-	.section-title {
-		font-size: 2.5rem;
+	.offers {
+		&__popup {
+			margin: 2em 1em;
+			&-section {
+				width: 400px;
+				font-size: 1.2rem;
+				&-coffee {
+					top: 110px;
+					left: 65px;
+				}
+				&-ruler {
+					top: 110px;
+					left: 198px;
+				}
+				&-house {
+					top: 110px;
+					left: 308px;
+				}
+				&-furniture {
+					top: 265px;
+					left: 298px;
+				}
+				&-brick {
+					top: 270px;
+					left: 178px;
+				}
+				&-key {
+					top: 310px;
+					left: 65px;
+				}
+			}
+		}
 	}
 }
 
@@ -579,6 +579,10 @@ body {
 		}
 	}
 
+	.section-title {
+		font-size: 2.5rem;
+	}
+
 	.hero-img {
 		margin: 4.5em 0 0;
 		padding: 3em 4em;
@@ -599,7 +603,7 @@ body {
 		}
 
 		h1 {
-			font-size: 2.5rem;
+			font-size: 3rem;
 			margin: 1em 0 0.75em;
 		}
 
@@ -612,11 +616,11 @@ body {
 
 	.projects {
 		&__box {
-			margin: 3em 0;
+			margin: 2em 2em;
 			&-img {
 				&--right {
 					position: relative;
-					left: 50%;
+					left: 47%;
 				}
 			}
 		}
@@ -637,6 +641,54 @@ body {
 			&-right {
 				text-align: right;
 				padding-right: 2em;
+			}
+		}
+	}
+
+	.offers {
+		height: 600px;
+		&__popup {
+			display: flex;
+			margin-bottom: 2em;
+
+			&-section {
+				width: 350px;
+				&-coffee {
+					top: 100px;
+					left: 58px;
+				}
+				&-ruler {
+					top: 100px;
+					left: 169px;
+				}
+				&-house {
+					top: 100px;
+					left: 268px;
+				}
+				&-furniture {
+					top: 240px;
+					left: 257px;
+				}
+				&-brick {
+					top: 240px;
+					left: 152px;
+				}
+				&-key {
+					left: 54px;
+					top: 270px;
+				}
+			}
+
+			&-info {
+				margin: 0 2em;
+				width: 300px;
+				&-header {
+					font-size: 2.1rem;
+				}
+				&-text {
+					font-size: 1.4rem;
+					padding: 0.5em;
+				}
 			}
 		}
 	}
@@ -674,11 +726,15 @@ body {
 		}
 	}
 
+	.section-title {
+		font-size: 3rem;
+	}
+
 	.hero-img {
 		margin: 5em 0 0;
 		padding: 2.5em 4em 3.5em;
 		h1 {
-			font-size: 3.5rem;
+			font-size: 4rem;
 			margin: 1em 0 0.5em 0;
 		}
 
@@ -721,11 +777,47 @@ body {
 		}
 	}
 
-	.offer {
+	.offers {
+		height: 700px;
 		&__popup {
-			l30p
 			&-section {
-				width: 400px;
+				width: 450px;
+				font-size: 1.5rem;
+
+				&-coffee {
+					top: 130px;
+					left: 80px;
+				}
+				&-ruler {
+					top: 130px;
+					left: 225px;
+				}
+				&-house {
+					top: 130px;
+					left: 350px;
+				}
+				&-furniture {
+					top: 310px;
+					left: 330px;
+				}
+				&-brick {
+					top: 300px;
+					left: 200px;
+				}
+				&-key {
+					left: 75px;
+					top: 345px;
+				}
+			}
+
+			&-info {
+				width: 350px;
+				&-header {
+					font-size: 2.6rem;
+				}
+				&-text {
+					font-size: 1.6rem;
+				}
 			}
 		}
 	}

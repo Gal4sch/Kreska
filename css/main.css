@@ -40,10 +40,11 @@ body {
 .section-title {
   text-align: center;
   text-transform: uppercase;
+  font-size: 2rem;
 }
 
 .underline {
-  margin: 0 auto 10px;
+  margin: 0 auto;
   width: 50px;
   height: 3px;
   background-color: #b67162;
@@ -143,7 +144,7 @@ body {
 .nav .nav-link__projects::before {
   width: 89px;
 }
-.nav .nav-link__offer::before {
+.nav .nav-link__offers::before {
   width: 70px;
 }
 .nav .nav-link__studio::before {
@@ -178,7 +179,7 @@ body {
 }
 .hero-img h1 {
   text-transform: uppercase;
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   margin: 1.2em 0 0.5em 0;
 }
 .hero-img .item1 {
@@ -254,7 +255,7 @@ body {
 .projects__box {
   display: flex;
   flex-direction: row;
-  margin: 1em 0.5em;
+  margin: 2em 1em;
 }
 .projects__img {
   width: 100%;
@@ -262,137 +263,104 @@ body {
   transition: transform 0.3s;
 }
 .projects__img:hover {
-  transform: scale(0.98);
+  transform: scale(1.02);
   opacity: 0.9;
 }
 .projects__title {
   text-align: center;
 }
 
-.offer {
+.offers {
   position: relative;
-  height: 600px;
-  margin-bottom: 50px;
+  height: 900px;
 }
-.offer .section-title {
-  margin-top: 1em;
+.offers__box {
+  margin: 1em;
 }
-.offer__popup {
+.offers__popup {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
 }
-.offer__popup-section {
+.offers__popup-section {
   position: relative;
-  font-size: 1rem;
+  font-size: 1.2rem;
   width: 300px;
   height: auto;
 }
-.offer__popup-section-img {
+.offers__popup-section-img {
+  margin-top: 0.5em;
   max-width: 100%;
   height: auto;
-  margin: 0 auto 2em;
 }
-.offer__popup-section-coffee {
+.offers__popup-section-title {
+  font-size: 1.2rem;
+}
+.offers__popup-section-coffee {
   position: absolute;
-  left: 50px;
+  left: 45px;
   top: 80px;
 }
-.offer__popup-section-coffee-title {
+.offers__popup-section-ruler {
   position: absolute;
-  top: 100px;
-  left: 48px;
-}
-.offer__popup-section-ruler {
-  position: absolute;
-  left: 150px;
+  left: 145px;
   top: 80px;
 }
-.offer__popup-section-ruler-title {
+.offers__popup-section-house {
   position: absolute;
-  top: 100px;
-  left: 142px;
-}
-.offer__popup-section-house {
-  position: absolute;
-  left: 232px;
+  left: 228px;
   top: 80px;
 }
-.offer__popup-section-house-title {
+.offers__popup-section-furniture {
   position: absolute;
-  top: 100px;
-  left: 230px;
-}
-.offer__popup-section-furniture {
-  position: absolute;
-  left: 220px;
+  left: 215px;
   top: 200px;
 }
-.offer__popup-section-furniture-title {
-  position: absolute;
-  top: 220px;
-  left: 218px;
-}
-.offer__popup-section-brick {
+.offers__popup-section-brick {
   position: absolute;
   left: 130px;
   top: 200px;
 }
-.offer__popup-section-brick-title {
+.offers__popup-section-key {
   position: absolute;
-  top: 220px;
-  left: 128px;
-}
-.offer__popup-section-key {
-  position: absolute;
-  left: 50px;
+  left: 45px;
   top: 225px;
 }
-.offer__popup-section-key-title {
-  position: absolute;
-  top: 245px;
-  left: 47px;
-}
-.offer__popup-section-resize {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.offers__popup-section-resize {
+  text-align: center;
   background-color: #ddd;
   border-radius: 50%;
-  padding: 5px;
+  padding: 2px;
+  margin: 1px;
   transition: color 0.3s, scale 0.3s, background-color 0.3s;
   cursor: pointer;
 }
-.offer__popup-section-resize:hover {
+.offers__popup-section-resize:hover {
   color: #fff;
-  scale: 1.2;
+  scale: 1.11;
   background-color: #000;
 }
-.offer__popup-info {
-  position: relative;
+.offers__popup-info {
+  margin-top: 2em;
+}
+.offers__popup-info-header {
+  margin-top: 1em;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 40px;
+  font-size: 2rem;
 }
-.offer__popup-info-start {
-  position: absolute;
-  margin: 10px 20px;
-  width: 250px;
-  height: auto;
+.offers__popup-info-text {
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  margin-top: 0.5em;
   font-size: 1.4rem;
-  padding: 5px;
-  z-index: 1;
 }
-.offer__popup-info-coffee {
+.offers__popup-info-two {
   display: none;
-  position: absolute;
-  margin: 10px 20px;
-  width: 250px;
-  height: auto;
-  font-size: 1.2rem;
-  padding: 5px;
-  z-index: 1;
+}
+.offers__popup-info-three {
+  display: none;
 }
 
 .studio {
@@ -412,6 +380,8 @@ body {
 }
 .studio p {
   text-align: center;
+  font-size: 1.4rem;
+  padding: 1em 0 0;
 }
 
 .contact {
@@ -497,13 +467,42 @@ body {
     padding: 2em 3em;
   }
   .hero-img h1 {
+    font-size: 2.5rem;
     margin: 1.5em 0 0.75em;
   }
   .hero-img .hero-text .btn {
     padding: 10px 20px;
   }
-  .section-title {
-    font-size: 2.5rem;
+  .offers__popup {
+    margin: 2em 1em;
+  }
+  .offers__popup-section {
+    width: 400px;
+    font-size: 1.2rem;
+  }
+  .offers__popup-section-coffee {
+    top: 110px;
+    left: 65px;
+  }
+  .offers__popup-section-ruler {
+    top: 110px;
+    left: 198px;
+  }
+  .offers__popup-section-house {
+    top: 110px;
+    left: 308px;
+  }
+  .offers__popup-section-furniture {
+    top: 265px;
+    left: 298px;
+  }
+  .offers__popup-section-brick {
+    top: 270px;
+    left: 178px;
+  }
+  .offers__popup-section-key {
+    top: 310px;
+    left: 65px;
   }
 }
 @media (min-width: 768px) {
@@ -520,6 +519,9 @@ body {
   .brand__social {
     left: 0.5em;
     font-size: 1.6rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
   }
   .hero-img {
     margin: 4.5em 0 0;
@@ -541,18 +543,18 @@ body {
     height: 41vh;
   }
   .hero-img h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 1em 0 0.75em;
   }
   .hero-img .hero-text .btn {
     font-size: 1.7rem;
   }
   .projects__box {
-    margin: 3em 0;
+    margin: 2em 2em;
   }
   .projects__box-img--right {
     position: relative;
-    left: 50%;
+    left: 47%;
   }
   .projects__img {
     padding-left: 1em;
@@ -569,6 +571,51 @@ body {
   .projects__title-right {
     text-align: right;
     padding-right: 2em;
+  }
+  .offers {
+    height: 600px;
+  }
+  .offers__popup {
+    display: flex;
+    margin-bottom: 2em;
+  }
+  .offers__popup-section {
+    width: 350px;
+  }
+  .offers__popup-section-coffee {
+    top: 100px;
+    left: 58px;
+  }
+  .offers__popup-section-ruler {
+    top: 100px;
+    left: 169px;
+  }
+  .offers__popup-section-house {
+    top: 100px;
+    left: 268px;
+  }
+  .offers__popup-section-furniture {
+    top: 240px;
+    left: 257px;
+  }
+  .offers__popup-section-brick {
+    top: 240px;
+    left: 152px;
+  }
+  .offers__popup-section-key {
+    left: 54px;
+    top: 270px;
+  }
+  .offers__popup-info {
+    margin: 0 2em;
+    width: 300px;
+  }
+  .offers__popup-info-header {
+    font-size: 2.1rem;
+  }
+  .offers__popup-info-text {
+    font-size: 1.4rem;
+    padding: 0.5em;
   }
   .contact {
     margin: 0 6em;
@@ -592,12 +639,15 @@ body {
     left: 0.7em;
     font-size: 1.8rem;
   }
+  .section-title {
+    font-size: 3rem;
+  }
   .hero-img {
     margin: 5em 0 0;
     padding: 2.5em 4em 3.5em;
   }
   .hero-img h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin: 1em 0 0.5em 0;
   }
   .hero-img .item1 {
@@ -630,8 +680,45 @@ body {
   .projects__title-right {
     padding-right: 2.2em;
   }
-  l30p .offer__popup-section {
-    width: 400px;
+  .offers {
+    height: 700px;
+  }
+  .offers__popup-section {
+    width: 450px;
+    font-size: 1.5rem;
+  }
+  .offers__popup-section-coffee {
+    top: 130px;
+    left: 80px;
+  }
+  .offers__popup-section-ruler {
+    top: 130px;
+    left: 225px;
+  }
+  .offers__popup-section-house {
+    top: 130px;
+    left: 350px;
+  }
+  .offers__popup-section-furniture {
+    top: 310px;
+    left: 330px;
+  }
+  .offers__popup-section-brick {
+    top: 300px;
+    left: 200px;
+  }
+  .offers__popup-section-key {
+    left: 75px;
+    top: 345px;
+  }
+  .offers__popup-info {
+    width: 350px;
+  }
+  .offers__popup-info-header {
+    font-size: 2.6rem;
+  }
+  .offers__popup-info-text {
+    font-size: 1.6rem;
   }
   .contact {
     margin: 2em 10em;
