@@ -184,7 +184,7 @@ body {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	margin: 4.5em 0 0 0;
+	margin-top: 3.5em;
 	padding: 2.5em 3em;
 	background-size: cover;
 	background-position: center;
@@ -194,7 +194,7 @@ body {
 	h1 {
 		text-transform: uppercase;
 		font-size: 2.3rem;
-		margin: 1.2em 0 0.5em 0;
+		margin: 1em 0 0.5em 0;
 	}
 
 	.item1 {
@@ -263,6 +263,7 @@ body {
 		left: 50%;
 		transform: translate(-50%);
 		font-size: 3rem;
+		margin: 0;
 		color: colors.$main-color;
 	}
 }
@@ -292,6 +293,14 @@ body {
 	&__title {
 		text-align: center;
 	}
+}
+
+.hide {
+	display: none;
+}
+
+.active {
+	display: true;
 }
 
 .offers {
@@ -382,16 +391,8 @@ body {
 				display: flex;
 				text-align: justify;
 				justify-content: center;
-				margin-top: 0.5em;
+				margin: 0.5em 1em;
 				font-size: 1.4rem;
-			}
-
-			&-two {
-				display: none;
-			}
-
-			&-three {
-				display: none;
 			}
 		}
 	}
@@ -499,6 +500,10 @@ body {
 			color: #292929;
 		}
 	}
+
+	&__year {
+		margin-left: 5px;
+	}
 }
 
 // ======================================
@@ -510,12 +515,11 @@ body {
 		padding: 2em 3em;
 		h1 {
 			font-size: 2.5rem;
-			margin: 1.5em 0 0.75em;
+			margin: 1.2em 0 0.5em;
 		}
 
 		.hero-text {
 			.btn {
-				// font-size: 2rem;
 				padding: 10px 20px;
 			}
 		}
@@ -550,6 +554,12 @@ body {
 				&-key {
 					top: 310px;
 					left: 65px;
+				}
+			}
+
+			&-info {
+				&-text {
+					margin: 0.5em 0;
 				}
 			}
 		}
@@ -587,19 +597,19 @@ body {
 		margin: 4.5em 0 0;
 		padding: 3em 4em;
 		.item1 {
-			height: 41vh;
+			height: 40vh;
 		}
 		.item2 {
-			height: 41vh;
+			height: 40vh;
 		}
 		.item3 {
-			height: 41vh;
+			height: 40vh;
 		}
 		.item4 {
-			height: 41vh;
+			height: 40vh;
 		}
 		.item5 {
-			height: 41vh;
+			height: 40vh;
 		}
 
 		h1 {
@@ -731,27 +741,23 @@ body {
 	}
 
 	.hero-img {
-		margin: 5em 0 0;
-		padding: 2.5em 4em 3.5em;
-		h1 {
-			font-size: 4rem;
-			margin: 1em 0 0.5em 0;
-		}
+		margin: 6em 0 0;
+		padding: 4em 8em 4em;
 
 		.item1 {
-			height: 38vh;
+			height: 35vh;
 		}
 		.item2 {
-			height: 38vh;
+			height: 35vh;
 		}
 		.item3 {
-			height: 38vh;
+			height: 35vh;
 		}
 		.item4 {
-			height: 38vh;
+			height: 35vh;
 		}
 		.item5 {
-			height: 38vh;
+			height: 35vh;
 		}
 
 		.hero-text {
@@ -811,7 +817,7 @@ body {
 			}
 
 			&-info {
-				width: 350px;
+				width: 400px;
 				&-header {
 					font-size: 2.6rem;
 				}
@@ -829,6 +835,7 @@ body {
 
 @media (min-width: 1200px) {
 	.hero-img {
+		margin: 5em 0;
 		.item1 {
 			height: 60vh;
 		}
@@ -843,6 +850,16 @@ body {
 		}
 		.item5 {
 			height: 60vh;
+		}
+
+		h1 {
+			font-size: 3.5rem;
+		}
+
+		.hero-text {
+			.btn {
+				font-size: 2.1rem;
+			}
 		}
 	}
 
@@ -879,7 +896,7 @@ body {
 
 	.hero-img {
 		margin-top: 5em;
-		padding: 3em 8em;
+		padding: 2.5em 8em;
 
 		.item1 {
 			height: 64vh;
