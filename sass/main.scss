@@ -373,7 +373,7 @@ body {
 
 			&-resize:hover {
 				color: #fff;
-				scale: 1.11;
+				scale: 1.1;
 				background-color: colors.$black;
 			}
 		}
@@ -389,7 +389,7 @@ body {
 
 			&-text {
 				display: flex;
-				text-align: justify;
+				text-align: center;
 				justify-content: center;
 				margin: 0.5em 1em;
 				font-size: 1.4rem;
@@ -421,54 +421,135 @@ body {
 	}
 }
 
+.wrapper {
+	width: 80vw;
+	max-width: 500px;
+	height: auto;
+	background-color: #fff;
+	margin: 4em 2em;
+	padding: 2em 2em;
+}
+
 .contact {
 	position: relative;
 	overflow: hidden;
-	margin: 0 2.5em;
-	padding: 2.5em 0;
+	margin: 4em 2em;
 
-	h2 {
+	&__wrapper {
+		display: flex;
+		justify-content: space-evenly;
+		&-slogan {
+			display: none;
+		}
+	}
+
+	&-title {
 		margin-top: 1em;
 	}
 
-	&__form-label {
-		margin-bottom: 0.5em;
-		text-transform: uppercase;
-	}
+	&__form {
+		&-label {
+			margin-bottom: 0.5em;
+			text-transform: uppercase;
+		}
+		&-input {
+			@include mixins.contactForm;
+			width: 100%;
+		}
 
-	&__form-input {
-		@include mixins.contactForm;
-		width: 100%;
-	}
+		&-textarea {
+			@include mixins.contactForm;
+			// max-width: 100%;
+			width: 100%;
+			min-height: 150px;
+		}
 
-	&__form-textarea {
-		@include mixins.contactForm;
-		max-width: 100%;
-		min-width: 100%;
-		min-height: 150px;
-	}
+		&-btn {
+			position: relative;
+			margin-top: 2em;
+			padding: 0.1em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			border: 1px solid colors.$black;
+			border-radius: 5px;
+			background-color: #fff;
+			cursor: pointer;
+		}
 
-	&__form-btn {
-		align-self: flex-end;
-		padding: 1em;
-		width: 100%;
-		border: 1px solid colors.$secondary-color;
-		border-radius: 5px;
-		background-color: #fff;
-		cursor: pointer;
-	}
+		&-btn:hover {
+			background-color: colors.$main-color;
+		}
 
-	&__form-btn:hover {
-		background-color: colors.$main-color;
+		&-popup {
+			position: absolute;
+			top: -350px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 5px 10px;
+			width: 50%;
+			height: 300px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			background-color: rgb(248, 249, 250);
+
+			p {
+				font-size: 3rem;
+				text-align: center;
+				margin-bottom: 40px;
+			}
+
+			&-close {
+				position: relative;
+				font-size: 2rem;
+				text-transform: uppercase;
+				padding: 2px 40px;
+				border: none;
+				border-radius: 8px;
+				color: colors.$black;
+				transition: background-color 0.3, color 0.3;
+				cursor: pointer;
+			}
+
+			&-close:hover {
+				color: #fff;
+				background-color: colors.$black;
+			}
+		}
 	}
+}
+
+.show-popup {
+	top: 350px;
+}
+
+.contact__form-box .error-text {
+	visibility: hidden;
+	padding: 0;
+	margin: 0 0 0 10px;
+	font-size: 1.4rem;
+	color: colors.$black;
+}
+
+.contact__form-box.error .error-text {
+	visibility: visible;
+}
+
+.contact__form-box.error input {
+	border-bottom: 2px solid colors.$secondary-color;
+}
+
+.contact__form-box.error textarea {
+	border-bottom: 2px solid colors.$secondary-color;
 }
 
 .footer {
 	position: relative;
 	&__box {
-		// position: absolute;
 		width: 100%;
-		margin-top: 2em;
 		padding: 3em 0;
 		background-color: colors.$third-color;
 		display: flex;
@@ -526,6 +607,7 @@ body {
 	}
 
 	.offers {
+		margin-bottom: 2em;
 		&__popup {
 			margin: 2em 1em;
 			&-section {
@@ -702,10 +784,6 @@ body {
 			}
 		}
 	}
-
-	.contact {
-		margin: 0 6em;
-	}
 }
 
 @media (min-width: 992px) {
@@ -788,7 +866,7 @@ body {
 		&__popup {
 			&-section {
 				width: 450px;
-				font-size: 1.5rem;
+				font-size: 1.8rem;
 
 				&-coffee {
 					top: 130px;
@@ -822,14 +900,23 @@ body {
 					font-size: 2.6rem;
 				}
 				&-text {
-					font-size: 1.6rem;
+					font-size: 1.7rem;
 				}
 			}
 		}
 	}
 
 	.contact {
-		margin: 2em 10em;
+		&__form {
+			&-popup {
+				&-text {
+					font-size: 4rem;
+				}
+				&-close {
+					font-size: 3rem;
+				}
+			}
+		}
 	}
 }
 
@@ -866,6 +953,31 @@ body {
 	.projects {
 		&__img {
 			max-width: 580px;
+		}
+	}
+
+	.contact {
+		margin: 3em 6em;
+		&__wrapper {
+			&-slogan {
+				display: inline-block;
+				width: 400px;
+				padding: 2em 2em;
+				margin: 8em 4em;
+				&-title{
+					font-size: 6rem;
+					text-align: center;
+				}
+				&-text {
+					position: relative;
+					margin-top: 4em;
+					width: 250px;
+					left: 50%;
+					transform: translate(-50%);
+					text-align: center;
+					font-size: 2rem;
+				}
+			}
 		}
 	}
 }
