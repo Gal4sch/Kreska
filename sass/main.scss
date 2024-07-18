@@ -1,6 +1,8 @@
 @use 'animations' as *;
 @use 'colors' as colors;
 @use 'mixins' as mixins;
+@use 'privacy' as *;
+@use 'project-one' as *;
 @use 'components' as components;
 
 *,
@@ -109,7 +111,7 @@ body {
 	}
 }
 
-.nav {
+nav {
 	text-transform: uppercase;
 	transition: background-color 0.6s;
 	z-index: 2;
@@ -168,6 +170,32 @@ body {
 
 	.navbar-toggler {
 		padding: 10px 15px;
+	}
+}
+
+.hero-title {
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		background: colors.$main-color;
+		content: '';
+	}
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin-top: 5em;
+	padding: 2em 12em;
+	z-index: 1;
+
+	h1 {
+		position: relative;
+		text-transform: uppercase;
+		font-size: 5rem;
+		margin-top: 3.5em;
+		text-align: center;
 	}
 }
 
@@ -422,29 +450,21 @@ body {
 }
 
 .wrapper {
-	width: 80vw;
+	width: 75vw;
 	max-width: 500px;
 	height: auto;
 	background-color: #fff;
-	margin: 4em 2em;
-	padding: 2em 2em;
 }
 
 .contact {
 	position: relative;
 	overflow: hidden;
-	margin: 4em 2em;
+	margin: 4em 4em;
 
 	&__wrapper {
-		display: flex;
-		justify-content: space-evenly;
 		&-slogan {
 			display: none;
 		}
-	}
-
-	&-title {
-		margin-top: 1em;
 	}
 
 	&__form {
@@ -459,9 +479,9 @@ body {
 
 		&-textarea {
 			@include mixins.contactForm;
-			// max-width: 100%;
+			max-width: 100%;
 			width: 100%;
-			min-height: 150px;
+			min-height: 200px;
 		}
 
 		&-btn {
@@ -787,17 +807,14 @@ body {
 }
 
 @media (min-width: 992px) {
-	nav {
+	.nav {
 		.nav-link {
-			&__items {
-				padding-top: 0;
-			}
-
 			&__item {
-				font-size: 2.5rem;
 				&::before {
 					width: 100%;
 				}
+				padding-top: 0;
+				font-size: 2.5rem;
 			}
 		}
 	}
@@ -908,6 +925,9 @@ body {
 
 	.contact {
 		&__form {
+			&-btn {
+				font-size: 2rem;
+			}
 			&-popup {
 				&-text {
 					font-size: 4rem;
@@ -921,6 +941,14 @@ body {
 }
 
 @media (min-width: 1200px) {
+	.nav {
+		.nav-link {
+			&__item {
+				font-size: 3rem;
+			}
+		}
+	}
+
 	.hero-img {
 		margin: 5em 0;
 		.item1 {
@@ -957,26 +985,36 @@ body {
 	}
 
 	.contact {
-		margin: 3em 6em;
+		margin: 6em 8em;
+		&-title {
+			display: none;
+		}
 		&__wrapper {
+			display: flex;
+			justify-content: space-evenly;
+			margin: 0 8em;
 			&-slogan {
 				display: inline-block;
 				width: 400px;
 				padding: 2em 2em;
 				margin: 8em 4em;
-				&-title{
+				&-title {
 					font-size: 6rem;
 					text-align: center;
 				}
 				&-text {
-					position: relative;
+					display: flex;
+					justify-content: center;
 					margin-top: 4em;
-					width: 250px;
-					left: 50%;
-					transform: translate(-50%);
 					text-align: center;
 					font-size: 2rem;
 				}
+			}
+		}
+
+		&__form {
+			&-btn {
+				font-size: 2.2rem;
 			}
 		}
 	}

@@ -136,15 +136,17 @@ const checkErrors = () => {
 	}
 };
 
-sendBtn.addEventListener('click', (e) => {
-	e.preventDefault();
+if (sendBtn) {
+	sendBtn.addEventListener('click', (e) => {
+		e.preventDefault();
 
-	checkForm([username, email, message]);
-	checkLength(username, 3);
-	validateEmail(email);
-	checkMessage(message, 1);
-	checkErrors();
-});
+		checkForm([username, email, message]);
+		checkLength(username, 3);
+		validateEmail(email);
+		checkMessage(message, 1);
+		checkErrors();
+	});
+}
 
 handleCurrentYear();
 offersStageOneButton.addEventListener('click', handleOffersStageOne);
