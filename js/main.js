@@ -1,3 +1,12 @@
+const allNavItems = document.querySelectorAll('.nav-link');
+const navList = document.querySelector('.navbar-collapse');
+
+allNavItems.forEach((item) =>
+	item.addEventListener('click', () => {
+		navList.classList.remove('show');
+	})
+);
+
 const offersStageOneButton = document.querySelector('.offers-stage-one-button');
 const offersStageTwoButton = document.querySelector('.offers-stage-two-button');
 const offersStageThreeButton = document.querySelector(

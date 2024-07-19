@@ -276,6 +276,21 @@ nav {
   transition: background-color 0.6s;
   z-index: 2;
 }
+nav .navbar-toggler {
+  padding: 10px 15px;
+}
+nav .nav-link,
+nav .navbar-nav .show > .nav-link,
+nav .navbar-brand,
+nav .fa-bars {
+  color: #000;
+}
+nav .nav-link:focus,
+nav .nav-link:hover,
+nav .navbar-nav .nav-link.active,
+nav .navbar-nav .show > .nav-link {
+  color: #e4d3cf;
+}
 nav .nav-link__item {
   position: relative;
   margin: 0 0.5em;
@@ -311,9 +326,6 @@ nav .nav-link__studio::before {
 }
 nav .nav-link__contact::before {
   width: 94px;
-}
-nav .navbar-toggler {
-  padding: 10px 15px;
 }
 
 .hero-title {
@@ -370,7 +382,7 @@ nav .navbar-toggler {
 }
 .hero-img .item1 {
   position: relative;
-  height: 55vh;
+  height: 58vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -379,7 +391,7 @@ nav .navbar-toggler {
 }
 .hero-img .item2 {
   position: relative;
-  height: 55vh;
+  height: 58vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -388,7 +400,7 @@ nav .navbar-toggler {
 }
 .hero-img .item3 {
   position: relative;
-  height: 55vh;
+  height: 58vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -397,7 +409,7 @@ nav .navbar-toggler {
 }
 .hero-img .item4 {
   position: relative;
-  height: 55vh;
+  height: 58vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -406,7 +418,7 @@ nav .navbar-toggler {
 }
 .hero-img .item5 {
   position: relative;
-  height: 55vh;
+  height: 58vh;
   width: 100%;
   background-size: cover;
   background-position: center;
