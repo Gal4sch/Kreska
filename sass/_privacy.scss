@@ -2,28 +2,24 @@
 
 .privacy__wrapper {
 	position: relative;
-	height: 100%;
-	width: 100%;
-	margin: 2em 0 10em;
-	padding: 0 12em;
+	margin: 1em 2em;
+	padding: 0 2em;
 	z-index: 1;
 
 	ol {
-		position: relative;
-		display: inline-block;
-		margin-top: 2em;
+		margin: 2em 1em 1em;
 		li {
-			text-align: justify;
 			position: relative;
-			text-align: left;
-			font-size: 2rem;
+			text-align: justify;
+			font-size: 1.4rem;
 		}
 	}
-
 	p {
 		position: relative;
-		text-align: left;
-		font-size: 2.5rem;
+		// margin: 0 em;
+		text-align: justify;
+		font-size: 1.4rem;
+		margin: 1em 2em;
 	}
 
 	a {
@@ -33,5 +29,35 @@
 
 	a:hover {
 		color: #885448;
+	}
+}
+
+@media (min-width: 768px) {
+	.privacy__wrapper{
+		margin: 2em 4em;
+		ol{
+			li{
+				font-size: 1.6rem;
+			}
+		}
+
+		p{
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.privacy__wrapper{
+		margin: 3em 6em;
+		ol{
+			li{
+				font-size: 1.8rem;
+			}
+		}
+
+		p{
+			font-size: 1.8rem;
+		}
 	}
 }

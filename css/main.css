@@ -9,27 +9,23 @@
 }
 .privacy__wrapper {
   position: relative;
-  height: 100%;
-  width: 100%;
-  margin: 2em 0 10em;
-  padding: 0 12em;
+  margin: 1em 2em;
+  padding: 0 2em;
   z-index: 1;
 }
 .privacy__wrapper ol {
-  position: relative;
-  display: inline-block;
-  margin-top: 2em;
+  margin: 2em 1em 1em;
 }
 .privacy__wrapper ol li {
-  text-align: justify;
   position: relative;
-  text-align: left;
-  font-size: 2rem;
+  text-align: justify;
+  font-size: 1.4rem;
 }
 .privacy__wrapper p {
   position: relative;
-  text-align: left;
-  font-size: 2.5rem;
+  text-align: justify;
+  font-size: 1.4rem;
+  margin: 1em 2em;
 }
 .privacy__wrapper a {
   text-decoration: none;
@@ -39,51 +35,134 @@
   color: #885448;
 }
 
+@media (min-width: 768px) {
+  .privacy__wrapper {
+    margin: 2em 4em;
+  }
+  .privacy__wrapper ol li {
+    font-size: 1.6rem;
+  }
+  .privacy__wrapper p {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1200px) {
+  .privacy__wrapper {
+    margin: 3em 6em;
+  }
+  .privacy__wrapper ol li {
+    font-size: 1.8rem;
+  }
+  .privacy__wrapper p {
+    font-size: 1.8rem;
+  }
+}
 .project {
-  position: absolute;
-  height: 500px;
+  position: relative;
+}
+.project__boxes {
+  margin: 0 2em 4em;
+}
+.project__box {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 1.5em;
 }
 .project__img {
-  cursor: pointer;
-}
-.project__img-scale {
-  transition: scale 0.3s;
+  width: 100%;
+  transition: transform 0.3s;
 }
 .project__img-one {
-  position: relative;
-  width: 500px;
-  margin: 2em;
-}
-.project__img-two {
-  position: relative;
-  width: 800px;
-  margin: 2em;
-  left: 520px;
-  bottom: 346px;
-}
-.project__img-three {
-  position: relative;
-  width: 500px;
-  margin: 2em;
-  bottom: 550px;
+  margin-bottom: 1em;
 }
 .project__img-four {
-  position: relative;
-  width: 800px;
-  margin: 2em;
-  left: 520px;
-  bottom: 730px;
+  margin-bottom: 1em;
 }
-.project__img-five {
-  position: relative;
-  width: 500px;
-  margin: 2em;
-  bottom: 1076px;
-}
-.project__img-scale:hover {
+.project__img:hover {
   scale: 1.01;
 }
 
+@media (min-width: 768px) {
+  .project__boxes {
+    margin: 2em 4em 6em;
+  }
+  .project__box {
+    margin: 2em 0;
+  }
+  .project__img-one {
+    margin-bottom: 2em;
+  }
+  .project__img-four {
+    margin-bottom: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .project__boxes {
+    margin: 0 3em 6em;
+  }
+  .project__box-resize {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .project__img-one {
+    position: relative;
+    height: 230px;
+    width: auto;
+    margin-bottom: 0;
+  }
+  .project__img-two {
+    position: relative;
+    height: 230px;
+    width: auto;
+  }
+  .project__img-three {
+    position: relative;
+  }
+  .project__img-four {
+    position: relative;
+    height: 230px;
+    width: auto;
+    margin-bottom: 0;
+  }
+  .project__img-five {
+    position: relative;
+    height: 230px;
+    width: auto;
+  }
+  .project__img-six {
+    position: relative;
+  }
+}
+@media (min-width: 1200px) {
+  .project__img-one {
+    height: 280px;
+  }
+  .project__img-two {
+    height: 280px;
+  }
+  .project__img-four {
+    height: 280px;
+  }
+  .project__img-five {
+    height: 280px;
+  }
+}
+@media (min-width: 1400px) {
+  .project__img-one {
+    height: 330px;
+  }
+  .project__img-two {
+    height: 330px;
+  }
+  .project__img-four {
+    height: 330px;
+  }
+  .project__img-five {
+    height: 330px;
+  }
+}
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -115,6 +194,9 @@ body {
 }
 
 .section-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
   text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
@@ -124,7 +206,7 @@ body {
   margin: 0 auto;
   width: 50px;
   height: 3px;
-  background-color: #b67162;
+  background-color: #e4d3cf;
 }
 
 .loading {
@@ -238,8 +320,11 @@ nav .navbar-toggler {
   position: relative;
   height: 100%;
   width: 100%;
-  margin-top: 5em;
-  padding: 2em 12em;
+  margin-top: 6.5em;
+  padding: 2.5em 3em;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   z-index: 1;
 }
 .hero-title::before {
@@ -252,11 +337,10 @@ nav .navbar-toggler {
   content: "";
 }
 .hero-title h1 {
-  position: relative;
   text-transform: uppercase;
-  font-size: 5rem;
-  margin-top: 3.5em;
-  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 4em;
+  margin-bottom: 0;
 }
 
 .hero-img {
@@ -286,7 +370,7 @@ nav .navbar-toggler {
 }
 .hero-img .item1 {
   position: relative;
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -295,7 +379,7 @@ nav .navbar-toggler {
 }
 .hero-img .item2 {
   position: relative;
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -304,7 +388,7 @@ nav .navbar-toggler {
 }
 .hero-img .item3 {
   position: relative;
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -313,7 +397,7 @@ nav .navbar-toggler {
 }
 .hero-img .item4 {
   position: relative;
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -322,12 +406,17 @@ nav .navbar-toggler {
 }
 .hero-img .item5 {
   position: relative;
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-image: url(../img/Kreska_projekt_2b.png);
+}
+.hero-img .hero-text h1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 .hero-img .hero-text .btn {
   font-size: 1.5rem;
@@ -363,7 +452,7 @@ nav .navbar-toggler {
 .projects__img {
   width: 100%;
   margin-bottom: 1em;
-  transition: transform 0.3s;
+  transition: transform 0.3s opacity 0.3s;
 }
 .projects__img:hover {
   transform: scale(1.02);
@@ -472,7 +561,7 @@ nav .navbar-toggler {
   position: relative;
   height: 100vh;
   width: 100%;
-  max-height: 600px;
+  max-height: 800px;
   background-image: url(../img/Kreska_projekt_2c.png);
   background-size: cover;
   background-position: center;
@@ -482,24 +571,28 @@ nav .navbar-toggler {
   padding: 2em;
   margin: 4em 1em;
   background-color: rgba(228, 211, 207, 0.9);
+  max-height: 700px;
 }
 .studio p {
+  position: relative;
+  display: flex;
+  justify-content: center;
   text-align: center;
   font-size: 1.4rem;
   padding: 1em 0 0;
+  max-height: 700px;
 }
 
 .wrapper {
-  width: 75vw;
-  max-width: 500px;
-  height: auto;
+  margin: 3em 0;
+  display: block;
   background-color: #fff;
 }
 
 .contact {
   position: relative;
   overflow: hidden;
-  margin: 4em 4em;
+  margin: 2em 4em;
 }
 .contact__wrapper-slogan {
   display: none;
@@ -687,6 +780,9 @@ nav .navbar-toggler {
   .offers__popup-info-text {
     margin: 0.5em 0;
   }
+  .contact {
+    margin: 2em 6em;
+  }
 }
 @media (min-width: 768px) {
   .loading img {
@@ -703,8 +799,14 @@ nav .navbar-toggler {
     left: 0.5em;
     font-size: 1.6rem;
   }
+  .nav .nav-link__item {
+    font-size: 2.4rem;
+  }
   .section-title {
     font-size: 2.5rem;
+  }
+  .hero-title h1 {
+    font-size: 3rem;
   }
   .hero-img {
     margin: 4.5em 0 0;
@@ -800,6 +902,9 @@ nav .navbar-toggler {
     font-size: 1.4rem;
     padding: 0.5em;
   }
+  .contact {
+    margin: 2em 8em;
+  }
 }
 @media (min-width: 992px) {
   .nav .nav-link__item {
@@ -894,6 +999,9 @@ nav .navbar-toggler {
   .offers__popup-info-text {
     font-size: 1.7rem;
   }
+  .contact {
+    margin: 4em 8em;
+  }
   .contact__form-btn {
     font-size: 2rem;
   }
@@ -906,7 +1014,11 @@ nav .navbar-toggler {
 }
 @media (min-width: 1200px) {
   .nav .nav-link__item {
-    font-size: 3rem;
+    font-size: 2.7rem;
+  }
+  .hero-title h1 {
+    margin-top: 3em;
+    font-size: 3.5rem;
   }
   .hero-img {
     margin: 5em 0;
@@ -935,31 +1047,38 @@ nav .navbar-toggler {
   .projects__img {
     max-width: 580px;
   }
-  .contact {
-    margin: 6em 8em;
+  .wrapper {
+    width: 65vw;
+    max-width: 450px;
   }
   .contact-title {
     display: none;
   }
   .contact__wrapper {
     display: flex;
-    justify-content: space-evenly;
-    margin: 0 8em;
+    justify-content: space-around;
   }
   .contact__wrapper-slogan {
     display: inline-block;
     width: 400px;
-    padding: 2em 2em;
-    margin: 8em 4em;
+    padding: 2em 0.5em;
+    margin: 10em 2em;
   }
   .contact__wrapper-slogan-title {
     font-size: 6rem;
     text-align: center;
   }
+  .contact__wrapper-slogan-underline {
+    position: relative;
+    margin: 1px auto;
+    width: 100px;
+    height: 3px;
+    background-color: #e4d3cf;
+  }
   .contact__wrapper-slogan-text {
     display: flex;
     justify-content: center;
-    margin-top: 4em;
+    margin-top: 2em;
     text-align: center;
     font-size: 2rem;
   }
@@ -1003,5 +1122,10 @@ nav .navbar-toggler {
   }
   .projects__img {
     max-width: 680px;
+  }
+}
+@media (min-width: 1400px) {
+  .wrapper {
+    max-width: 600px;
   }
 }/*# sourceMappingURL=main.css.map */

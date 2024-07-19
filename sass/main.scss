@@ -2,7 +2,7 @@
 @use 'colors' as colors;
 @use 'mixins' as mixins;
 @use 'privacy' as *;
-@use 'project-one' as *;
+@use 'project' as *;
 @use 'components' as components;
 
 *,
@@ -30,6 +30,9 @@ body {
 }
 
 .section-title {
+	position: relative;
+	display: flex;
+	justify-content: center;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 2rem;
@@ -39,7 +42,7 @@ body {
 	margin: 0 auto;
 	width: 50px;
 	height: 3px;
-	background-color: colors.$secondary-color;
+	background-color: colors.$main-color;
 }
 
 .loading {
@@ -186,16 +189,18 @@ nav {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	margin-top: 5em;
-	padding: 2em 12em;
+	margin-top: 6.5em;
+	padding: 2.5em 3em;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 	z-index: 1;
 
 	h1 {
-		position: relative;
 		text-transform: uppercase;
-		font-size: 5rem;
-		margin-top: 3.5em;
-		text-align: center;
+		font-size: 2.5rem;
+		margin-top: 4em;
+		margin-bottom: 0;
 	}
 }
 
@@ -227,7 +232,7 @@ nav {
 
 	.item1 {
 		position: relative;
-		height: 60vh;
+		height: 50vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
@@ -236,7 +241,7 @@ nav {
 	}
 	.item2 {
 		position: relative;
-		height: 60vh;
+		height: 50vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
@@ -245,7 +250,7 @@ nav {
 	}
 	.item3 {
 		position: relative;
-		height: 60vh;
+		height: 50vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
@@ -254,7 +259,7 @@ nav {
 	}
 	.item4 {
 		position: relative;
-		height: 60vh;
+		height: 50vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
@@ -263,7 +268,7 @@ nav {
 	}
 	.item5 {
 		position: relative;
-		height: 60vh;
+		height: 50vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
@@ -272,6 +277,11 @@ nav {
 	}
 
 	.hero-text {
+		h1 {
+			position: relative;
+			display: flex;
+			justify-content: center;
+		}
 		.btn {
 			font-size: 1.5rem;
 			padding: 10px 20px;
@@ -310,7 +320,7 @@ nav {
 	&__img {
 		width: 100%;
 		margin-bottom: 1em;
-		transition: transform 0.3s;
+		transition: transform 0.3s opacity 0.3s;
 	}
 
 	&__img:hover {
@@ -430,7 +440,7 @@ nav {
 	position: relative;
 	height: 100vh;
 	width: 100%;
-	max-height: 600px;
+	max-height: 800px;
 	background-image: url(../img/Kreska_projekt_2c.png);
 	background-size: cover;
 	background-position: center;
@@ -440,26 +450,30 @@ nav {
 		padding: 2em;
 		margin: 4em 1em;
 		background-color: rgba($color: colors.$main-color, $alpha: 0.9);
+		max-height: 700px;
 	}
 
 	p {
+		position: relative;
+		display: flex;
+		justify-content: center;
 		text-align: center;
 		font-size: 1.4rem;
 		padding: 1em 0 0;
+		max-height: 700px;
 	}
 }
 
 .wrapper {
-	width: 75vw;
-	max-width: 500px;
-	height: auto;
+	margin: 3em 0;
+	display: block;
 	background-color: #fff;
 }
 
 .contact {
 	position: relative;
 	overflow: hidden;
-	margin: 4em 4em;
+	margin: 2em 4em;
 
 	&__wrapper {
 		&-slogan {
@@ -666,6 +680,10 @@ nav {
 			}
 		}
 	}
+
+	.contact {
+		margin: 2em 6em;
+	}
 }
 
 @media (min-width: 768px) {
@@ -691,8 +709,22 @@ nav {
 		}
 	}
 
+	.nav {
+		.nav-link {
+			&__item {
+				font-size: 2.4rem;
+			}
+		}
+	}
+
 	.section-title {
 		font-size: 2.5rem;
+	}
+
+	.hero-title {
+		h1 {
+			font-size: 3rem;
+		}
 	}
 
 	.hero-img {
@@ -803,6 +835,9 @@ nav {
 				}
 			}
 		}
+	}
+	.contact {
+		margin: 2em 8em;
 	}
 }
 
@@ -924,6 +959,7 @@ nav {
 	}
 
 	.contact {
+		margin: 4em 8em;
 		&__form {
 			&-btn {
 				font-size: 2rem;
@@ -944,8 +980,15 @@ nav {
 	.nav {
 		.nav-link {
 			&__item {
-				font-size: 3rem;
+				font-size: 2.7rem;
 			}
+		}
+	}
+
+	.hero-title {
+		h1 {
+			margin-top: 3em;
+			font-size: 3.5rem;
 		}
 	}
 
@@ -984,34 +1027,43 @@ nav {
 		}
 	}
 
+	.wrapper {
+		width: 65vw;
+		max-width: 450px;
+	}
+
 	.contact {
-		margin: 6em 8em;
 		&-title {
 			display: none;
 		}
 		&__wrapper {
 			display: flex;
-			justify-content: space-evenly;
-			margin: 0 8em;
+			justify-content: space-around;
 			&-slogan {
 				display: inline-block;
 				width: 400px;
-				padding: 2em 2em;
-				margin: 8em 4em;
+				padding: 2em 0.5em;
+				margin: 10em 2em;
 				&-title {
 					font-size: 6rem;
 					text-align: center;
 				}
+				&-underline {
+					position: relative;
+					margin: 1px auto;
+					width: 100px;
+					height: 3px;
+					background-color: colors.$main-color;
+				}
 				&-text {
 					display: flex;
 					justify-content: center;
-					margin-top: 4em;
+					margin-top: 2em;
 					text-align: center;
 					font-size: 2rem;
 				}
 			}
 		}
-
 		&__form {
 			&-btn {
 				font-size: 2.2rem;
@@ -1069,5 +1121,11 @@ nav {
 		&__img {
 			max-width: 680px;
 		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.wrapper {
+		max-width: 600px;
 	}
 }
