@@ -539,7 +539,7 @@ nav .nav-link__contact::before {
 .offers__popup-section-key {
   position: absolute;
   left: 60px;
-  top: 185px;
+  top: 177px;
 }
 .offers__popup-section-resize {
   text-align: center;
@@ -568,8 +568,8 @@ nav .nav-link__contact::before {
   display: flex;
   text-align: center;
   justify-content: center;
-  margin: 0.5em 1em;
-  font-size: 1.1rem;
+  margin: 1em 2em;
+  font-size: 1rem;
 }
 
 .studio {
