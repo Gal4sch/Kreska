@@ -356,7 +356,7 @@ nav {
 
 .offers {
 	position: relative;
-	height: 900px;
+	height: 600px;
 
 	&__box {
 		margin: 1em;
@@ -372,44 +372,47 @@ nav {
 			height: auto;
 
 			&-img {
+				position: relative;
 				margin-top: 0.5em;
-				max-width: 100%;
+				width: 80%;
 				height: auto;
+				left: 50%;
+				transform: translate(-50%);
 			}
 
 			&-title {
-				font-size: 1.2rem;
+				font-size: 1rem;
 			}
 
 			&-coffee {
 				position: absolute;
-				left: 45px;
-				top: 80px;
+				left: 65px;
+				top: 65px;
 			}
 			&-ruler {
 				position: absolute;
 				left: 145px;
-				top: 80px;
+				top: 65px;
 			}
 			&-house {
 				position: absolute;
-				left: 228px;
-				top: 80px;
+				left: 210px;
+				top: 65px;
 			}
 			&-furniture {
 				position: absolute;
-				left: 215px;
-				top: 200px;
+				left: 200px;
+				top: 165px;
 			}
 			&-brick {
 				position: absolute;
 				left: 130px;
-				top: 200px;
+				top: 165px;
 			}
 			&-key {
 				position: absolute;
-				left: 45px;
-				top: 225px;
+				left: 60px;
+				top: 185px;
 			}
 
 			&-resize {
@@ -435,7 +438,7 @@ nav {
 				margin-top: 1em;
 				display: flex;
 				justify-content: center;
-				font-size: 2rem;
+				font-size: 1.5rem;
 			}
 
 			&-text {
@@ -443,7 +446,7 @@ nav {
 				text-align: center;
 				justify-content: center;
 				margin: 0.5em 1em;
-				font-size: 1.4rem;
+				font-size: 1.1rem;
 			}
 		}
 	}
@@ -535,25 +538,26 @@ nav {
 			left: 50%;
 			transform: translate(-50%, -50%);
 			padding: 5px 10px;
-			width: 50%;
-			height: 300px;
+			width: 80%;
+			height: 150px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
+			border-radius: 5px;
 			background-color: rgb(248, 249, 250);
 
 			p {
-				font-size: 3rem;
+				font-size: 1.5rem;
 				text-align: center;
-				margin-bottom: 40px;
+				// margin-bottom: 40px;
 			}
 
 			&-close {
 				position: relative;
-				font-size: 2rem;
+				font-size: 1rem;
 				text-transform: uppercase;
-				padding: 2px 40px;
+				padding: 5px 30px;
 				border: none;
 				border-radius: 8px;
 				color: colors.$black;
@@ -570,7 +574,7 @@ nav {
 }
 
 .show-popup {
-	top: 350px;
+	top: 260px;
 }
 
 .contact__form-box .error-text {
@@ -597,7 +601,7 @@ nav {
 	position: relative;
 	&__box {
 		width: 100%;
-		padding: 3em 0;
+		padding: 1em 0;
 		background-color: colors.$third-color;
 		display: flex;
 		justify-content: space-around;
@@ -606,14 +610,22 @@ nav {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			padding: 0 20px;
 		}
 
 		&-copy {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin: 0;
-			padding: 0 10px;
+			&-mobile {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.5rem;
+				margin: 0 10px;
+				padding: 0 10px;
+			}
+
+			&-desktop {
+				display: none;
+			}
 		}
 
 		&-privacy {
@@ -622,6 +634,8 @@ nav {
 			align-items: center;
 			text-decoration: none;
 			color: colors.$black;
+			margin: 0 10px;
+			font-size: 1.5rem;
 		}
 
 		&-privacy:hover {
@@ -654,40 +668,48 @@ nav {
 	}
 
 	.offers {
-		margin-bottom: 2em;
+		margin-bottom: 6em;
+		height: 700px;
 		&__popup {
 			margin: 2em 1em;
 			&-section {
 				width: 400px;
 				font-size: 1.2rem;
+				&-img {
+					margin-bottom: 1em;
+				}
 				&-coffee {
-					top: 110px;
-					left: 65px;
+					top: 90px;
+					left: 90px;
 				}
 				&-ruler {
-					top: 110px;
-					left: 198px;
+					top: 90px;
+					left: 195px;
 				}
 				&-house {
-					top: 110px;
-					left: 308px;
+					top: 90px;
+					left: 285px;
 				}
 				&-furniture {
-					top: 265px;
-					left: 298px;
+					top: 225px;
+					left: 275px;
 				}
 				&-brick {
-					top: 270px;
-					left: 178px;
+					top: 215px;
+					left: 180px;
 				}
 				&-key {
-					top: 310px;
-					left: 65px;
+					top: 245px;
+					left: 90px;
 				}
 			}
 
 			&-info {
+				&-header {
+					font-size: 2rem;
+				}
 				&-text {
+					font-size: 1.5rem;
 					margin: 0.5em 0;
 				}
 			}
@@ -803,12 +825,19 @@ nav {
 	}
 
 	.offers {
+		margin-bottom: 2em;
 		height: 600px;
 		&__popup {
 			display: flex;
 			margin-bottom: 2em;
 
 			&-section {
+				&-img {
+					position: relative;
+					margin-top: 0.5em;
+					width: 100%;
+					height: auto;
+				}
 				width: 350px;
 				&-coffee {
 					top: 100px;
@@ -851,6 +880,28 @@ nav {
 	}
 	.contact {
 		margin: 2em 8em;
+	}
+
+	.footer {
+		&__box {
+			&-copy {
+				&-mobile {
+					display: none;
+				}
+
+				&-desktop {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 1.5rem;
+					margin: 0 10px;
+					padding: 0 10px;
+				}
+			}
+			&-privacy {
+				font-size: 1.5rem;
+			}
+		}
 	}
 }
 
@@ -978,14 +1029,22 @@ nav {
 				font-size: 2rem;
 			}
 			&-popup {
-				&-text {
-					font-size: 4rem;
+				z-index: 1;
+				width: 50%;
+				height: 200px;
+				padding: 10px 20px;
+				p {
+					font-size: 2rem;
 				}
 				&-close {
-					font-size: 3rem;
+					font-size: 2rem;
 				}
 			}
 		}
+	}
+
+	.show-popup {
+		top: 300px;
 	}
 }
 

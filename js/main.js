@@ -26,8 +26,10 @@ const stageThree = document.querySelector('.stage-three');
 const stageFour = document.querySelector('.stage-four');
 const stageFive = document.querySelector('.stage-five');
 const stageSix = document.querySelector('.stage-six');
+const stages = document.querySelector('.stages');
 
-const footerYear = document.querySelector('.footer__year');
+const footerYearMobile = document.querySelector('.footer__year-mobile');
+const footerYearDesktop = document.querySelector('.footer__year-desktop');
 
 const username = document.querySelector('#username');
 const email = document.querySelector('#email');
@@ -35,7 +37,7 @@ const message = document.querySelector('#msg');
 const sendBtn = document.querySelector('.send');
 const popup = document.querySelector('.popup');
 
-const handleOffersStageOne = () => {
+const handleOffersStage = () => {
 	stageOne.classList.remove('hide');
 	stageTwo.classList.add('hide');
 	stageThree.classList.add('hide');
@@ -86,7 +88,8 @@ const handleOffersStageSix = () => {
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
-	footerYear.innerText = year;
+	footerYearMobile.innerText = year;
+	footerYearDesktop.innerText = year;
 };
 
 const showError = (input, msg) => {
@@ -158,7 +161,7 @@ if (sendBtn) {
 }
 
 handleCurrentYear();
-offersStageOneButton.addEventListener('click', handleOffersStageOne);
+offersStageOneButton.addEventListener('click', handleOffersStage);
 offersStageTwoButton.addEventListener('click', handleOffersStageTwo);
 offersStageThreeButton.addEventListener('click', handleOffersStageThree);
 offersStageFourButton.addEventListener('click', handleOffersStageFour);
