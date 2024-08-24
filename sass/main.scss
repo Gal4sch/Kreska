@@ -45,6 +45,14 @@ body {
 	background-color: colors.$main-color;
 }
 
+.build {
+	font-size: 72px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .loading {
 	position: fixed;
 	background-color: #fff;
@@ -368,13 +376,16 @@ nav {
 			font-size: 1.2rem;
 			width: 300px;
 			height: auto;
+			color: #fff;
 
 			&-img {
 				position: relative;
-				margin-top: 0.5em;
-				width: 80%;
+				margin-top: 2em;
+				width: 100%;
 				height: auto;
+				top: 25%;
 				left: 50%;
+				box-shadow: 1px 1px 5px black;
 				transform: translate(-50%);
 			}
 
@@ -384,13 +395,13 @@ nav {
 
 			&-coffee {
 				position: absolute;
-				left: 65px;
-				top: 65px;
+				left: 60px;
+				top: 70px;
 			}
 			&-ruler {
 				position: absolute;
-				left: 145px;
-				top: 65px;
+				left: 120px;
+				top: 50px;
 			}
 			&-house {
 				position: absolute;
@@ -399,34 +410,37 @@ nav {
 			}
 			&-furniture {
 				position: absolute;
-				left: 200px;
-				top: 165px;
+				left: 210px;
+				top: 125px;
 			}
 			&-brick {
 				position: absolute;
-				left: 130px;
-				top: 165px;
+				left: 135px;
+				top: 115px;
 			}
 			&-key {
 				position: absolute;
 				left: 60px;
-				top: 177px;
+				top: 125px;
 			}
 
 			&-resize {
 				text-align: center;
-				background-color: #ddd;
+				background-color: colors.$main-color;
 				border-radius: 50%;
-				padding: 2px;
-				margin: 1px;
+				border: 2px solid colors.$secondary-color;
+				width: 10px;
+				height: 10px;
+				margin: 5px;
+				padding: 5px;
 				transition: color 0.3s, scale 0.3s, background-color 0.3s;
 				cursor: pointer;
 			}
 
 			&-resize:hover {
-				color: #fff;
-				scale: 1.1;
-				background-color: colors.$black;
+				scale: 1.2;
+				border: 2px solid colors.$secondary-color;
+				background-color: white;
 			}
 		}
 
@@ -668,37 +682,43 @@ nav {
 	.offers {
 		margin-bottom: 6em;
 		height: 700px;
+
 		&__popup {
-			margin: 2em 1em;
+			margin-top: 2em;
 			&-section {
-				width: 400px;
 				font-size: 1.2rem;
+				width: 455px;
 				&-img {
 					margin-bottom: 1em;
 				}
 				&-coffee {
-					top: 90px;
-					left: 90px;
+					top: 100px;
+					left: 100px;
 				}
 				&-ruler {
-					top: 90px;
+					top: 60px;
 					left: 195px;
 				}
 				&-house {
-					top: 90px;
-					left: 285px;
+					top: 100px;
+					left: 315px;
 				}
 				&-furniture {
-					top: 225px;
-					left: 275px;
+					top: 170px;
+					left: 320px;
 				}
 				&-brick {
-					top: 215px;
-					left: 180px;
+					top: 175px;
+					left: 210px;
 				}
 				&-key {
-					top: 245px;
-					left: 90px;
+					top: 181px;
+					left: 96px;
+				}
+
+				&-resize {
+					width: 20px;
+					height: 20px;
 				}
 			}
 
@@ -830,13 +850,12 @@ nav {
 			margin-bottom: 2em;
 
 			&-section {
+				width: 300px;
+				height: auto;
 				&-img {
 					position: relative;
 					margin-top: 0.5em;
-					width: 100%;
-					height: auto;
 				}
-				width: 350px;
 				&-coffee {
 					top: 100px;
 					left: 58px;

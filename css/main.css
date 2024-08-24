@@ -213,6 +213,14 @@ body {
   background-color: #e4d3cf;
 }
 
+.build {
+  font-size: 72px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .loading {
   position: fixed;
   background-color: #fff;
@@ -501,13 +509,16 @@ nav .nav-link__contact::before {
   font-size: 1.2rem;
   width: 300px;
   height: auto;
+  color: #fff;
 }
 .offers__popup-section-img {
   position: relative;
-  margin-top: 0.5em;
-  width: 80%;
+  margin-top: 2em;
+  width: 100%;
   height: auto;
+  top: 25%;
   left: 50%;
+  box-shadow: 1px 1px 5px black;
   transform: translate(-50%);
 }
 .offers__popup-section-title {
@@ -515,13 +526,13 @@ nav .nav-link__contact::before {
 }
 .offers__popup-section-coffee {
   position: absolute;
-  left: 65px;
-  top: 65px;
+  left: 60px;
+  top: 70px;
 }
 .offers__popup-section-ruler {
   position: absolute;
-  left: 145px;
-  top: 65px;
+  left: 120px;
+  top: 50px;
 }
 .offers__popup-section-house {
   position: absolute;
@@ -530,32 +541,35 @@ nav .nav-link__contact::before {
 }
 .offers__popup-section-furniture {
   position: absolute;
-  left: 200px;
-  top: 165px;
+  left: 210px;
+  top: 125px;
 }
 .offers__popup-section-brick {
   position: absolute;
-  left: 130px;
-  top: 165px;
+  left: 135px;
+  top: 115px;
 }
 .offers__popup-section-key {
   position: absolute;
   left: 60px;
-  top: 177px;
+  top: 125px;
 }
 .offers__popup-section-resize {
   text-align: center;
-  background-color: #ddd;
+  background-color: #e4d3cf;
   border-radius: 50%;
-  padding: 2px;
-  margin: 1px;
+  border: 2px solid #b67162;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  padding: 5px;
   transition: color 0.3s, scale 0.3s, background-color 0.3s;
   cursor: pointer;
 }
 .offers__popup-section-resize:hover {
-  color: #fff;
-  scale: 1.1;
-  background-color: #000;
+  scale: 1.2;
+  border: 2px solid #b67162;
+  background-color: white;
 }
 .offers__popup-info {
   margin-top: 2em;
@@ -772,38 +786,42 @@ nav .nav-link__contact::before {
     height: 700px;
   }
   .offers__popup {
-    margin: 2em 1em;
+    margin-top: 2em;
   }
   .offers__popup-section {
-    width: 400px;
     font-size: 1.2rem;
+    width: 455px;
   }
   .offers__popup-section-img {
     margin-bottom: 1em;
   }
   .offers__popup-section-coffee {
-    top: 90px;
-    left: 90px;
+    top: 100px;
+    left: 100px;
   }
   .offers__popup-section-ruler {
-    top: 90px;
+    top: 60px;
     left: 195px;
   }
   .offers__popup-section-house {
-    top: 90px;
-    left: 285px;
+    top: 100px;
+    left: 315px;
   }
   .offers__popup-section-furniture {
-    top: 225px;
-    left: 275px;
+    top: 170px;
+    left: 320px;
   }
   .offers__popup-section-brick {
-    top: 215px;
-    left: 180px;
+    top: 175px;
+    left: 210px;
   }
   .offers__popup-section-key {
-    top: 245px;
-    left: 90px;
+    top: 181px;
+    left: 96px;
+  }
+  .offers__popup-section-resize {
+    width: 20px;
+    height: 20px;
   }
   .offers__popup-info-header {
     font-size: 2rem;
@@ -898,13 +916,12 @@ nav .nav-link__contact::before {
     margin-bottom: 2em;
   }
   .offers__popup-section {
-    width: 350px;
+    width: 300px;
+    height: auto;
   }
   .offers__popup-section-img {
     position: relative;
     margin-top: 0.5em;
-    width: 100%;
-    height: auto;
   }
   .offers__popup-section-coffee {
     top: 100px;
