@@ -1,5 +1,8 @@
+@use 'animations' as *;
 @use 'colors' as colors;
 @use 'mixins' as mixins;
+@use 'privacy' as *;
+@use 'project' as *;
 @use 'components' as components;
 
 *,
@@ -18,80 +21,642 @@ html {
 
 body {
 	font-family: 'Poiret One', sans-serif;
-	color: colors.$black;
 	font-size: 1.6rem;
+	color: colors.$black;
 }
 
-.bg-color {
+.navbar-bg-color {
 	background-color: rgba($color: colors.$main-color, $alpha: 1);
+}
+
+.section-title {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+
+.underline {
+	margin: 0 auto;
+	width: 50px;
+	height: 3px;
+	background-color: colors.$main-color;
+}
+
+.build {
+	font-size: 72px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.loading {
+	position: fixed;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	animation: load-out 1s forwards;
+
+	img {
+		position: relative;
+		width: 200px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	p {
+		position: absolute;
+		left: 50%;
+		font-size: 1.4rem;
+		transform: translate(-50%);
+	}
+}
+
+.brand {
+	h2 {
+		position: fixed;
+		top: 0;
+		left: 100%;
+		transform: translate(-50%);
+		writing-mode: vertical-rl;
+		font-size: 1.7rem;
+		height: 100vh;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		padding-top: 0.75em;
+		line-height: 0.5em;
+		margin: -1.25em -1.3em;
+		z-index: 2;
+	}
+
+	&__social {
+		position: fixed;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		top: 50%;
+		font-size: 1.5rem;
+		transform: translateY(-50%);
+		writing-mode: vertical-rl;
+		z-index: 2;
+
+		a {
+			margin: 10px;
+			color: colors.$black;
+		}
+
+		a:hover {
+			color: colors.$third-color;
+		}
+	}
 }
 
 nav {
 	text-transform: uppercase;
 	transition: background-color 0.6s;
-	z-index: 1;
+	z-index: 2;
+	.navbar-toggler {
+		padding: 10px 15px;
+	}
+
+	.nav-link,
+	.navbar-nav .show > .nav-link,
+	.navbar-brand,
+	.fa-bars {
+		color: colors.$black;
+	}
+
+	.nav-link:focus,
+	.nav-link:hover,
+	.navbar-nav .nav-link.active,
+	.navbar-nav .show > .nav-link {
+		color: colors.$main-color;
+	}
 
 	.nav-link {
 		&__item {
 			position: relative;
-			margin: 0 1.5em;
+			margin: 0 0.5em;
 			font-size: 2.2rem;
 			color: colors.$black;
+			display: flex;
+			align-items: center;
 			text-decoration: none;
 
+			&::before {
+				position: absolute;
+				bottom: 3px;
+				height: 3px;
+				transform: scaleX(0);
+				background-color: colors.$secondary-color;
+				transition: transform 0.3s;
+				content: '';
+			}
+
+			&:hover::before,
+			&:focus::before {
+				transform: scaleX(1);
+			}
+
+			&:hover,
 			&:focus {
-				color: colors.$third-color;
+				color: colors.$black;
+			}
+		}
+		&__projects {
+			&::before {
+				width: 89px;
+			}
+		}
+		&__offers {
+			&::before {
+				width: 70px;
+			}
+		}
+		&__studio {
+			&::before {
+				width: 66px;
+			}
+		}
+		&__contact {
+			&::before {
+				width: 94px;
 			}
 		}
 	}
-
-	.navbar-toggler {
-		padding: 10px 15px;
-	}
 }
 
-.hero-img {
-	position: absolute;
-	top: 90px;
-	height: 100vh;
+.hero-title {
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		background: colors.$main-color;
+		content: '';
+	}
+	position: relative;
+	height: 100%;
 	width: 100%;
+	margin-top: 6.5em;
+	padding: 2.5em 3em;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	z-index: 0;
+	z-index: 1;
 
 	h1 {
 		text-transform: uppercase;
 		font-size: 2.5rem;
-		margin: 50px 0 20px 0;
+		margin-top: 4em;
+		margin-bottom: 0;
+	}
+}
+
+.hero-img {
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		background: colors.$main-color;
+		content: '';
+	}
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin-top: 3.5em;
+	padding: 2.5em 3em;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: 1;
+
+	h1 {
+		text-transform: uppercase;
+		font-size: 2.3rem;
+		margin: 1em 0 0.5em 0;
+	}
+
+	.item1 {
+		position: relative;
+		height: 57vh;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		background-image: url(../img/Kreska_projekt_1c.png);
+	}
+	.item2 {
+		position: relative;
+		height: 57vh;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		background-image: url(../img/Kreska_projekt_1e.png);
+	}
+	.item3 {
+		position: relative;
+		height: 57vh;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		background-image: url(../img/Kreska_projekt_3a.png);
+	}
+	.item4 {
+		position: relative;
+		height: 57vh;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		background-image: url(../img/Kreska_projekt_1d.png);
+	}
+	.item5 {
+		position: relative;
+		height: 57vh;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		background-image: url(../img/Kreska_projekt_2b.png);
 	}
 
 	.hero-text {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		height: 100%;
-
+		h1 {
+			position: relative;
+			display: flex;
+			justify-content: center;
+		}
 		.btn {
 			font-size: 1.5rem;
 			padding: 10px 20px;
+			margin-bottom: 10px;
 			color: colors.$black;
-			border-color: black;
+			border-color: colors.$black;
+			transition: background-color 0.3s;
 		}
 
 		.btn:hover {
 			background-color: colors.$main-color;
 		}
 	}
+
 	.fa-chevron-down {
 		position: absolute;
-		bottom: 10px;
 		left: 50%;
 		transform: translate(-50%);
 		font-size: 3rem;
+		margin: 0;
 		color: colors.$main-color;
+	}
+}
+
+.projects {
+	position: relative;
+	h2 {
+		margin-top: 1em;
+	}
+	&__box {
+		display: flex;
+		flex-direction: row;
+		margin: 2em 1em;
+	}
+
+	&__img {
+		width: 100%;
+		margin-bottom: 1em;
+		transition: transform 0.3s opacity 0.3s;
+	}
+
+	&__img:hover {
+		transform: scale(1.02);
+		opacity: 0.9;
+	}
+
+	&__title {
+		text-align: center;
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.active {
+	display: true;
+}
+
+.offers {
+	position: relative;
+	height: 600px;
+
+	&__box {
+		margin: 1em;
+	}
+	&__popup {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		&-section {
+			position: relative;
+			font-size: 1.2rem;
+			width: 300px;
+			height: auto;
+			color: #fff;
+
+			&-img {
+				position: relative;
+				margin-top: 2em;
+				width: 100%;
+				height: auto;
+				top: 25%;
+				left: 50%;
+				box-shadow: 1px 1px 5px black;
+				transform: translate(-50%);
+			}
+
+			&-title {
+				font-size: 1rem;
+			}
+
+			&-coffee {
+				position: absolute;
+				left: 60px;
+				top: 70px;
+			}
+			&-ruler {
+				position: absolute;
+				left: 120px;
+				top: 50px;
+			}
+			&-house {
+				position: absolute;
+				left: 210px;
+				top: 65px;
+			}
+			&-furniture {
+				position: absolute;
+				left: 210px;
+				top: 125px;
+			}
+			&-brick {
+				position: absolute;
+				left: 135px;
+				top: 115px;
+			}
+			&-key {
+				position: absolute;
+				left: 60px;
+				top: 125px;
+			}
+
+			&-resize {
+				text-align: center;
+				background-color: colors.$main-color;
+				border-radius: 50%;
+				border: 2px solid colors.$secondary-color;
+				width: 10px;
+				height: 10px;
+				margin: 5px;
+				padding: 5px;
+				transition: color 0.3s, scale 0.3s, background-color 0.3s;
+				cursor: pointer;
+			}
+
+			&-resize:hover {
+				scale: 1.2;
+				border: 2px solid colors.$secondary-color;
+				background-color: white;
+			}
+		}
+
+		&-info {
+			margin-top: 2em;
+			&-header {
+				margin-top: 1em;
+				display: flex;
+				justify-content: center;
+				font-size: 1.5rem;
+			}
+
+			&-text {
+				display: flex;
+				text-align: center;
+				justify-content: center;
+				margin: 1em 2em;
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+.studio {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	max-height: 800px;
+	background-image: url(../img/Kreska_projekt_2c.png);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+	&__info {
+		padding: 2em;
+		margin: 4em 1em;
+		background-color: rgba($color: colors.$main-color, $alpha: 0.9);
+		max-height: 700px;
+	}
+
+	p {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1.4rem;
+		padding: 1em 0 0;
+		max-height: 700px;
+	}
+}
+
+.wrapper {
+	margin: 3em 0;
+	display: block;
+	background-color: #fff;
+}
+
+.contact {
+	position: relative;
+	overflow: hidden;
+	margin: 2em 4em;
+
+	&__wrapper {
+		&-slogan {
+			display: none;
+		}
+	}
+
+	&__form {
+		&-label {
+			margin-bottom: 0.5em;
+			text-transform: uppercase;
+		}
+		&-input {
+			@include mixins.contactForm;
+			width: 100%;
+		}
+
+		&-textarea {
+			@include mixins.contactForm;
+			max-width: 100%;
+			width: 100%;
+			min-height: 200px;
+		}
+
+		&-btn {
+			position: relative;
+			margin-top: 2em;
+			padding: 0.1em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			border: 1px solid colors.$black;
+			border-radius: 5px;
+			background-color: #fff;
+			cursor: pointer;
+		}
+
+		&-btn:hover {
+			background-color: colors.$main-color;
+		}
+
+		&-popup {
+			position: absolute;
+			top: -350px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 5px 10px;
+			width: 80%;
+			height: 150px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			border-radius: 5px;
+			background-color: rgb(248, 249, 250);
+
+			p {
+				font-size: 1.5rem;
+				text-align: center;
+				// margin-bottom: 40px;
+			}
+
+			&-close {
+				position: relative;
+				font-size: 1rem;
+				text-transform: uppercase;
+				padding: 5px 30px;
+				border: none;
+				border-radius: 8px;
+				color: colors.$black;
+				transition: background-color 0.3, color 0.3;
+				cursor: pointer;
+			}
+
+			&-close:hover {
+				color: #fff;
+				background-color: colors.$black;
+			}
+		}
+	}
+}
+
+.show-popup {
+	top: 260px;
+}
+
+.contact__form-box .error-text {
+	visibility: hidden;
+	padding: 0;
+	margin: 0 0 0 10px;
+	font-size: 1.4rem;
+	color: colors.$black;
+}
+
+.contact__form-box.error .error-text {
+	visibility: visible;
+}
+
+.contact__form-box.error input {
+	border-bottom: 2px solid colors.$secondary-color;
+}
+
+.contact__form-box.error textarea {
+	border-bottom: 2px solid colors.$secondary-color;
+}
+
+.footer {
+	position: relative;
+	&__box {
+		width: 100%;
+		padding: 1em 0;
+		background-color: colors.$third-color;
+		display: flex;
+		justify-content: space-around;
+
+		&-brand {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 20px;
+		}
+
+		&-copy {
+			&-mobile {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.5rem;
+				margin: 0 10px;
+				padding: 0 10px;
+			}
+
+			&-desktop {
+				display: none;
+			}
+		}
+
+		&-privacy {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			color: colors.$black;
+			margin: 0 10px;
+			font-size: 1.5rem;
+		}
+
+		&-privacy:hover {
+			color: #292929;
+		}
+	}
+
+	&__year {
+		margin-left: 5px;
 	}
 }
 
@@ -101,51 +666,555 @@ nav {
 
 @media (min-width: 576px) {
 	.hero-img {
+		padding: 2em 3em;
 		h1 {
-			font-size: 3.2rem;
+			font-size: 2.5rem;
+			margin: 1.2em 0 0.5em;
+		}
+
+		.hero-text {
+			.btn {
+				padding: 10px 20px;
+			}
+		}
+	}
+
+	.offers {
+		margin-bottom: 6em;
+		height: 700px;
+
+		&__popup {
+			margin-top: 2em;
+			&-section {
+				font-size: 1.2rem;
+				width: 455px;
+				&-img {
+					margin-bottom: 1em;
+				}
+				&-coffee {
+					top: 100px;
+					left: 100px;
+				}
+				&-ruler {
+					top: 60px;
+					left: 195px;
+				}
+				&-house {
+					top: 100px;
+					left: 315px;
+				}
+				&-furniture {
+					top: 170px;
+					left: 320px;
+				}
+				&-brick {
+					top: 175px;
+					left: 210px;
+				}
+				&-key {
+					top: 181px;
+					left: 96px;
+				}
+
+				&-resize {
+					width: 20px;
+					height: 20px;
+				}
+			}
+
+			&-info {
+				&-header {
+					font-size: 2rem;
+				}
+				&-text {
+					font-size: 1.5rem;
+					margin: 0.5em 0;
+				}
+			}
+		}
+	}
+
+	.contact {
+		margin: 2em 6em;
+	}
+}
+
+@media (min-width: 768px) {
+	.loading {
+		img {
+			width: 300px;
+		}
+
+		p {
+			font-size: 3rem;
+		}
+	}
+
+	.brand {
+		h2 {
+			margin: -1.25em -1.4em;
+			font-size: 2rem;
+		}
+
+		&__social {
+			left: 0.5em;
+			font-size: 1.6rem;
+		}
+	}
+
+	.nav {
+		.nav-link {
+			&__item {
+				font-size: 2.4rem;
+			}
+		}
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+	}
+
+	.hero-title {
+		h1 {
+			font-size: 3rem;
+		}
+	}
+
+	.hero-img {
+		margin: 4.5em 0 0;
+		padding: 3em 4em;
+		.item1 {
+			height: 40vh;
+		}
+		.item2 {
+			height: 40vh;
+		}
+		.item3 {
+			height: 40vh;
+		}
+		.item4 {
+			height: 40vh;
+		}
+		.item5 {
+			height: 40vh;
+		}
+
+		h1 {
+			font-size: 3rem;
+			margin: 1em 0 0.75em;
+		}
+
+		.hero-text {
+			.btn {
+				font-size: 1.7rem;
+			}
+		}
+	}
+
+	.projects {
+		&__box {
+			margin: 2em 2em;
+			&-img {
+				&--right {
+					position: relative;
+					left: 47%;
+				}
+			}
+		}
+
+		&__img {
+			padding-left: 1em;
+			padding-right: 2.5em;
+			max-width: 380px;
+		}
+
+		&__title {
+			font-size: 2rem;
+			padding-left: 1em;
+			&-left {
+				text-align: left;
+			}
+
+			&-right {
+				text-align: right;
+				padding-right: 2em;
+			}
+		}
+	}
+
+	.offers {
+		margin-bottom: 2em;
+		height: 600px;
+		&__popup {
+			display: flex;
+			margin-bottom: 2em;
+
+			&-section {
+				width: 300px;
+				height: auto;
+				&-img {
+					position: relative;
+					margin-top: 0.5em;
+				}
+				&-coffee {
+					top: 100px;
+					left: 58px;
+				}
+				&-ruler {
+					top: 100px;
+					left: 169px;
+				}
+				&-house {
+					top: 100px;
+					left: 268px;
+				}
+				&-furniture {
+					top: 240px;
+					left: 257px;
+				}
+				&-brick {
+					top: 240px;
+					left: 152px;
+				}
+				&-key {
+					left: 54px;
+					top: 270px;
+				}
+			}
+
+			&-info {
+				margin: 0 2em;
+				width: 300px;
+				&-header {
+					font-size: 2.1rem;
+				}
+				&-text {
+					font-size: 1.4rem;
+					padding: 0.5em;
+				}
+			}
+		}
+	}
+	.contact {
+		margin: 2em 8em;
+	}
+
+	.footer {
+		&__box {
+			&-copy {
+				&-mobile {
+					display: none;
+				}
+
+				&-desktop {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 1.5rem;
+					margin: 0 10px;
+					padding: 0 10px;
+				}
+			}
+			&-privacy {
+				font-size: 1.5rem;
+			}
 		}
 	}
 }
 
 @media (min-width: 992px) {
-	nav {
+	.nav {
 		.nav-link {
 			&__item {
 				&::before {
-					position: absolute;
-					bottom: 3px;
 					width: 100%;
-					height: 3px;
-					display: flex;
-					align-items: center;
-					transform: scaleX(0);
-					background-color: colors.$secondary-color;
-					transition: transform 0.3s;
-					content: '';
 				}
-
-				&:hover::before,
-				&:focus::before {
-					transform: scaleX(1);
-				}
-
-				&:hover,
-				&:focus {
-					color: black;
-				}
+				padding-top: 0;
+				font-size: 2.5rem;
 			}
 		}
 	}
 
-	header.hero-img {
-		h1 {
-			font-size: 3rem;
+	.brand {
+		h2 {
+			margin: -1.25em -1.3em;
+			font-size: 2.2rem;
+		}
+
+		&__social {
+			left: 0.7em;
+			font-size: 1.8rem;
+		}
+	}
+
+	.section-title {
+		font-size: 3rem;
+	}
+
+	.hero-img {
+		margin: 6em 0 0;
+		padding: 4em 8em 4em;
+
+		.item1 {
+			height: 35vh;
+		}
+		.item2 {
+			height: 35vh;
+		}
+		.item3 {
+			height: 35vh;
+		}
+		.item4 {
+			height: 35vh;
+		}
+		.item5 {
+			height: 35vh;
 		}
 
 		.hero-text {
 			.btn {
 				font-size: 2rem;
+				margin: 3em 0 1em;
 			}
 		}
+	}
+
+	.projects {
+		&__img {
+			padding-left: 0.8em;
+			padding-right: 2.2em;
+			max-width: 480px;
+		}
+
+		&__title {
+			padding-left: 0.8em;
+			&-right {
+				padding-right: 2.2em;
+			}
+		}
+	}
+
+	.offers {
+		height: 700px;
+		&__popup {
+			&-section {
+				width: 450px;
+				font-size: 1.8rem;
+
+				&-coffee {
+					top: 130px;
+					left: 80px;
+				}
+				&-ruler {
+					top: 130px;
+					left: 225px;
+				}
+				&-house {
+					top: 130px;
+					left: 350px;
+				}
+				&-furniture {
+					top: 310px;
+					left: 330px;
+				}
+				&-brick {
+					top: 300px;
+					left: 200px;
+				}
+				&-key {
+					left: 75px;
+					top: 345px;
+				}
+			}
+
+			&-info {
+				width: 400px;
+				&-header {
+					font-size: 2.6rem;
+				}
+				&-text {
+					font-size: 1.7rem;
+				}
+			}
+		}
+	}
+
+	.contact {
+		margin: 4em 8em;
+		&__form {
+			&-btn {
+				font-size: 2rem;
+			}
+			&-popup {
+				z-index: 1;
+				width: 50%;
+				height: 200px;
+				padding: 10px 20px;
+				p {
+					font-size: 2rem;
+				}
+				&-close {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+
+	.show-popup {
+		top: 300px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.nav {
+		.nav-link {
+			&__item {
+				font-size: 2.7rem;
+			}
+		}
+	}
+
+	.hero-title {
+		h1 {
+			margin-top: 3em;
+			font-size: 3.5rem;
+		}
+	}
+
+	.hero-img {
+		margin: 5em 0;
+		.item1 {
+			height: 60vh;
+		}
+		.item2 {
+			height: 60vh;
+		}
+		.item3 {
+			height: 60vh;
+		}
+		.item4 {
+			height: 60vh;
+		}
+		.item5 {
+			height: 60vh;
+		}
+
+		h1 {
+			font-size: 3.5rem;
+		}
+
+		.hero-text {
+			.btn {
+				font-size: 2.1rem;
+			}
+		}
+	}
+
+	.projects {
+		&__img {
+			max-width: 580px;
+		}
+	}
+
+	.wrapper {
+		width: 65vw;
+		max-width: 450px;
+	}
+
+	.contact {
+		&-title {
+			display: none;
+		}
+		&__wrapper {
+			display: flex;
+			justify-content: space-around;
+			&-slogan {
+				display: inline-block;
+				width: 400px;
+				padding: 2em 0.5em;
+				margin: 10em 2em;
+				&-title {
+					font-size: 6rem;
+					text-align: center;
+				}
+				&-underline {
+					position: relative;
+					margin: 1px auto;
+					width: 100px;
+					height: 3px;
+					background-color: colors.$main-color;
+				}
+				&-text {
+					display: flex;
+					justify-content: center;
+					margin-top: 2em;
+					text-align: center;
+					font-size: 2rem;
+				}
+			}
+		}
+		&__form {
+			&-btn {
+				font-size: 2.2rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	nav {
+		.navbar-brand {
+			margin-left: 10px;
+		}
+		.nav-link {
+			&__item {
+				margin-left: 2em;
+			}
+		}
+	}
+
+	.brand {
+		h2 {
+			margin: -1.25em -2em;
+			font-size: 2.5rem;
+		}
+
+		&__social {
+			left: 2em;
+			font-size: 2rem;
+		}
+	}
+
+	.hero-img {
+		margin-top: 5em;
+		padding: 2.5em 8em;
+
+		.item1 {
+			height: 64vh;
+		}
+		.item2 {
+			height: 64vh;
+		}
+		.item3 {
+			height: 64vh;
+		}
+		.item4 {
+			height: 64vh;
+		}
+		.item5 {
+			height: 64vh;
+		}
+	}
+
+	.projects {
+		&__img {
+			max-width: 680px;
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.wrapper {
+		max-width: 600px;
 	}
 }

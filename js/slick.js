@@ -1,9 +1,11 @@
 $('.hero-carousel').slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
+	fade: true,
+	infinite: true,
+	fade: true,
+	cssEase: 'linear',
 	autoplay: true,
-	autoplaySpeed: 2500,
-	speed: 2000,
+	autoplaySpeed: 4000,
+	speed: 3000,
 	arrows: false,
 	mobileFirst: true,
 });
