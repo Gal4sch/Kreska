@@ -1,6 +1,8 @@
 @use 'animations' as *;
 @use 'colors' as colors;
 @use 'mixins' as mixins;
+@use 'privacy' as *;
+@use 'project' as *;
 @use 'components' as components;
 
 *,
@@ -28,21 +30,24 @@ body {
 }
 
 .section-title {
+	position: relative;
+	display: flex;
+	justify-content: center;
 	text-align: center;
 	text-transform: uppercase;
+	font-size: 2rem;
 }
 
 .underline {
-	margin: 0 auto 10px;
+	margin: 0 auto;
 	width: 50px;
 	height: 3px;
-	background-color: colors.$secondary-color;
+	background-color: colors.$main-color;
 }
 
 .loading {
 	position: fixed;
 	background-color: #fff;
-	opacity: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -50,7 +55,6 @@ body {
 	width: 100%;
 	top: 0;
 	left: 0;
-	z-index: 3;
 	animation: load-out 1s forwards;
 
 	img {
@@ -108,12 +112,29 @@ body {
 	}
 }
 
-.nav {
+nav {
 	text-transform: uppercase;
 	transition: background-color 0.6s;
 	z-index: 2;
+	.navbar-toggler {
+		padding: 10px 15px;
+	}
+
+	.nav-link,
+	.navbar-nav .show > .nav-link,
+	.navbar-brand,
+	.fa-bars {
+		color: colors.$black;
+	}
+
+	.nav-link:focus,
+	.nav-link:hover,
+	.navbar-nav .nav-link.active,
+	.navbar-nav .show > .nav-link {
+		color: colors.$main-color;
+	}
+
 	.nav-link {
-		// padding: 1.5em 0.75em;
 		&__item {
 			position: relative;
 			margin: 0 0.5em;
@@ -148,7 +169,7 @@ body {
 				width: 89px;
 			}
 		}
-		&__offer {
+		&__offers {
 			&::before {
 				width: 70px;
 			}
@@ -164,9 +185,33 @@ body {
 			}
 		}
 	}
+}
 
-	.navbar-toggler {
-		padding: 10px 15px;
+.hero-title {
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		background: colors.$main-color;
+		content: '';
+	}
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin-top: 6.5em;
+	padding: 2.5em 3em;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: 1;
+
+	h1 {
+		text-transform: uppercase;
+		font-size: 2.5rem;
+		margin-top: 4em;
+		margin-bottom: 0;
 	}
 }
 
@@ -183,7 +228,7 @@ body {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	margin: 4.5em 0 0 0;
+	margin-top: 3.5em;
 	padding: 2.5em 3em;
 	background-size: cover;
 	background-position: center;
@@ -192,13 +237,13 @@ body {
 
 	h1 {
 		text-transform: uppercase;
-		font-size: 2.2rem;
-		margin: 1.2em 0 0.5em 0;
+		font-size: 2.3rem;
+		margin: 1em 0 0.5em 0;
 	}
 
 	.item1 {
 		position: relative;
-		height: 60vh;
+		height: 57vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
@@ -207,7 +252,7 @@ body {
 	}
 	.item2 {
 		position: relative;
-		height: 60vh;
+		height: 57vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
@@ -216,7 +261,7 @@ body {
 	}
 	.item3 {
 		position: relative;
-		height: 60vh;
+		height: 57vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
@@ -225,7 +270,7 @@ body {
 	}
 	.item4 {
 		position: relative;
-		height: 60vh;
+		height: 57vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
@@ -234,7 +279,7 @@ body {
 	}
 	.item5 {
 		position: relative;
-		height: 60vh;
+		height: 57vh;
 		width: 100%;
 		background-size: cover;
 		background-position: center;
@@ -243,6 +288,11 @@ body {
 	}
 
 	.hero-text {
+		h1 {
+			position: relative;
+			display: flex;
+			justify-content: center;
+		}
 		.btn {
 			font-size: 1.5rem;
 			padding: 10px 20px;
@@ -262,6 +312,7 @@ body {
 		left: 50%;
 		transform: translate(-50%);
 		font-size: 3rem;
+		margin: 0;
 		color: colors.$main-color;
 	}
 }
@@ -274,17 +325,17 @@ body {
 	&__box {
 		display: flex;
 		flex-direction: row;
-		margin: 1em 0.5em;
+		margin: 2em 1em;
 	}
 
 	&__img {
 		width: 100%;
 		margin-bottom: 1em;
-		transition: transform 0.3s;
+		transition: transform 0.3s opacity 0.3s;
 	}
 
 	&__img:hover {
-		transform: scale(0.98);
+		transform: scale(1.02);
 		opacity: 0.9;
 	}
 
@@ -293,137 +344,107 @@ body {
 	}
 }
 
-.offer {
+.hide {
+	display: none;
+}
+
+.active {
+	display: true;
+}
+
+.offers {
 	position: relative;
 	height: 600px;
-	margin-bottom: 50px;
 
-	.section-title {
-		margin-top: 1em;
+	&__box {
+		margin: 1em;
 	}
 	&__popup {
 		position: absolute;
 		left: 50%;
 		transform: translate(-50%);
-
 		&-section {
 			position: relative;
-			font-size: 1rem;
+			font-size: 1.2rem;
 			width: 300px;
 			height: auto;
 
 			&-img {
-				max-width: 100%;
+				position: relative;
+				margin-top: 0.5em;
+				width: 80%;
 				height: auto;
-				margin: 0 auto 2em;
+				left: 50%;
+				transform: translate(-50%);
+			}
+
+			&-title {
+				font-size: 1rem;
 			}
 
 			&-coffee {
 				position: absolute;
-				left: 50px;
-				top: 80px;
+				left: 65px;
+				top: 65px;
 			}
-
-			&-coffee-title {
-				position: absolute;
-				top: 100px;
-				left: 48px;
-			}
-
 			&-ruler {
 				position: absolute;
-				left: 150px;
-				top: 80px;
-			}
-			&-ruler-title {
-				position: absolute;
-				top: 100px;
-				left: 142px;
+				left: 145px;
+				top: 65px;
 			}
 			&-house {
 				position: absolute;
-				left: 232px;
-				top: 80px;
-			}
-			&-house-title {
-				position: absolute;
-				top: 100px;
-				left: 230px;
+				left: 210px;
+				top: 65px;
 			}
 			&-furniture {
 				position: absolute;
-				left: 220px;
-				top: 200px;
-			}
-			&-furniture-title {
-				position: absolute;
-				top: 220px;
-				left: 218px;
+				left: 200px;
+				top: 165px;
 			}
 			&-brick {
 				position: absolute;
 				left: 130px;
-				top: 200px;
-			}
-			&-brick-title {
-				position: absolute;
-				top: 220px;
-				left: 128px;
+				top: 165px;
 			}
 			&-key {
 				position: absolute;
-				left: 50px;
-				top: 225px;
-			}
-			&-key-title {
-				position: absolute;
-				top: 245px;
-				left: 47px;
+				left: 60px;
+				top: 177px;
 			}
 
 			&-resize {
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				text-align: center;
 				background-color: #ddd;
 				border-radius: 50%;
-				padding: 5px;
+				padding: 2px;
+				margin: 1px;
 				transition: color 0.3s, scale 0.3s, background-color 0.3s;
 				cursor: pointer;
 			}
 
 			&-resize:hover {
 				color: #fff;
-				scale: 1.2;
+				scale: 1.1;
 				background-color: colors.$black;
 			}
 		}
 
 		&-info {
-			position: relative;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-top: 40px;
-			&-start {
-				position: absolute;
-				margin: 10px 20px;
-				width: 250px;
-				height: auto;
-				font-size: 1.4rem;
-				padding: 5px;
-				z-index: 1;
+			margin-top: 2em;
+			&-header {
+				margin-top: 1em;
+				display: flex;
+				justify-content: center;
+				font-size: 1.5rem;
 			}
 
-			&-coffee {
-				display: none;
-				position: absolute;
-				margin: 10px 20px;
-				width: 250px;
-				height: auto;
-				font-size: 1.2rem;
-				padding: 5px;
-				z-index: 1;
+			&-text {
+				display: flex;
+				text-align: center;
+				justify-content: center;
+				margin: 1em 2em;
+				font-size: 1rem;
 			}
 		}
 	}
@@ -433,7 +454,7 @@ body {
 	position: relative;
 	height: 100vh;
 	width: 100%;
-	max-height: 600px;
+	max-height: 800px;
 	background-image: url(../img/Kreska_projekt_2c.png);
 	background-size: cover;
 	background-position: center;
@@ -443,62 +464,142 @@ body {
 		padding: 2em;
 		margin: 4em 1em;
 		background-color: rgba($color: colors.$main-color, $alpha: 0.9);
+		max-height: 700px;
 	}
 
 	p {
+		position: relative;
+		display: flex;
+		justify-content: center;
 		text-align: center;
+		font-size: 1.4rem;
+		padding: 1em 0 0;
+		max-height: 700px;
 	}
+}
+
+.wrapper {
+	margin: 3em 0;
+	display: block;
+	background-color: #fff;
 }
 
 .contact {
 	position: relative;
 	overflow: hidden;
-	margin: 0 2.5em;
-	padding: 2.5em 0;
+	margin: 2em 4em;
 
-	h2 {
-		margin-top: 1em;
+	&__wrapper {
+		&-slogan {
+			display: none;
+		}
 	}
 
-	&__form-label {
-		margin-bottom: 0.5em;
-		text-transform: uppercase;
-	}
+	&__form {
+		&-label {
+			margin-bottom: 0.5em;
+			text-transform: uppercase;
+		}
+		&-input {
+			@include mixins.contactForm;
+			width: 100%;
+		}
 
-	&__form-input {
-		@include mixins.contactForm;
-		width: 100%;
-	}
+		&-textarea {
+			@include mixins.contactForm;
+			max-width: 100%;
+			width: 100%;
+			min-height: 200px;
+		}
 
-	&__form-textarea {
-		@include mixins.contactForm;
-		max-width: 100%;
-		min-width: 100%;
-		min-height: 150px;
-	}
+		&-btn {
+			position: relative;
+			margin-top: 2em;
+			padding: 0.1em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			border: 1px solid colors.$black;
+			border-radius: 5px;
+			background-color: #fff;
+			cursor: pointer;
+		}
 
-	&__form-btn {
-		align-self: flex-end;
-		padding: 1em;
-		width: 100%;
-		border: 1px solid colors.$secondary-color;
-		border-radius: 5px;
-		background-color: #fff;
-		cursor: pointer;
-	}
+		&-btn:hover {
+			background-color: colors.$main-color;
+		}
 
-	&__form-btn:hover {
-		background-color: colors.$main-color;
+		&-popup {
+			position: absolute;
+			top: -350px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 5px 10px;
+			width: 80%;
+			height: 150px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			border-radius: 5px;
+			background-color: rgb(248, 249, 250);
+
+			p {
+				font-size: 1.5rem;
+				text-align: center;
+				// margin-bottom: 40px;
+			}
+
+			&-close {
+				position: relative;
+				font-size: 1rem;
+				text-transform: uppercase;
+				padding: 5px 30px;
+				border: none;
+				border-radius: 8px;
+				color: colors.$black;
+				transition: background-color 0.3, color 0.3;
+				cursor: pointer;
+			}
+
+			&-close:hover {
+				color: #fff;
+				background-color: colors.$black;
+			}
+		}
 	}
+}
+
+.show-popup {
+	top: 260px;
+}
+
+.contact__form-box .error-text {
+	visibility: hidden;
+	padding: 0;
+	margin: 0 0 0 10px;
+	font-size: 1.4rem;
+	color: colors.$black;
+}
+
+.contact__form-box.error .error-text {
+	visibility: visible;
+}
+
+.contact__form-box.error input {
+	border-bottom: 2px solid colors.$secondary-color;
+}
+
+.contact__form-box.error textarea {
+	border-bottom: 2px solid colors.$secondary-color;
 }
 
 .footer {
 	position: relative;
 	&__box {
-		// position: absolute;
 		width: 100%;
-		margin-top: 2em;
-		padding: 3em 0;
+		padding: 1em 0;
 		background-color: colors.$third-color;
 		display: flex;
 		justify-content: space-around;
@@ -507,14 +608,22 @@ body {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			padding: 0 20px;
 		}
 
 		&-copy {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin: 0;
-			padding: 0 10px;
+			&-mobile {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.5rem;
+				margin: 0 10px;
+				padding: 0 10px;
+			}
+
+			&-desktop {
+				display: none;
+			}
 		}
 
 		&-privacy {
@@ -523,11 +632,17 @@ body {
 			align-items: center;
 			text-decoration: none;
 			color: colors.$black;
+			margin: 0 10px;
+			font-size: 1.5rem;
 		}
 
 		&-privacy:hover {
 			color: #292929;
 		}
+	}
+
+	&__year {
+		margin-left: 5px;
 	}
 }
 
@@ -539,20 +654,68 @@ body {
 	.hero-img {
 		padding: 2em 3em;
 		h1 {
-			// font-size: 3rem;
-			margin: 1.5em 0 0.75em;
+			font-size: 2.5rem;
+			margin: 1.2em 0 0.5em;
 		}
 
 		.hero-text {
 			.btn {
-				// font-size: 2rem;
 				padding: 10px 20px;
 			}
 		}
 	}
 
-	.section-title {
-		font-size: 2.5rem;
+	.offers {
+		margin-bottom: 6em;
+		height: 700px;
+		&__popup {
+			margin: 2em 1em;
+			&-section {
+				width: 400px;
+				font-size: 1.2rem;
+				&-img {
+					margin-bottom: 1em;
+				}
+				&-coffee {
+					top: 90px;
+					left: 90px;
+				}
+				&-ruler {
+					top: 90px;
+					left: 195px;
+				}
+				&-house {
+					top: 90px;
+					left: 285px;
+				}
+				&-furniture {
+					top: 225px;
+					left: 275px;
+				}
+				&-brick {
+					top: 215px;
+					left: 180px;
+				}
+				&-key {
+					top: 245px;
+					left: 90px;
+				}
+			}
+
+			&-info {
+				&-header {
+					font-size: 2rem;
+				}
+				&-text {
+					font-size: 1.5rem;
+					margin: 0.5em 0;
+				}
+			}
+		}
+	}
+
+	.contact {
+		margin: 2em 6em;
 	}
 }
 
@@ -579,27 +742,45 @@ body {
 		}
 	}
 
+	.nav {
+		.nav-link {
+			&__item {
+				font-size: 2.4rem;
+			}
+		}
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+	}
+
+	.hero-title {
+		h1 {
+			font-size: 3rem;
+		}
+	}
+
 	.hero-img {
 		margin: 4.5em 0 0;
 		padding: 3em 4em;
 		.item1 {
-			height: 41vh;
+			height: 40vh;
 		}
 		.item2 {
-			height: 41vh;
+			height: 40vh;
 		}
 		.item3 {
-			height: 41vh;
+			height: 40vh;
 		}
 		.item4 {
-			height: 41vh;
+			height: 40vh;
 		}
 		.item5 {
-			height: 41vh;
+			height: 40vh;
 		}
 
 		h1 {
-			font-size: 2.5rem;
+			font-size: 3rem;
 			margin: 1em 0 0.75em;
 		}
 
@@ -612,11 +793,11 @@ body {
 
 	.projects {
 		&__box {
-			margin: 3em 0;
+			margin: 2em 2em;
 			&-img {
 				&--right {
 					position: relative;
-					left: 50%;
+					left: 47%;
 				}
 			}
 		}
@@ -641,23 +822,96 @@ body {
 		}
 	}
 
+	.offers {
+		margin-bottom: 2em;
+		height: 600px;
+		&__popup {
+			display: flex;
+			margin-bottom: 2em;
+
+			&-section {
+				&-img {
+					position: relative;
+					margin-top: 0.5em;
+					width: 100%;
+					height: auto;
+				}
+				width: 350px;
+				&-coffee {
+					top: 100px;
+					left: 58px;
+				}
+				&-ruler {
+					top: 100px;
+					left: 169px;
+				}
+				&-house {
+					top: 100px;
+					left: 268px;
+				}
+				&-furniture {
+					top: 240px;
+					left: 257px;
+				}
+				&-brick {
+					top: 240px;
+					left: 152px;
+				}
+				&-key {
+					left: 54px;
+					top: 270px;
+				}
+			}
+
+			&-info {
+				margin: 0 2em;
+				width: 300px;
+				&-header {
+					font-size: 2.1rem;
+				}
+				&-text {
+					font-size: 1.4rem;
+					padding: 0.5em;
+				}
+			}
+		}
+	}
 	.contact {
-		margin: 0 6em;
+		margin: 2em 8em;
+	}
+
+	.footer {
+		&__box {
+			&-copy {
+				&-mobile {
+					display: none;
+				}
+
+				&-desktop {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 1.5rem;
+					margin: 0 10px;
+					padding: 0 10px;
+				}
+			}
+			&-privacy {
+				font-size: 1.5rem;
+			}
+		}
 	}
 }
 
 @media (min-width: 992px) {
-	nav {
+	.nav {
 		.nav-link {
-			&__items {
-				padding-top: 0;
-			}
-
 			&__item {
-				font-size: 2.5rem;
 				&::before {
 					width: 100%;
 				}
+				padding-top: 0;
+				font-size: 2.5rem;
 			}
 		}
 	}
@@ -674,28 +928,28 @@ body {
 		}
 	}
 
+	.section-title {
+		font-size: 3rem;
+	}
+
 	.hero-img {
-		margin: 5em 0 0;
-		padding: 2.5em 4em 3.5em;
-		h1 {
-			font-size: 3.5rem;
-			margin: 1em 0 0.5em 0;
-		}
+		margin: 6em 0 0;
+		padding: 4em 8em 4em;
 
 		.item1 {
-			height: 38vh;
+			height: 35vh;
 		}
 		.item2 {
-			height: 38vh;
+			height: 35vh;
 		}
 		.item3 {
-			height: 38vh;
+			height: 35vh;
 		}
 		.item4 {
-			height: 38vh;
+			height: 35vh;
 		}
 		.item5 {
-			height: 38vh;
+			height: 35vh;
 		}
 
 		.hero-text {
@@ -721,22 +975,95 @@ body {
 		}
 	}
 
-	.offer {
+	.offers {
+		height: 700px;
 		&__popup {
-			l30p
 			&-section {
+				width: 450px;
+				font-size: 1.8rem;
+
+				&-coffee {
+					top: 130px;
+					left: 80px;
+				}
+				&-ruler {
+					top: 130px;
+					left: 225px;
+				}
+				&-house {
+					top: 130px;
+					left: 350px;
+				}
+				&-furniture {
+					top: 310px;
+					left: 330px;
+				}
+				&-brick {
+					top: 300px;
+					left: 200px;
+				}
+				&-key {
+					left: 75px;
+					top: 345px;
+				}
+			}
+
+			&-info {
 				width: 400px;
+				&-header {
+					font-size: 2.6rem;
+				}
+				&-text {
+					font-size: 1.7rem;
+				}
 			}
 		}
 	}
 
 	.contact {
-		margin: 2em 10em;
+		margin: 4em 8em;
+		&__form {
+			&-btn {
+				font-size: 2rem;
+			}
+			&-popup {
+				z-index: 1;
+				width: 50%;
+				height: 200px;
+				padding: 10px 20px;
+				p {
+					font-size: 2rem;
+				}
+				&-close {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+
+	.show-popup {
+		top: 300px;
 	}
 }
 
 @media (min-width: 1200px) {
+	.nav {
+		.nav-link {
+			&__item {
+				font-size: 2.7rem;
+			}
+		}
+	}
+
+	.hero-title {
+		h1 {
+			margin-top: 3em;
+			font-size: 3.5rem;
+		}
+	}
+
 	.hero-img {
+		margin: 5em 0;
 		.item1 {
 			height: 60vh;
 		}
@@ -752,11 +1079,65 @@ body {
 		.item5 {
 			height: 60vh;
 		}
+
+		h1 {
+			font-size: 3.5rem;
+		}
+
+		.hero-text {
+			.btn {
+				font-size: 2.1rem;
+			}
+		}
 	}
 
 	.projects {
 		&__img {
 			max-width: 580px;
+		}
+	}
+
+	.wrapper {
+		width: 65vw;
+		max-width: 450px;
+	}
+
+	.contact {
+		&-title {
+			display: none;
+		}
+		&__wrapper {
+			display: flex;
+			justify-content: space-around;
+			&-slogan {
+				display: inline-block;
+				width: 400px;
+				padding: 2em 0.5em;
+				margin: 10em 2em;
+				&-title {
+					font-size: 6rem;
+					text-align: center;
+				}
+				&-underline {
+					position: relative;
+					margin: 1px auto;
+					width: 100px;
+					height: 3px;
+					background-color: colors.$main-color;
+				}
+				&-text {
+					display: flex;
+					justify-content: center;
+					margin-top: 2em;
+					text-align: center;
+					font-size: 2rem;
+				}
+			}
+		}
+		&__form {
+			&-btn {
+				font-size: 2.2rem;
+			}
 		}
 	}
 }
@@ -787,7 +1168,7 @@ body {
 
 	.hero-img {
 		margin-top: 5em;
-		padding: 3em 8em;
+		padding: 2.5em 8em;
 
 		.item1 {
 			height: 64vh;
@@ -810,5 +1191,11 @@ body {
 		&__img {
 			max-width: 680px;
 		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.wrapper {
+		max-width: 600px;
 	}
 }

@@ -1,0 +1,133 @@
+@use 'colors' as colors;
+
+.project {
+	&__boxes {
+		margin: 0 2em 4em;
+	}
+	position: relative;
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 1em 1.5em;
+	}
+	&__img {
+		width: 100%;
+		transition: transform 0.3s;
+		&-one {
+			margin-bottom: 1em;
+		}
+
+		&-four {
+			margin-bottom: 1em;
+		}
+	}
+
+	&__img:hover {
+		scale: 1.01;
+	}
+}
+
+@media (min-width: 768px) {
+	.project {
+		&__boxes {
+			margin: 2em 4em 6em;
+		}
+		&__box {
+			margin: 2em 0;
+		}
+
+		&__img {
+			&-one {
+				margin-bottom: 2em;
+			}
+			&-four {
+				margin-bottom: 2em;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.project {
+		&__boxes {
+			margin: 0 3em 6em;
+		}
+
+		&__box {
+			&-resize {
+				position: relative;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		}
+
+		&__img {
+			&-one {
+				position: relative;
+				height: 230px;
+				width: auto;
+				margin-bottom: 0;
+			}
+			&-two {
+				position: relative;
+				height: 230px;
+				width: auto;
+			}
+			&-three {
+				position: relative;
+			}
+			&-four {
+				position: relative;
+				height: 230px;
+				width: auto;
+				margin-bottom: 0;
+			}
+			&-five {
+				position: relative;
+				height: 230px;
+				width: auto;
+			}
+			&-six {
+				position: relative;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.project {
+		&__img {
+			&-one {
+				height: 280px;
+			}
+			&-two {
+				height: 280px;
+			}
+			&-four {
+				height: 280px;
+			}
+			&-five {
+				height: 280px;
+			}
+		}
+	}
+}
+@media (min-width: 1400px) {
+	.project {
+		&__img {
+			&-one {
+				height: 330px;
+			}
+			&-two {
+				height: 330px;
+			}
+			&-four {
+				height: 330px;
+			}
+			&-five {
+				height: 330px;
+			}
+		}
+	}
+}

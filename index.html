@@ -2,7 +2,8 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/icon.svg" type="image/x-icon" />
     <title>Kreska</title>
@@ -18,7 +19,6 @@
 </head>
 
 <body>
-
     <div class="loading">
         <div class="loading__brand">
             <img src="./img/KRESKA.svg" alt="Kreska">
@@ -28,7 +28,7 @@
 
     <nav class="navbar nav navbar-expand-lg position-fixed top-0 w-100 py-3 navbar-bg-color">
         <div class="container nav-link">
-            <a href="#" class="navbar-brand"><img src="./img/KRESKA.svg" alt="Logo firmy"></a>
+            <a href="index.html" class="navbar-brand"><img src="./img/KRESKA.svg" alt="Logo firmy"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
@@ -36,7 +36,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto nav-link__items">
                     <a href="#projects" class="nav-link__item nav-link__projects">projekty</a>
-                    <a href="#offer" class="nav-link__item nav-link__offer">oferta</a>
+                    <a href="#offers" class="nav-link__item nav-link__offers">oferta</a>
                     <a href="#studio" class="nav-link__item nav-link__studio">studio</a>
                     <a href="#contact" class="nav-link__item nav-link__contact">kontakt</a>
                 </div>
@@ -46,15 +46,17 @@
 
     <div id="brand" class="brand">
         <div id="social" class="brand__social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/kreska_projektowanie_wnetrz?igsh=cGpkNGpwcWR3ZmZ5" target="_blank"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kreska_projektowanie_wnetrz?igsh=cGpkNGpwcWR3ZmZ5" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/kreska_projektowanie_wnetrz?igsh=cGpkNGpwcWR3ZmZ5" target="_blank"><i
+                    class="fab fa-pinterest"></i></a>
         </div>
         <div id="slogan" class="brand__slogan">
             <h2 class="brand__slogan-title">Projektowanie historii z duszą.</h2>
         </div>
     </div>
-    <div class="hero-before"></div>
 
     <header class="hero-img">
 
@@ -74,7 +76,7 @@
             <h1>projektowanie wnętrz</h1>
             <a href="#contact" class="btn btn-outline-light mt-2 text-uppercase">zamów projekt</a>
         </div>
-        <a href="#offer"><i class="fa-solid fa-chevron-down bounce-top"></i></a>
+        <a href="#offers"><i class="fa-solid fa-chevron-down bounce-top"></i></a>
     </header>
 
     <main class="main">
@@ -88,19 +90,17 @@
 
                 <div class="projects__box">
                     <div class="projects__box-img" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500">
-                        <a href="#projects-one"><img src="./img/Kreska_projekt_1a.png" alt="design"
+                        <a href="project_one.html"><img src="./img/Kreska_projekt_1a.png" alt="design"
                                 class="projects__img"></a>
                         <h3 class="projects__title projects__title-left">
                             Projekt nr 1</h3>
                     </div>
-
                 </div>
 
                 <div class="projects__box">
-
                     <div class="projects__box-img projects__box-img--right" data-aos="fade-up" data-aos-delay="500"
                         data-aos-duration="500">
-                        <a href="#projects-two"><img src="./img/Kreska_projekt_2a.png" alt="design"
+                        <a href="project_two.html"><img src="./img/Kreska_projekt_2a.png" alt="design"
                                 class="projects__img"></a>
                         <h3 class="projects__title projects__title-right">
                             Projekt nr 2</h3>
@@ -110,7 +110,7 @@
 
                 <div class="projects__box">
                     <div class="projects__box-img" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500">
-                        <a href="#projects-three"><img src="./img/Kreska_projekt_3a.png" alt="design"
+                        <a href="project_three.html"><img src="./img/Kreska_projekt_3a.png" alt="design"
                                 class="projects__img"></a>
                         <h3 class="projects__title projects__title-left">
                             Projekt nr 3</h3>
@@ -119,47 +119,110 @@
             </div>
         </section>
 
-        <section id="offer" class="offer p-5">
+        <section id="offers" class="offers p-5">
             <div class="container">
-                <div class="offer__box">
-                    <div class="section-title">
-                        <h2 data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">oferta
+                <div class="offers__box">
+                    <div>
+                        <h2 class="section-title" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">oferta
                         </h2>
                         <p class="underline" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500"></p>
                     </div>
-                    <div class="offer__popup">
-                        <div class="offer__popup-section">
-                            <img src="./img/home-plan.jpg" alt="offer" class="offer__popup-section-img">
-                            <p class="offer__popup-section-coffee offer__popup-section-resize"><i
-                                    class="fa-solid fa-mug-hot"></i></p>
-                            <p class="offer__popup-section-coffee-title">Etap 1</p>
-                            <p class="offer__popup-section-ruler offer__popup-section-resize"><i
-                                    class="fa-solid fa-ruler-vertical"></i></p>
-                            <p class="offer__popup-section-ruler-title">Etap 2</p>
-                            <p class="offer__popup-section-house offer__popup-section-resize"><i
-                                    class="fa-solid fa-house "></i></p>
-                            <p class="offer__popup-section-house-title">Etap 3</p>
-                            <p class="offer__popup-section-furniture offer__popup-section-resize"><i
-                                    class="fa-solid fa-couch "></i></p>
-                            <p class="offer__popup-section-furniture-title">Etap 4</p>
-                            <p class="offer__popup-section-brick offer__popup-section-resize"><i
-                                    class="fa-solid fa-trowel-bricks "></i></p>
-                            <p class="offer__popup-section-brick-title">Etap 5</p>
-                            <p class="offer__popup-section-key offer__popup-section-resize"><i
-                                    class="fa-solid fa-key "></i>
-                            </p>
-                            <p class="offer__popup-section-key-title">Etap 6</p>
+                    <div class="offers__popup">
+                        <div class="offers__popup-section" data-aos="fade-up" data-aos-delay="700"
+                            data-aos-duration="500">
+                            <img src="./img/home-plan.jpg" alt="offers" class="offers__popup-section-img">
+                            <div class="offers__popup-section-coffee offers-stage-one-button">
+                                <p class="offers__popup-section-resize"><i class="fa-solid fa-mug-hot"></i></p>
+                                <p class="offers__popup-section-title">Etap 1</p>
+                            </div>
+                            <div class="offers__popup-section-ruler offers-stage-two-button">
+                                <p class="offers__popup-section-resize"><i class="fa-solid fa-ruler-vertical"></i></p>
+                                <p class="offers__popup-section-title">Etap 2</p>
+                            </div>
+                            <div class="offers__popup-section-house offers-stage-three-button">
+                                <p class="offers__popup-section-resize"><i class="fa-solid fa-house "></i></p>
+                                <p class="offers__popup-section-title">Etap 3</p>
+                            </div>
+                            <div class="offers__popup-section-furniture offers-stage-four-button">
+                                <p class="offers__popup-section-resize"><i class="fa-solid fa-couch "></i></p>
+                                <p class="offers__popup-section-title">Etap 4</p>
+                            </div>
+                            <div class="offers__popup-section-brick offers-stage-five-button">
+                                <p class="offers__popup-section-resize"><i class="fa-solid fa-trowel-bricks "></i></p>
+                                <p class="offers__popup-section-title">Etap 5</p>
+                            </div>
+                            <div class="offers__popup-section-key offers-stage-six-button">
+                                <p class="offers__popup-section-resize"><i class="fa-solid fa-key "></i>
+                                </p>
+                                <p class="offers__popup-section-title">Etap 6</p>
+                            </div>
+
                         </div>
-                        <div class="offer__popup-info">
-                            <p class="offer__popup-info-start">Kliknij w ikonkę powyżej, żeby otrzymać informację na
-                                temat
-                                etapu.</p>
-                            <p class="offer__popup-info-coffee">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Exercitationem eaque deleniti temporibus natus nemo libero assumenda earum aliquid
-                                molestias
-                                distinctio asperiores dolorum reiciendis expedita nisi iusto quisquam labore officiis,
-                                eum
-                                odit eveniet placeat ab ducimus doloribus. Qui vitae dicta deserunt.</p>
+                        <div class="offers__popup-info offers__popup-info-one stage-one" data-aos="fade-up"
+                            data-aos-delay="900" data-aos-duration="500">
+                            <h3 class="offers__popup-info-header">Etap 1</h3>
+                            <p class="offers__popup-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Perferendis maxime recusandae sapiente, dolore quod accusantium libero nam iusto qui,
+                                doloribus autem natus! Cupiditate nostrum nesciunt temporibus dolorem maiores architecto
+                                odit.</p>
+                            <p class="offers__popup-info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Exercitationem atque amet, commodi ipsum pariatur quisquam, ullam alias assumenda
+                                dolore, expedita impedit dignissimos laudantium architecto voluptate voluptas iure
+                                quidem mollitia. Fugiat.</p>
+                        </div>
+                        <div class="offers__popup-info offers__popup-info-two stage-two hide" data-aos="fade-up"
+                            data-aos-delay="700" data-aos-duration="500">
+                            <h3 class="offers__popup-info-header">Etap 2</h3>
+                            <p class="offers__popup-info-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Placeat, voluptates repellat similique sint quam deleniti nobis exercitationem aliquid
+                                amet cupiditate ad mollitia consequuntur consequatur reprehenderit fugit, quia neque eum
+                                animi!</p>
+                            <p class="offers__popup-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Amet minus necessitatibus fugit incidunt officiis eveniet molestias. Incidunt molestias,
+                                ipsa, sed maxime et perferendis doloribus consequuntur rem tempora unde cupiditate
+                                voluptatem!</p>
+                        </div>
+                        <div class="offers__popup-info offers__popup-info-three stage-three hide">
+                            <h3 class="offers__popup-info-header">Etap 3</h3>
+                            <p class="offers__popup-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Repudiandae incidunt, quia voluptates suscipit debitis, dolorum doloribus sapiente nam
+                                ex eaque corporis iure inventore quisquam dolor, ullam unde fuga quasi ipsa nesciunt
+                                reprehenderit maiores aliquam sint et soluta.</p>
+                            <p class="offers__popup-info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Optio dolores nobis maxime laboriosam magnam deleniti et omnis natus pariatur, suscipit
+                                voluptatem vel a veritatis architecto officiis eius quis corporis. Deserunt.</p>
+                        </div>
+                        <div class="offers__popup-info offers__popup-info-four stage-four hide">
+                            <h3 class="offers__popup-info-header">Etap 4</h3>
+                            <p class="offers__popup-info-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Sed iste recusandae rerum iure non suscipit modi molestias repudiandae eum nam earum
+                                voluptatibus commodi aperiam ex accusamus ea, facere vel autem enim minima quisquam
+                                repellendus, optio quam corrupti. </p>
+                            <p class="offers__popup-info-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Veritatis aperiam ullam blanditiis laboriosam quisquam corporis quia tempore, vel
+                                reprehenderit! Sed totam, consequatur saepe numquam architecto quos corrupti delectus
+                                similique quo.</p>
+                        </div>
+                        <div class="offers__popup-info offers__popup-info-four stage-five hide">
+                            <h3 class="offers__popup-info-header">Etap 5</h3>
+                            <p class="offers__popup-info-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Error, veniam provident iste temporibus eaque cupiditate rem. Quas sunt labore omnis
+                                blanditiis deserunt, dolores non unde, eveniet ipsam sapiente minima quidem ab
+                                consequuntur corporis nisi fugiat quis accusantium quo?</p>
+                            <p class="offers__popup-info-text">Quidem expedita distinctio,
+                                iusto aut corporis molestiae libero nesciunt ratione. Ducimus inventore vero ea ratione
+                                et, tenetur libero sed distinctio modi nemo omnis nobis exercitationem perspiciatis
+                                quam. </p>
+                        </div>
+                        <div class="offers__popup-info offers__popup-info-four stage-six hide">
+                            <h3 class="offers__popup-info-header">Etap 6</h3>
+                            <p class="offers__popup-info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Eum sapiente maiores blanditiis reiciendis! Sed placeat quo hic laborum doloremque atque
+                                dolor veritatis, impedit laboriosam, reprehenderit quos debitis. </p>
+                            <p class="offers__popup-info-text">Animi est doloribus consequatur cupiditate, laboriosam
+                                sapiente aliquam possimus dolorem. Odit velit doloribus, repudiandae possimus atque iure
+                                magnam nesciunt, delectus aut voluptatem voluptas sequi inventore corrupti reiciendis et
+                                dolorem. Perspiciatis itaque rerum minima optio perferendis? </p>
                         </div>
                     </div>
                 </div>
@@ -180,36 +243,58 @@
         </section>
 
         <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">kontakt
-                </h2>
-                <div class="underline"></div>
-
-                <form action="" class="contact_form">
-
-                    <div class="contact__form-top">
-                        <label for="name" class="contact__form-label"></label>
-                        <input type="text" class="contact__form-input" id="name" placeholder="Imię i nazwisko">
-
-                        <label for="e-mail" class="contact__form-label"></label>
-                        <input type="email" class="contact__form-input" placeholder="Adres e-mail">
+            <div class="contact__wrapper">
+                <div class="container wrapper">
+                    <div class="contact-title">
+                        <h2 class="section-title">kontakt
+                        </h2>
+                        <p class="underline"></p>
                     </div>
-                    <label for="msg" class="contact__form-label"></label>
-                    <textarea id="msg" class="contact__form-textarea" placeholder="Wiadomość"></textarea>
 
-                    <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
+                    <form class="contact__form " action="">
+                        <div class="contact__form-box">
+                            <label for="username" class="contact__form-label"></label>
+                            <input class="contact__form-input" type="text" id="username" placeholder="Imię*">
+                            <p class="contact__form-error-text error-text">error</p>
+                        </div>
 
-                </form>
-
+                        <div class="contact__form-box">
+                            <label for="email" class="contact__form-label"></label>
+                            <input class="contact__form-input" type="email" name="email" id="email"
+                                placeholder="Adres e-mail*">
+                            <p class="contact__form-error-text error-text">error</p>
+                        </div>
+                        <div class="contact__form-box">
+                            <label for="msg" class="contact__form-label"></label>
+                            <textarea class="contact__form-textarea" type="text" id="msg"
+                                placeholder="Wiadomość*"></textarea>
+                            <p class="contact__form-error-text error-text">error</p>
+                        </div>
+                        <button type="submit" class="contact__form-btn send">Wyślij</button>
+                        <div class="contact__form-popup popup">
+                            <p class="contact__form-popup-text">Wiadomość została wysłana!</p>
+                            <button class="contact__form-popup-close close">ok</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact__wrapper-slogan">
+                    <h3 class="contact__wrapper-slogan-title">Skontaktuj się ze mną!</h3>
+                    <p class="contact__wrapper-slogan-underline"></p>
+                    <p class="contact__wrapper-slogan-text">Zaprojektuję dla Ciebie wymarzoną przestrzeń do życia!</p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer__box">
-            <a href="#" class="footer__box-brand"><img src="./img/KRESKA.svg" alt="Logo firmy"></a>
-            <p class="footer__box-copy"><strong>© 2024</strong></p>
-            <a href="#privacy" class="footer__box-privacy"><strong>Polityka prywatności</strong></a>
+            <a href="index.html" class="footer__box-brand"><img src="./img/KRESKA.svg" alt="Logo firmy"></a>
+            <p class="footer__box-copy-mobile"><strong>&copy; <span class="footer__year-mobile"></span> Kreska </strong>
+            </p>
+            <p class="footer__box-copy-desktop"><strong>Copyright &copy; <span class="footer__year-desktop"></span>
+                    Kreska -
+                    Wszelkie prawa zastrzeżone. </strong></p>
+            <a href="privacy.html" class="footer__box-privacy"><strong>Polityka prywatności</strong></a>
         </div>
     </footer>
 
@@ -220,7 +305,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./js/aos.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/main.js"></script>
 </body>
