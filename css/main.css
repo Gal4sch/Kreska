@@ -2,6 +2,7 @@
   100% {
     z-index: 0;
     opacity: 0;
+    display: none;
   }
   99% {
     z-index: 3;
@@ -204,6 +205,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
+  margin-top: 1em;
 }
 
 .underline {
@@ -460,30 +462,6 @@ nav .nav-link__contact::before {
   color: #e4d3cf;
 }
 
-.projects {
-  position: relative;
-}
-.projects h2 {
-  margin-top: 1em;
-}
-.projects__box {
-  display: flex;
-  flex-direction: row;
-  margin: 2em 1em;
-}
-.projects__img {
-  width: 100%;
-  margin-bottom: 1em;
-  transition: transform 0.3s opacity 0.3s;
-}
-.projects__img:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
-}
-.projects__title {
-  text-align: center;
-}
-
 .hide {
   display: none;
 }
@@ -492,100 +470,128 @@ nav .nav-link__contact::before {
   display: true;
 }
 
-.offers {
+.projects {
   position: relative;
-  height: 600px;
+  height: 300px;
 }
-.offers__box {
-  margin: 1em;
-}
-.offers__popup {
+.projects__popup {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+  margin-top: 2em;
 }
-.offers__popup-section {
-  position: relative;
-  font-size: 1.2rem;
-  width: 300px;
+.projects__popup-section {
+  width: 280px;
   height: auto;
   color: #fff;
 }
-.offers__popup-section-img {
+.projects__popup-section-img {
   position: relative;
-  margin-top: 2em;
   width: 100%;
   height: auto;
-  top: 25%;
+  box-shadow: 3px 3px 5px black;
+}
+.projects__popup-section-project-title {
+  position: absolute;
+  margin-top: 2px;
+  padding: 0 2px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
   left: 50%;
-  box-shadow: 1px 1px 5px black;
   transform: translate(-50%);
-}
-.offers__popup-section-title {
-  font-size: 1rem;
-}
-.offers__popup-section-coffee {
-  position: absolute;
-  left: 60px;
-  top: 70px;
-}
-.offers__popup-section-ruler {
-  position: absolute;
-  left: 120px;
-  top: 50px;
-}
-.offers__popup-section-house {
-  position: absolute;
-  left: 210px;
-  top: 65px;
-}
-.offers__popup-section-furniture {
-  position: absolute;
-  left: 210px;
-  top: 125px;
-}
-.offers__popup-section-brick {
-  position: absolute;
-  left: 135px;
-  top: 115px;
-}
-.offers__popup-section-key {
-  position: absolute;
-  left: 60px;
-  top: 125px;
-}
-.offers__popup-section-resize {
   text-align: center;
-  background-color: #e4d3cf;
-  border-radius: 50%;
-  border: 2px solid #b67162;
+}
+.projects__popup-section-project-one {
+  position: absolute;
+  top: 30%;
+  left: 23%;
+}
+.projects__popup-section-project-two {
+  position: absolute;
+  top: 12%;
+  left: 43%;
+}
+.projects__popup-section-project-three {
+  position: absolute;
+  top: 33%;
+  left: 65%;
+}
+.projects__popup-section-project-four {
+  position: absolute;
+  top: 59%;
+  left: 72%;
+}
+.projects__popup-section-project-five {
+  position: absolute;
+  top: 55%;
+  left: 47%;
+}
+.projects__popup-section-project-six {
+  position: absolute;
+  top: 68%;
+  left: 22.5%;
+}
+.projects__popup-section-resize {
+  position: relative;
   width: 10px;
   height: 10px;
-  margin: 5px;
-  padding: 5px;
-  transition: color 0.3s, scale 0.3s, background-color 0.3s;
+  margin-bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+  border: 2px solid rgba(158, 157, 137, 0.4);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #9e9d89;
+  transition: color 0.3s, scale 0.3s, border 0.3s, box-shadow 0.3s, background-color 0.3s;
   cursor: pointer;
 }
-.offers__popup-section-resize:hover {
-  scale: 1.2;
-  border: 2px solid #b67162;
-  background-color: white;
+.projects__popup-section-resize:hover {
+  border: 2px solid rgba(182, 113, 98, 0.7);
+  box-shadow: 0 0 10px #b67162;
+  background-color: #fff;
 }
-.offers__popup-info {
+.projects__popup-info {
   margin-top: 2em;
 }
-.offers__popup-info-header {
+.projects__popup-info-header {
   margin-top: 1em;
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
 }
-.offers__popup-info-text {
+.projects__popup-info-text {
   display: flex;
   text-align: center;
   justify-content: center;
   margin: 1em 2em;
   font-size: 1rem;
+}
+
+.offers {
+  padding: 2em 0 2em 0;
+}
+.offers__popup {
+  margin-top: 1em;
+}
+.offers__popup-info {
+  margin-top: 1em;
+  padding: 0 80px;
+}
+.offers__popup-info-header {
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.offers__popup-info-text {
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+.offers__popup-underline {
+  position: relative;
+  left: -30px;
+  width: 150px;
+  height: 1px;
+  background-color: #000;
 }
 
 .studio {
@@ -781,54 +787,32 @@ nav .nav-link__contact::before {
   .hero-img .hero-text .btn {
     padding: 10px 20px;
   }
-  .offers {
-    margin-bottom: 6em;
-    height: 700px;
+  .projects {
+    height: 450px;
   }
-  .offers__popup {
-    margin-top: 2em;
-  }
-  .offers__popup-section {
+  .projects__popup-section {
     font-size: 1.2rem;
     width: 455px;
   }
-  .offers__popup-section-img {
-    margin-bottom: 1em;
+  .projects__popup-section-project-title {
+    font-size: 1.2rem;
   }
-  .offers__popup-section-coffee {
-    top: 100px;
-    left: 100px;
+  .projects__popup-section-resize {
+    width: 15px;
+    height: 15px;
   }
-  .offers__popup-section-ruler {
-    top: 60px;
-    left: 195px;
+  .projects__popup-info-header {
+    font-size: 2rem;
   }
-  .offers__popup-section-house {
-    top: 100px;
-    left: 315px;
-  }
-  .offers__popup-section-furniture {
-    top: 170px;
-    left: 320px;
-  }
-  .offers__popup-section-brick {
-    top: 175px;
-    left: 210px;
-  }
-  .offers__popup-section-key {
-    top: 181px;
-    left: 96px;
-  }
-  .offers__popup-section-resize {
-    width: 20px;
-    height: 20px;
+  .projects__popup-info-text {
+    font-size: 1.5rem;
+    margin: 0.5em 0;
   }
   .offers__popup-info-header {
     font-size: 2rem;
   }
   .offers__popup-info-text {
-    font-size: 1.5rem;
-    margin: 0.5em 0;
+    font-size: 1.2rem;
   }
   .contact {
     margin: 2em 6em;
@@ -884,79 +868,29 @@ nav .nav-link__contact::before {
   .hero-img .hero-text .btn {
     font-size: 1.7rem;
   }
-  .projects__box {
-    margin: 2em 2em;
-  }
-  .projects__box-img--right {
-    position: relative;
-    left: 47%;
-  }
-  .projects__img {
-    padding-left: 1em;
-    padding-right: 2.5em;
-    max-width: 380px;
-  }
-  .projects__title {
-    font-size: 2rem;
-    padding-left: 1em;
-  }
-  .projects__title-left {
-    text-align: left;
-  }
-  .projects__title-right {
-    text-align: right;
-    padding-right: 2em;
-  }
-  .offers {
-    margin-bottom: 2em;
-    height: 600px;
-  }
-  .offers__popup {
+  .projects__popup {
     display: flex;
-    margin-bottom: 2em;
   }
-  .offers__popup-section {
-    width: 300px;
-    height: auto;
+  .projects__popup-section {
+    width: 500px;
   }
-  .offers__popup-section-img {
-    position: relative;
-    margin-top: 0.5em;
+  .projects__popup-section-resize {
+    width: 20px;
+    height: 20px;
   }
-  .offers__popup-section-coffee {
-    top: 100px;
-    left: 58px;
-  }
-  .offers__popup-section-ruler {
-    top: 100px;
-    left: 169px;
-  }
-  .offers__popup-section-house {
-    top: 100px;
-    left: 268px;
-  }
-  .offers__popup-section-furniture {
-    top: 240px;
-    left: 257px;
-  }
-  .offers__popup-section-brick {
-    top: 240px;
-    left: 152px;
-  }
-  .offers__popup-section-key {
-    left: 54px;
-    top: 270px;
-  }
-  .offers__popup-info {
+  .projects__popup-info {
     margin: 0 2em;
     width: 300px;
   }
-  .offers__popup-info-header {
+  .projects__popup-info-header {
     font-size: 2.1rem;
+  }
+  .projects__popup-info-text {
+    font-size: 1.4rem;
+    padding: 0.5em;
   }
   .offers__popup-info-text {
     font-size: 1.4rem;
-    padding: 0.5em;
   }
   .contact {
     margin: 2em 8em;
@@ -1018,56 +952,33 @@ nav .nav-link__contact::before {
     font-size: 2rem;
     margin: 3em 0 1em;
   }
-  .projects__img {
-    padding-left: 0.8em;
-    padding-right: 2.2em;
-    max-width: 480px;
+  .projects {
+    height: 600px;
   }
-  .projects__title {
-    padding-left: 0.8em;
+  .projects__popup-section {
+    width: 700px;
   }
-  .projects__title-right {
-    padding-right: 2.2em;
+  .projects__popup-section-project-title {
+    font-size: 1.6rem;
   }
-  .offers {
-    height: 700px;
+  .projects__popup-section-resize {
+    width: 25px;
+    height: 25px;
   }
-  .offers__popup-section {
-    width: 450px;
-    font-size: 1.8rem;
-  }
-  .offers__popup-section-coffee {
-    top: 130px;
-    left: 80px;
-  }
-  .offers__popup-section-ruler {
-    top: 130px;
-    left: 225px;
-  }
-  .offers__popup-section-house {
-    top: 130px;
-    left: 350px;
-  }
-  .offers__popup-section-furniture {
-    top: 310px;
-    left: 330px;
-  }
-  .offers__popup-section-brick {
-    top: 300px;
-    left: 200px;
-  }
-  .offers__popup-section-key {
-    left: 75px;
-    top: 345px;
-  }
-  .offers__popup-info {
+  .projects__popup-info {
     width: 400px;
   }
-  .offers__popup-info-header {
+  .projects__popup-info-header {
     font-size: 2.6rem;
   }
-  .offers__popup-info-text {
+  .projects__popup-info-text {
     font-size: 1.7rem;
+  }
+  .offers__popup-info-header {
+    font-size: 2.4rem;
+  }
+  .offers__popup-info-text {
+    font-size: 1.6rem;
   }
   .contact {
     margin: 4em 8em;
@@ -1123,12 +1034,22 @@ nav .nav-link__contact::before {
   .hero-img .hero-text .btn {
     font-size: 2.1rem;
   }
-  .projects__img {
-    max-width: 580px;
-  }
   .wrapper {
     width: 65vw;
     max-width: 450px;
+  }
+  .projects {
+    height: 700px;
+  }
+  .projects__popup-section {
+    width: 900px;
+  }
+  .projects__popup-section-project-title {
+    font-size: 1.8rem;
+  }
+  .projects__popup-section-resize {
+    width: 35px;
+    height: 35px;
   }
   .contact-title {
     display: none;
@@ -1198,9 +1119,6 @@ nav .nav-link__contact::before {
   }
   .hero-img .item5 {
     height: 64vh;
-  }
-  .projects__img {
-    max-width: 680px;
   }
 }
 @media (min-width: 1400px) {
