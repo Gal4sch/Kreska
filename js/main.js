@@ -26,7 +26,6 @@ const stageThree = document.querySelector('.stage-three');
 const stageFour = document.querySelector('.stage-four');
 const stageFive = document.querySelector('.stage-five');
 const stageSix = document.querySelector('.stage-six');
-const stages = document.querySelector('.stages');
 
 const footerYearMobile = document.querySelector('.footer__year-mobile');
 const footerYearDesktop = document.querySelector('.footer__year-desktop');
@@ -38,52 +37,22 @@ const sendBtn = document.querySelector('.send');
 const popup = document.querySelector('.popup');
 
 const handleOffersStage = () => {
-	stageOne.classList.remove('hide');
-	stageTwo.classList.add('hide');
-	stageThree.classList.add('hide');
-	stageFour.classList.add('hide');
-	stageFive.classList.add('hide');
-	stageSix.classList.add('hide');
+	stageOne.classList.toggle('hide');
 };
 const handleOffersStageTwo = () => {
-	stageOne.classList.add('hide');
-	stageTwo.classList.remove('hide');
-	stageThree.classList.add('hide');
-	stageFour.classList.add('hide');
-	stageFive.classList.add('hide');
-	stageSix.classList.add('hide');
+	stageTwo.classList.toggle('hide');
 };
 const handleOffersStageThree = () => {
-	stageOne.classList.add('hide');
-	stageTwo.classList.add('hide');
-	stageThree.classList.remove('hide');
-	stageFour.classList.add('hide');
-	stageFive.classList.add('hide');
-	stageSix.classList.add('hide');
+	stageThree.classList.toggle('hide');
 };
 const handleOffersStageFour = () => {
-	stageOne.classList.add('hide');
-	stageTwo.classList.add('hide');
-	stageThree.classList.add('hide');
-	stageFour.classList.remove('hide');
-	stageFive.classList.add('hide');
-	stageSix.classList.add('hide');
+	stageFour.classList.toggle('hide');
 };
 const handleOffersStageFive = () => {
-	stageOne.classList.add('hide');
-	stageTwo.classList.add('hide');
-	stageThree.classList.add('hide');
-	stageFour.classList.add('hide');
-	stageFive.classList.remove('hide');
-	stageSix.classList.add('hide');
+	stageFive.classList.toggle('hide');
 };
 const handleOffersStageSix = () => {
-	stageOne.classList.add('hide');
-	stageTwo.classList.add('hide');
-	stageThree.classList.add('hide');
-	stageFour.classList.add('hide');
-	stageFive.classList.add('hide');
-	stageSix.classList.remove('hide');
+	stageSix.classList.toggle('hide');
 };
 
 const handleCurrentYear = () => {

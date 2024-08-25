@@ -327,7 +327,7 @@ nav {
 }
 
 .hide {
-	// display: none;
+	display: none;
 }
 
 .active {
@@ -337,7 +337,6 @@ nav {
 .projects {
 	position: relative;
 	height: 300px;
-	
 
 	&__popup {
 		position: absolute;
@@ -442,9 +441,30 @@ nav {
 	}
 }
 
-.offers{
-	height: 1200px;
-	padding: 50px;
+.offers {
+	padding: 2em 0 2em 0;
+	&__popup {
+		margin-top: 1em;
+		&-info {
+			margin-top: 1em;
+			padding: 0 80px;
+			&-header {
+				padding-bottom: 5px;
+				cursor: pointer;
+			}
+			&-text {
+				font-size: 1rem;
+				padding-bottom: 10px;
+			}
+		}
+		&-underline {
+			position: relative;
+			left: -30px;
+			width: 150px;
+			height: 1px;
+			background-color: colors.$black;
+		}
+	}
 }
 
 .studio {
@@ -693,6 +713,17 @@ nav {
 		}
 	}
 
+	.offers {
+		&__popup-info {
+			&-header {
+				font-size: 2rem;
+			}
+			&-text {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
 	.contact {
 		margin: 2em 6em;
 	}
@@ -796,6 +827,13 @@ nav {
 			}
 		}
 	}
+
+	.offers {
+		&__popup-info-text {
+			font-size: 1.4rem;
+		}
+	}
+
 	.contact {
 		margin: 2em 8em;
 	}
@@ -910,6 +948,17 @@ nav {
 		}
 	}
 
+	.offers {
+		&__popup-info {
+			&-header{
+				font-size: 2.4rem;
+			}
+			&-text {
+				font-size: 1.6rem;
+			}
+		}
+	}
+
 	.contact {
 		margin: 4em 8em;
 		&__form {
@@ -987,6 +1036,7 @@ nav {
 	}
 
 	.projects {
+		height: 700px;
 		&__popup {
 			&-section {
 				width: 900px;

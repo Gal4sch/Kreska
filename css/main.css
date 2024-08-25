@@ -2,6 +2,7 @@
   100% {
     z-index: 0;
     opacity: 0;
+    display: none;
   }
   99% {
     z-index: 3;
@@ -461,6 +462,10 @@ nav .nav-link__contact::before {
   color: #e4d3cf;
 }
 
+.hide {
+  display: none;
+}
+
 .active {
   display: true;
 }
@@ -564,8 +569,29 @@ nav .nav-link__contact::before {
 }
 
 .offers {
-  height: 1200px;
-  padding: 50px;
+  padding: 2em 0 2em 0;
+}
+.offers__popup {
+  margin-top: 1em;
+}
+.offers__popup-info {
+  margin-top: 1em;
+  padding: 0 80px;
+}
+.offers__popup-info-header {
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.offers__popup-info-text {
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+.offers__popup-underline {
+  position: relative;
+  left: -30px;
+  width: 150px;
+  height: 1px;
+  background-color: #000;
 }
 
 .studio {
@@ -782,6 +808,12 @@ nav .nav-link__contact::before {
     font-size: 1.5rem;
     margin: 0.5em 0;
   }
+  .offers__popup-info-header {
+    font-size: 2rem;
+  }
+  .offers__popup-info-text {
+    font-size: 1.2rem;
+  }
   .contact {
     margin: 2em 6em;
   }
@@ -856,6 +888,9 @@ nav .nav-link__contact::before {
   .projects__popup-info-text {
     font-size: 1.4rem;
     padding: 0.5em;
+  }
+  .offers__popup-info-text {
+    font-size: 1.4rem;
   }
   .contact {
     margin: 2em 8em;
@@ -939,6 +974,12 @@ nav .nav-link__contact::before {
   .projects__popup-info-text {
     font-size: 1.7rem;
   }
+  .offers__popup-info-header {
+    font-size: 2.4rem;
+  }
+  .offers__popup-info-text {
+    font-size: 1.6rem;
+  }
   .contact {
     margin: 4em 8em;
   }
@@ -996,6 +1037,9 @@ nav .nav-link__contact::before {
   .wrapper {
     width: 65vw;
     max-width: 450px;
+  }
+  .projects {
+    height: 700px;
   }
   .projects__popup-section {
     width: 900px;
