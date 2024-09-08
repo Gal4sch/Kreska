@@ -10,9 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/8b7ee2cf3e.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LfwdDoqAAAAAOgP_7YTN_qqYJcZJbuUG47xHaNc"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Sulphur+Point:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
@@ -21,14 +24,14 @@
 <body>
     <div class="loading">
         <div class="loading__brand">
-            <img src="./img/KRESKA.svg" alt="Kreska">
+            <img class="loading__brand-img" src="./img/KRESKA.svg" alt="Kreska">
             <p class="loading__brand-title">Projektowanie historii z duszą.</p>
         </div>
     </div>
 
     <nav class="navbar nav navbar-expand-lg position-fixed top-0 w-100 py-3 navbar-bg-color">
         <div class="container nav-link">
-            <a href="index.html" class="navbar-brand"><img src="./img/KRESKA.svg" alt="Logo firmy"></a>
+            <a href="index.html" class="navbar-brand"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
@@ -36,7 +39,8 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto nav-link__items">
                     <a href="#projects" class="nav-link__item nav-link__projects">projekty</a>
-                    <a href="#offers" class="nav-link__item nav-link__offers">oferta</a>
+                    <a href="#offers" class="nav-link__item nav-link__stages">oferta</a>
+                    <a href="#stages" class="nav-link__item nav-link__stages">etapy</a>
                     <a href="#studio" class="nav-link__item nav-link__studio">studio</a>
                     <a href="#contact" class="nav-link__item nav-link__contact">kontakt</a>
                 </div>
@@ -46,12 +50,11 @@
 
     <div id="brand" class="brand">
         <div id="social" class="brand__social">
-            <a href="https://www.instagram.com/kreska_projektowanie_wnetrz?igsh=cGpkNGpwcWR3ZmZ5" target="_blank"><i
-                    class="fab fa-facebook-f"></i></a>
+            <!-- <a href="https://www.instagram.com/kreska_projektowanie_wnetrz?igsh=cGpkNGpwcWR3ZmZ5" target="_blank"><i
+                    class="fab fa-facebook-f"></i></a> -->
             <a href="https://www.instagram.com/kreska_projektowanie_wnetrz?igsh=cGpkNGpwcWR3ZmZ5" target="_blank"><i
                     class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/kreska_projektowanie_wnetrz?igsh=cGpkNGpwcWR3ZmZ5" target="_blank"><i
-                    class="fab fa-pinterest"></i></a>
+            <a href="https://pin.it/4GziA6Umc" target="_blank"><i class="fab fa-pinterest"></i></a>
         </div>
         <div id="slogan" class="brand__slogan">
             <h2 class="brand__slogan-title">Projektowanie historii z duszą.</h2>
@@ -76,7 +79,7 @@
             <h1>projektowanie wnętrz</h1>
             <a href="#contact" class="btn btn-outline-light mt-2 text-uppercase">zamów projekt</a>
         </div>
-        <a href="#offers"><i class="fa-solid fa-chevron-down bounce-top"></i></a>
+        <a href="#stages"><i class="fa-solid fa-chevron-down bounce-top"></i></a>
     </header>
 
     <main class="main">
@@ -84,14 +87,62 @@
         <section id="projects" class="projects bg-light  p-5">
             <div class="container">
 
-                <h2 class="section-title" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">projekty
+                <h2 class="section-title">projekty
                 </h2>
-                <div class="underline" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500"></div>
+                <div class="underline"></div>
 
                 <div class="projects__popup">
-                    <div class="projects__popup-section" data-aos="fade-up" data-aos-delay="700"
-                        data-aos-duration="500">
-                        <img src="./img/Image38.png" alt="projects" class="projects__popup-section-img">
+                    <div class="projects__popup-section">
+                        <img src="./img/Image38.jpg" alt="projects" class="projects__popup-section-img">
+                        <div class="projects__popup-section-project">
+                            <div class="projects__popup-section-project-one">
+                                <a href="project_one.html">
+                                    <p class="projects__popup-section-resize">
+                                    </p>
+                                </a>
+                                <p class="projects__popup-section-project-title">Mieszkanie Gdańsk</p>
+                            </div>
+                            <div class="projects__popup-section-project-two">
+                                <a href="project_two.html">
+                                    <p class="projects__popup-section-resize"></p>
+                                </a>
+                                <p class="projects__popup-section-project-title">Bliźniak Łomianki</p>
+                            </div>
+                            <div class="projects__popup-section-project-three">
+                                <a href="project_three.html">
+                                    <p class="projects__popup-section-resize">
+                                    </p>
+                                </a>
+                                <p class="projects__popup-section-project-title">Gdańsk Grobla</p>
+                            </div>
+                            <div class="projects__popup-section-project-four">
+                                <a href="project_four.html">
+                                    <p class="projects__popup-section-resize"></p>
+                                </a>
+                                <p class="projects__popup-section-project-title">Warszawa Ursus</p>
+                            </div>
+                            <div class="projects__popup-section-project-five">
+                                <a href="project_five.html">
+                                    <p class="projects__popup-section-resize"></p>
+                                </a>
+                                <p class="projects__popup-section-project-title">Warszawa Bliźniak</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+        <section id="offers" class="projects p-5">
+            <div class="container">
+
+                <h2 class="section-title">oferta
+                </h2>
+                <div class="underline"></div>
+
+                <div class="projects__popup">
+                    <div class="projects__popup-section">
+                        <img src="./img/Image38.jpg" alt="projects" class="projects__popup-section-img">
                         <div class="projects__popup-section-project">
                             <div class="projects__popup-section-project-one">
                                 <a href="project_one.html">
@@ -125,129 +176,151 @@
                                 </a>
                                 <p class="projects__popup-section-project-title">Projekt nr 5</p>
                             </div>
-                            <div class="projects__popup-section-project-six">
-                                <a href="project_one.html">
-                                    <p class="projects__popup-section-resize"></p>
-                                </a>
-                                <p class="projects__popup-section-project-title">Projekt nr 6</p>
-                            </div>
                         </div>
 
                     </div>
                 </div>
         </section>
 
-        <section id="offers" class="offers">
+        <section id="stages" class="stages bg-light">
             <div class="container">
-                <div class="offers__box">
+                <div class="stages__box">
                     <div>
-                        <h2 class="section-title" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">oferta
+                        <h2 class="section-title">etapy
                         </h2>
-                        <p class="underline" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500"></p>
+                        <p class="underline"></p>
                     </div>
-                    <div class="offers__popup-info" data-aos="fade-up" data-aos-delay="700" data-aos-duration="500">
-                        <div class="offers__popup-info-one">
-                            <h3 class="offers__popup-info-header offers-stage-one-button">Etap 1</h3>
-                            <div class="stage-one">
-                                <p class="offers__popup-info-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit.
-                                    Perferendis maxime recusandae sapiente, dolore quod accusantium libero nam iusto
-                                    qui,
-                                    doloribus autem natus! Cupiditate nostrum nesciunt temporibus dolorem maiores
-                                    architecto
-                                    odit.</p>
-                                <p class="offers__popup-info-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                    Exercitationem atque amet, commodi ipsum pariatur quisquam, ullam alias assumenda
-                                    dolore, expedita impedit dignissimos laudantium architecto voluptate voluptas iure
-                                    quidem mollitia. Fugiat.</p>
+                    <div class="stages__popup">
+                        <div class="stages__popup-info">
+                            <div class="stages__popup-info-one">
+                                <h3 class="stages__popup-info-header stages-stage-one-button">01. Pierwsze spotkanie:
+                                    Poznajmy się!</h3>
+                                <div class="stage-one">
+                                    <p class="stages__popup-info-text">To Twój pierwszy krok w naszej wspólnej podróży.
+                                        Podczas tego spotkania porozmawiam o Twoich marzeniach, stylu życia, estetyce i
+                                        budżecie. </p>
+                                    <p class="stages__popup-info-text">Chcę Cię dobrze poznać, by móc stworzyć wnętrze
+                                        idealnie dopasowane do
+                                        Twoich oczekiwań i możliwości. To właśnie tutaj zrodzą się pierwsze pomysły,
+                                        które
+                                        będą fundamentem całego projektu.</p>
+                                </div>
                             </div>
-                            <p class="offers__popup-underline"></p>
                         </div>
-                        <div class="offers__popup-info-two">
-                            <h3 class="offers__popup-info-header offers-stage-two-button">Etap 2</h3>
-                            <div class="stage-two hide">
-                                <p class="offers__popup-info-text ">Lorem ipsum dolor sit, amet consectetur adipisicing
-                                    elit.
-                                    Placeat, voluptates repellat similique sint quam deleniti nobis exercitationem
-                                    aliquid
-                                    amet cupiditate ad mollitia consequuntur consequatur reprehenderit fugit, quia neque
-                                    eum
-                                    animi!</p>
-                                <p class="offers__popup-info-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit.
-                                    Amet minus necessitatibus fugit incidunt officiis eveniet molestias. Incidunt
-                                    molestias,
-                                    ipsa, sed maxime et perferendis doloribus consequuntur rem tempora unde cupiditate
-                                    voluptatem!</p>
+                        <div class="stages__popup-info">
+                            <div class="stages__popup-info-two">
+                                <h3 class="stages__popup-info-header stages-stage-two-button">02. Inwentaryzacja:
+                                    Zaczynam
+                                    od szczegółów</h3>
+                                <div class="stage-two hide">
+                                    <p class="stages__popup-info-text ">Zanim przystąpię do projektowania, dokładnie
+                                        mierzę
+                                        przestrzeń, którą mam zaaranżować. Zbieram też dokumentację fotograficzną, aby
+                                        każdy
+                                        detal był uwzględniony.</p>
+                                    <p class="stages__popup-info-text">Jeśli Twój dom jest jeszcze na etapie budowy,
+                                        bazuję
+                                        na planach architektonicznych. Dzięki temu, projekt będzie odzwierciedlał
+                                        rzeczywiste wymiary i możliwości przestrzeni.</p>
+                                </div>
                             </div>
-                            <p class="offers__popup-underline"></p>
                         </div>
-                        <div class="offers__popup-info-three">
-                            <h3 class="offers__popup-info-header offers-stage-three-button">Etap 3</h3>
-                            <div class="stage-three hide">
-                                <p class="offers__popup-info-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit.
-                                    Repudiandae incidunt, quia voluptates suscipit debitis, dolorum doloribus sapiente
-                                    nam
-                                    ex eaque corporis iure inventore quisquam dolor, ullam unde fuga quasi ipsa nesciunt
-                                    reprehenderit maiores aliquam sint et soluta.</p>
-                                <p class="offers__popup-info-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                    Optio dolores nobis maxime laboriosam magnam deleniti et omnis natus pariatur,
-                                    suscipit
-                                    voluptatem vel a veritatis architecto officiis eius quis corporis. Deserunt.</p>
+                        <div class="stages__popup-info">
+
+                            <div class="stages__popup-info-three">
+                                <h3 class="stages__popup-info-header stages-stage-three-button">03. Koncepcja:
+                                    Funkcjonalność przede wszystkim</h3>
+                                <div class="stage-three hide">
+                                    <p class="stages__popup-info-text">To moment, w którym analizuję całą przestrzeń i
+                                        staram się maksymalnie wykorzystać jej potencjał. Przedstawię Ci kilka
+                                        propozycji
+                                        układów funkcjonalnych, dopasowanych do Twoich potrzeb i codziennych zwyczajów.
+                                    </p>
+                                    <p class="stages__popup-info-text">Moim celem jest stworzenie wnętrza, gdzie każda
+                                        strefa idealnie ze sobą współgra. Otrzymasz różne opcje w formie prostych
+                                        planów,
+                                        abyś mógł wybrać tę najlepszą dla siebie.</p>
+                                </div>
                             </div>
-                            <p class="offers__popup-underline"></p>
                         </div>
-                        <div class="offers__popup-info-four">
-                            <h3 class="offers__popup-info-header offers-stage-four-button">Etap 4</h3>
-                            <div class="stage-four hide">
-                                <p class="offers__popup-info-text">Lorem, ipsum dolor sit amet consectetur adipisicing
-                                    elit.
-                                    Sed iste recusandae rerum iure non suscipit modi molestias repudiandae eum nam earum
-                                    voluptatibus commodi aperiam ex accusamus ea, facere vel autem enim minima quisquam
-                                    repellendus, optio quam corrupti. </p>
-                                <p class="offers__popup-info-text">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                    elit.
-                                    Veritatis aperiam ullam blanditiis laboriosam quisquam corporis quia tempore, vel
-                                    reprehenderit! Sed totam, consequatur saepe numquam architecto quos corrupti
-                                    delectus
-                                    similique quo.</p>
+                        <div class="stages__popup-info">
+
+                            <div class="stages__popup-info-four">
+                                <h3 class="stages__popup-info-header stages-stage-four-button">04. Wizualizacje: Twoje
+                                    wnętrze w 3D</h3>
+                                <div class="stage-four hide">
+                                    <p class="stages__popup-info-text">Po zatwierdzeniu układu funkcjonalnego,
+                                        przechodzę do
+                                        tworzenia fotorealistycznych wizualizacji. Spośród wielu dostępnych materiałów i
+                                        elementów wybieram te, które najlepiej oddają zamierzony efekt.</p>
+                                    <p class="stages__popup-info-text">Dzięki wizualizacjom zobaczysz swoje przyszłe
+                                        wnętrze
+                                        w najdrobniejszych szczegółach, zanim jeszcze zacznę je realizować.
+                                    </p>
+                                </div>
                             </div>
-                            <p class="offers__popup-underline"></p>
                         </div>
-                        <div class="offers__popup-info-five">
-                            <h3 class="offers__popup-info-header offers-stage-five-button">Etap 5</h3>
-                            <div class="stage-five hide">
-                                <p class="offers__popup-info-text">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                    elit.
-                                    Error, veniam provident iste temporibus eaque cupiditate rem. Quas sunt labore omnis
-                                    blanditiis deserunt, dolores non unde, eveniet ipsam sapiente minima quidem ab
-                                    consequuntur corporis nisi fugiat quis accusantium quo?</p>
-                                <p class="offers__popup-info-text">Quidem expedita distinctio,
-                                    iusto aut corporis molestiae libero nesciunt ratione. Ducimus inventore vero ea
-                                    ratione
-                                    et, tenetur libero sed distinctio modi nemo omnis nobis exercitationem perspiciatis
-                                    quam. </p>
+                        <div class="stages__popup-info">
+
+                            <div class="stages__popup-info-five">
+                                <h3 class="stages__popup-info-header stages-stage-five-button">05. Drugie spotkanie:
+                                    Wybór
+                                    materiałów w praktyce</h3>
+                                <div class="stage-five hide">
+                                    <p class="stages__popup-info-text">Kiedy wizualizacje są gotowe i zaakceptowane,
+                                        spotykam się z Tobą, aby wspólnie wybrać materiały wykończeniowe. W przyjaznej
+                                        atmosferze showroomu dobieramy detale, które w pełni oddają charakter Twojego
+                                        projektu, jednocześnie dbając o ustalony budżet</p>
+                                    <p class="stages__popup-info-text">Po spotkaniu przygotuję dla Ciebie zestawienie
+                                        wszystkich materiałów wraz z ich ilościami i cenami, a także będę monitorować
+                                        realizację zamówień.</p>
+                                </div>
                             </div>
-                            <p class="offers__popup-underline"></p>
                         </div>
-                        <div class="offers__popup-info-six">
-                            <h3 class="offers__popup-info-header offers-stage-six-button">Etap 6</h3>
-                            <div class="stage-six hide">
-                                <p class="offers__popup-info-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                    Eum sapiente maiores blanditiis reiciendis! Sed placeat quo hic laborum doloremque
-                                    atque
-                                    dolor veritatis, impedit laboriosam, reprehenderit quos debitis. </p>
-                                <p class="offers__popup-info-text">Animi est doloribus consequatur cupiditate,
-                                    laboriosam
-                                    sapiente aliquam possimus dolorem. Odit velit doloribus, repudiandae possimus atque
-                                    iure
-                                    magnam nesciunt, delectus aut voluptatem voluptas sequi inventore corrupti
-                                    reiciendis et
-                                    dolorem. Perspiciatis itaque rerum minima optio perferendis? </p>
+
+                        <div class="stages__popup-info">
+
+                            <div class="stages__popup-info-six">
+                                <h3 class="stages__popup-info-header stages-stage-six-button">06. Projekt wykonawczy:
+                                    Czas
+                                    na szczegóły techniczne</h3>
+                                <div class="stage-six hide">
+                                    <p class="stages__popup-info-text">Na tym etapie tworzę szczegółowe rysunki dla
+                                        wykonawców – zarówno dla ekipy budowlanej, jak i stolarzy. To kluczowy element
+                                        projektu, który zawiera wszystkie niezbędne informacje, aby prace przebiegały
+                                        sprawnie i zgodnie z założeniami. </p>
+                                    <p class="stages__popup-info-text">Dzięki temu mogę mieć pewność, że efekt końcowy
+                                        będzie dokładnie taki, jak planowałem. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stages__popup-info">
+                            <div class="stages__popup-info-seven">
+                                <h3 class="stages__popup-info-header stages-stage-seven-button">07. Nadzór autorski:
+                                    Czuwam
+                                    nad realizacją</h3>
+                                <div class="stage-seven hide">
+                                    <p class="stages__popup-info-text">Jeśli zdecydujesz się na kompleksowy projekt
+                                        wnętrz,
+                                        zapewniam częściowy nadzór autorski, obejmujący maksymalnie dwa dodatkowe
+                                        spotkania
+                                        na miejscu inwestycji.</p>
+                                    <p class="stages__popup-info-text">W przypadku projektów realizowanych w Krakowie,
+                                        Warszawie i okolicach, mogę zaoferować pełen nadzór nad pracami, współpracując z
+                                        zaufanymi wykonawcami.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stages__popup-info-eight">
+                            <h3 class="stages__popup-info-header stages-stage-eight-button">08. Realizacja: Spełnienie
+                                marzeń</h3>
+                            <div class="stage-eight hide">
+                                <p class="stages__popup-info-text">To najpiękniejszy moment całego procesu – kiedy Twoje
+                                    wymarzone wnętrze staje się rzeczywistością. Spotykam się z Tobą, aby wspólnie
+                                    cieszyć się z efektu mojej pracy i podziwiać zrealizowany projekt.</p>
+                                <p class="stages__popup-info-text"> To chwila, która przypomina, jak satysfakcjonujące
+                                    jest widzieć, jak nasze wspólne wysiłki przekształcają przestrzeń w idealny dom,
+                                    dokładnie taki, jaki sobie wyobrażałeś.</p>
                             </div>
                         </div>
                     </div>
@@ -261,10 +334,20 @@
                 <div class="studio__info">
                     <h2 class="section-title">studio
                     </h2>
-                    <p class="studio-info">Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Quis fuga ducimus adipisci sint, deleniti sequi
-                        doloremque officiis suscipit quidem impedit quisquam ipsum laudantium placeat architecto tempora
-                        nesciunt sed quas vel.</p>
+                    <p class="studio-info">Moją misją jest tworzenie wnętrz, które promieniują ciepłem i gościnnością, w
+                        pełni oddając unikalną dynamikę życia mieszkańców. Wierzę, że dom to nie tylko miejsce, ale
+                        przede wszystkim atmosfera, która inspiruje i daje poczucie bezpieczeństwa.
+                    </p>
+                    <p class="studio-info">
+                        Każdy projekt, który realizuję, jest starannie zaplanowany, aby połączyć estetykę z
+                        funkcjonalnością. Zrozumienie indywidualnych potrzeb naszych klientów pozwala mi tworzyć
+                        przestrzenie, które są nie tylko piękne, ale także praktyczne, sprzyjające codziennym
+                        aktywnościom i rytuałom.
+                    </p>
+                    <p class="studio-info">
+                        Dążę do tego, aby nasze wnętrza były tłem dla codziennych chwil, wypełnione ciepłem i
+                        przytulnością, które sprawiają, że każdy dzień staje się wyjątkowy.
+                    </p>
                 </div>
             </div>
         </section>
@@ -278,10 +361,10 @@
                         <p class="underline"></p>
                     </div>
 
-                    <form class="contact__form " action="">
+                    <form class="contact__form " action="https://kreskawnetrza.pl/mail.php" method="POST">
                         <div class="contact__form-box">
-                            <label for="username" class="contact__form-label"></label>
-                            <input class="contact__form-input" type="text" id="username" placeholder="Imię*">
+                            <label for="name" class="contact__form-label"></label>
+                            <input class="contact__form-input" type="text" id="name" name="name" placeholder="Imię*">
                             <p class="contact__form-error-text error-text">error</p>
                         </div>
 
@@ -292,14 +375,18 @@
                             <p class="contact__form-error-text error-text">error</p>
                         </div>
                         <div class="contact__form-box">
-                            <label for="msg" class="contact__form-label"></label>
-                            <textarea class="contact__form-textarea" type="text" id="msg"
+                            <label for="message" class="contact__form-label"></label>
+                            <textarea class="contact__form-textarea" type="text" name="message" id="message"
                                 placeholder="Wiadomość*"></textarea>
                             <p class="contact__form-error-text error-text">error</p>
                         </div>
+
                         <button type="submit" class="contact__form-btn send">Wyślij</button>
                         <div class="contact__form-popup popup">
                             <p class="contact__form-popup-text">Wiadomość została wysłana!</p>
+                            <p class="contact__form-popup-text">Dziękujemy za kontakt.</p>
+                            <p class="contact__form-popup-text">Postaramy się odpowiedzieć jak najszybciej.</p>
+
                             <button class="contact__form-popup-close close">ok</button>
                         </div>
                     </form>

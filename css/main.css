@@ -62,6 +62,17 @@
     font-size: 1.8rem;
   }
 }
+.hero__text-info {
+  margin: 2em 4em;
+  padding: 0 2em;
+}
+.hero__text-info-one {
+  margin-bottom: 2em;
+}
+.hero__text-info-three {
+  margin-top: 2em;
+}
+
 .project {
   position: relative;
 }
@@ -71,33 +82,46 @@
 .project__box {
   display: flex;
   flex-direction: column;
-  margin: 1em 1.5em;
+  margin: 0 1.5em;
+}
+.project__box-choose {
+  display: flex;
+  font-family: "Montserrat", "sans-serif";
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.project__box-choose-next {
+  color: #000;
+  text-decoration: none;
+  transition: scale 0.3s;
+}
+.project__box-choose-next:hover {
+  scale: 0.95;
 }
 .project__img {
   width: 100%;
-  transition: transform 0.3s;
-}
-.project__img-one {
-  margin-bottom: 1em;
-}
-.project__img-four {
+  transition: scale 0.3s;
   margin-bottom: 1em;
 }
 .project__img:hover {
   scale: 1.01;
 }
 
+@media (min-width: 576px) {
+  .project__box-choose {
+    font-size: 1.4rem;
+  }
+}
 @media (min-width: 768px) {
   .project__boxes {
     margin: 2em 4em 6em;
   }
   .project__box {
-    margin: 2em 0;
+    margin: 0 0;
   }
-  .project__img-one {
-    margin-bottom: 2em;
-  }
-  .project__img-four {
+  .project__img {
     margin-bottom: 2em;
   }
 }
@@ -111,15 +135,17 @@
     flex-direction: row;
     justify-content: space-between;
   }
+  .project__box-choose {
+    font-size: 1.6rem;
+  }
   .project__img-one {
     position: relative;
-    height: 230px;
+    height: 220px;
     width: auto;
-    margin-bottom: 0;
   }
   .project__img-two {
     position: relative;
-    height: 230px;
+    height: 220px;
     width: auto;
   }
   .project__img-three {
@@ -127,31 +153,73 @@
   }
   .project__img-four {
     position: relative;
-    height: 230px;
+    height: 220px;
     width: auto;
-    margin-bottom: 0;
   }
   .project__img-five {
     position: relative;
-    height: 230px;
+    height: 220px;
     width: auto;
   }
   .project__img-six {
     position: relative;
+    height: 220px;
+    width: auto;
+  }
+  .project__img-seven {
+    position: relative;
+  }
+  .project__img-eight {
+    position: relative;
+    width: 400px;
+    height: auto;
+  }
+  .project__img-nine {
+    position: relative;
+    width: 400px;
+    height: auto;
+  }
+  .project__img-eleven {
+    position: relative;
+    width: 400px;
+    height: auto;
+  }
+  .project__img-twelve {
+    position: relative;
+    width: 400px;
+    height: auto;
   }
 }
 @media (min-width: 1200px) {
+  .project__img {
+    margin-bottom: 3em;
+  }
   .project__img-one {
-    height: 280px;
+    height: 275px;
   }
   .project__img-two {
-    height: 280px;
+    height: 275px;
   }
   .project__img-four {
-    height: 280px;
+    height: 265px;
   }
   .project__img-five {
-    height: 280px;
+    height: 265px;
+  }
+  .project__img-six {
+    height: 265px;
+  }
+  .project__img-eight {
+    width: 500px;
+  }
+  .project__img-nine {
+    width: 500px;
+  }
+  .project__img-eleven {
+    width: 500px;
+  }
+  .project__img-twelve {
+    width: 500px;
   }
 }
 @media (min-width: 1400px) {
@@ -162,10 +230,25 @@
     height: 330px;
   }
   .project__img-four {
-    height: 330px;
+    height: 315px;
   }
   .project__img-five {
-    height: 330px;
+    height: 315px;
+  }
+  .project__img-six {
+    height: 315px;
+  }
+  .project__img-eight {
+    width: 580px;
+  }
+  .project__img-nine {
+    width: 580px;
+  }
+  .project__img-eleven {
+    width: 580px;
+  }
+  .project__img-twelve {
+    width: 580px;
   }
 }
 .wrapper {
@@ -191,6 +274,7 @@ html {
 body {
   font-family: "Poiret One", sans-serif;
   font-size: 1.6rem;
+  font-weight: 300;
   color: #000;
 }
 
@@ -204,7 +288,7 @@ body {
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-top: 1em;
 }
 
@@ -303,6 +387,15 @@ nav .navbar-nav .nav-link.active,
 nav .navbar-nav .show > .nav-link {
   color: #e4d3cf;
 }
+nav .navbar-brand {
+  width: 100px;
+  height: 70px;
+  background-image: url(../img/KRESKA_100x70.png);
+  transition: background-image 0.3s;
+}
+nav .navbar-brand:hover {
+  background-image: url(../img/KRESKA_100x70_grey.png);
+}
 nav .nav-link__item {
   position: relative;
   margin: 0 0.5em;
@@ -324,20 +417,20 @@ nav .nav-link__item::before {
 nav .nav-link__item:hover::before, nav .nav-link__item:focus::before {
   transform: scaleX(1);
 }
-nav .nav-link__item:hover, nav .nav-link__item:focus {
-  color: #000;
-}
 nav .nav-link__projects::before {
-  width: 89px;
+  width: 20%;
 }
-nav .nav-link__offers::before {
-  width: 70px;
+nav .nav-link__ofers::before {
+  width: 15%;
+}
+nav .nav-link__stages::before {
+  width: 15%;
 }
 nav .nav-link__studio::before {
-  width: 66px;
+  width: 15%;
 }
 nav .nav-link__contact::before {
-  width: 94px;
+  width: 20%;
 }
 
 .hero-title {
@@ -353,7 +446,7 @@ nav .nav-link__contact::before {
 }
 .hero-title::before {
   position: absolute;
-  top: 0;
+  top: -5px;
   left: 0;
   width: 100%;
   height: 100px;
@@ -395,47 +488,47 @@ nav .nav-link__contact::before {
 .hero-img .item1 {
   position: relative;
   height: 57vh;
-  width: 100%;
+  width: auto;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(../img/Kreska_projekt_1c.png);
+  background-image: url(../img/Kreska_projekt_1c_640.jpg);
 }
 .hero-img .item2 {
   position: relative;
   height: 57vh;
-  width: 100%;
+  width: auto;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(../img/Kreska_projekt_1e.png);
+  background-image: url(../img/Kreska_projekt_1e_640.jpg);
 }
 .hero-img .item3 {
   position: relative;
   height: 57vh;
-  width: 100%;
+  width: auto;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(../img/Kreska_projekt_3a.png);
+  background-image: url(../img/Kreska_projekt_3a_640.jpg);
 }
 .hero-img .item4 {
   position: relative;
   height: 57vh;
-  width: 100%;
+  width: auto;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(../img/Kreska_projekt_1d.png);
+  background-image: url(../img/Kreska_projekt_1d_640.jpg);
 }
 .hero-img .item5 {
   position: relative;
   height: 57vh;
-  width: 100%;
+  width: auto;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(../img/Kreska_projekt_2b.png);
+  background-image: url(../img/Kreska_projekt_2b_640.jpg);
 }
 .hero-img .hero-text h1 {
   position: relative;
@@ -448,10 +541,11 @@ nav .nav-link__contact::before {
   margin-bottom: 10px;
   color: #000;
   border-color: #000;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, scale 0.3s;
 }
 .hero-img .hero-text .btn:hover {
   background-color: #e4d3cf;
+  scale: 1.03;
 }
 .hero-img .fa-chevron-down {
   position: absolute;
@@ -464,10 +558,7 @@ nav .nav-link__contact::before {
 
 .hide {
   display: none;
-}
-
-.active {
-  display: true;
+  position: relative;
 }
 
 .projects {
@@ -481,13 +572,12 @@ nav .nav-link__contact::before {
   margin-top: 2em;
 }
 .projects__popup-section {
-  width: 280px;
   height: auto;
   color: #fff;
 }
 .projects__popup-section-img {
   position: relative;
-  width: 100%;
+  width: 240px;
   height: auto;
   box-shadow: 3px 3px 5px black;
 }
@@ -495,7 +585,7 @@ nav .nav-link__contact::before {
   position: absolute;
   margin-top: 2px;
   padding: 0 2px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.1);
   left: 50%;
@@ -504,32 +594,27 @@ nav .nav-link__contact::before {
 }
 .projects__popup-section-project-one {
   position: absolute;
-  top: 30%;
-  left: 23%;
+  top: 20%;
+  left: 18%;
 }
 .projects__popup-section-project-two {
   position: absolute;
-  top: 12%;
-  left: 43%;
+  top: 22%;
+  left: 65%;
 }
 .projects__popup-section-project-three {
   position: absolute;
-  top: 33%;
-  left: 65%;
+  top: 57%;
+  left: 75%;
 }
 .projects__popup-section-project-four {
   position: absolute;
-  top: 59%;
-  left: 72%;
+  top: 45%;
+  left: 47%;
 }
 .projects__popup-section-project-five {
   position: absolute;
-  top: 55%;
-  left: 47%;
-}
-.projects__popup-section-project-six {
-  position: absolute;
-  top: 68%;
+  top: 60%;
   left: 22.5%;
 }
 .projects__popup-section-resize {
@@ -568,37 +653,55 @@ nav .nav-link__contact::before {
   font-size: 1rem;
 }
 
-.offers {
+.stages {
   padding: 2em 0 2em 0;
 }
-.offers__popup {
-  margin-top: 1em;
-}
-.offers__popup-info {
+.stages__popup {
   margin-top: 1em;
   padding: 0 80px;
 }
-.offers__popup-info-header {
-  padding-bottom: 5px;
-  cursor: pointer;
+.stages__popup-info {
+  font-family: "Montserrat", sans-serif;
+  margin: 1em 0 2em;
+  transition: width 0.3s;
+  text-align: justify;
 }
-.offers__popup-info-text {
-  font-size: 1rem;
-  padding-bottom: 10px;
-}
-.offers__popup-underline {
+.stages__popup-info::after {
+  display: block;
   position: relative;
   left: -30px;
   width: 150px;
   height: 1px;
+  top: 10px;
+  margin-bottom: 1em;
   background-color: #000;
+  transition: width 0.3s;
+  content: "";
+}
+.stages__popup-info-header {
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.stages__popup-info-header:hover {
+  color: #b67162;
+}
+.stages__popup-info-text {
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+.stages__popup-info-eight {
+  font-family: "Montserrat", sans-serif;
+}
+.stages__popup-info:hover::after, .stages__popup-info:active::after {
+  width: 200px;
 }
 
 .studio {
   position: relative;
   height: 100vh;
-  width: 100%;
-  max-height: 800px;
+  width: auto;
   background-image: url(../img/Kreska_projekt_2c.png);
   background-size: cover;
   background-position: center;
@@ -615,6 +718,7 @@ nav .nav-link__contact::before {
   display: flex;
   justify-content: center;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   padding: 1em 0 0;
   max-height: 700px;
@@ -687,7 +791,7 @@ nav .nav-link__contact::before {
   align-items: center;
   flex-direction: column;
   border-radius: 5px;
-  background-color: rgb(248, 249, 250);
+  background-color: #e4d3cf;
 }
 .contact__form-popup p {
   font-size: 1.5rem;
@@ -740,6 +844,7 @@ nav .nav-link__contact::before {
   width: 100%;
   padding: 1em 0;
   background-color: #9e9d89;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: space-around;
 }
@@ -790,9 +895,9 @@ nav .nav-link__contact::before {
   .projects {
     height: 450px;
   }
-  .projects__popup-section {
-    font-size: 1.2rem;
-    width: 455px;
+  .projects__popup-section-img {
+    width: 360px;
+    height: auto;
   }
   .projects__popup-section-project-title {
     font-size: 1.2rem;
@@ -808,10 +913,10 @@ nav .nav-link__contact::before {
     font-size: 1.5rem;
     margin: 0.5em 0;
   }
-  .offers__popup-info-header {
+  .stages__popup-info-header {
     font-size: 2rem;
   }
-  .offers__popup-info-text {
+  .stages__popup-info-text {
     font-size: 1.2rem;
   }
   .contact {
@@ -837,7 +942,7 @@ nav .nav-link__contact::before {
     font-size: 2.4rem;
   }
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   .hero-title h1 {
     font-size: 3rem;
@@ -847,19 +952,19 @@ nav .nav-link__contact::before {
     padding: 3em 4em;
   }
   .hero-img .item1 {
-    height: 40vh;
+    height: 45vh;
   }
   .hero-img .item2 {
-    height: 40vh;
+    height: 45vh;
   }
   .hero-img .item3 {
-    height: 40vh;
+    height: 45vh;
   }
   .hero-img .item4 {
-    height: 40vh;
+    height: 45vh;
   }
   .hero-img .item5 {
-    height: 40vh;
+    height: 45vh;
   }
   .hero-img h1 {
     font-size: 3rem;
@@ -873,6 +978,32 @@ nav .nav-link__contact::before {
   }
   .projects__popup-section {
     width: 500px;
+  }
+  .projects__popup-section-img {
+    width: 500px;
+  }
+  .projects__popup-section-project-title {
+    font-size: 1.2rem;
+  }
+  .projects__popup-section-project-one {
+    top: 25%;
+    left: 23%;
+  }
+  .projects__popup-section-project-two {
+    top: 35%;
+    left: 65%;
+  }
+  .projects__popup-section-project-three {
+    top: 57%;
+    left: 74%;
+  }
+  .projects__popup-section-project-four {
+    top: 50%;
+    left: 47%;
+  }
+  .projects__popup-section-project-five {
+    top: 68%;
+    left: 22.5%;
   }
   .projects__popup-section-resize {
     width: 20px;
@@ -889,7 +1020,7 @@ nav .nav-link__contact::before {
     font-size: 1.4rem;
     padding: 0.5em;
   }
-  .offers__popup-info-text {
+  .stages__popup-info-text {
     font-size: 1.4rem;
   }
   .contact {
@@ -934,19 +1065,24 @@ nav .nav-link__contact::before {
     padding: 4em 8em 4em;
   }
   .hero-img .item1 {
-    height: 35vh;
+    background-image: url(../img/Kreska_projekt_1c_1920.jpg);
+    height: 36vh;
   }
   .hero-img .item2 {
-    height: 35vh;
+    background-image: url(../img/Kreska_projekt_1e_1920.jpg);
+    height: 36vh;
   }
   .hero-img .item3 {
-    height: 35vh;
+    background-image: url(../img/Kreska_projekt_3a_1920.jpg);
+    height: 36vh;
   }
   .hero-img .item4 {
-    height: 35vh;
+    background-image: url(../img/Kreska_projekt_1d_1920.jpg);
+    height: 36vh;
   }
   .hero-img .item5 {
-    height: 35vh;
+    background-image: url(../img/Kreska_projekt_2b_1920.jpg);
+    height: 36vh;
   }
   .hero-img .hero-text .btn {
     font-size: 2rem;
@@ -954,12 +1090,17 @@ nav .nav-link__contact::before {
   }
   .projects {
     height: 600px;
+    width: auto;
   }
   .projects__popup-section {
     width: 700px;
   }
+  .projects__popup-section-img {
+    width: 700px;
+    height: auto;
+  }
   .projects__popup-section-project-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   .projects__popup-section-resize {
     width: 25px;
@@ -974,11 +1115,11 @@ nav .nav-link__contact::before {
   .projects__popup-info-text {
     font-size: 1.7rem;
   }
-  .offers__popup-info-header {
-    font-size: 2.4rem;
+  .stages__popup-info-header {
+    font-size: 2.2rem;
   }
-  .offers__popup-info-text {
-    font-size: 1.6rem;
+  .stages__popup-info-text {
+    font-size: 1.4rem;
   }
   .contact {
     margin: 4em 8em;
@@ -1003,6 +1144,9 @@ nav .nav-link__contact::before {
   }
 }
 @media (min-width: 1200px) {
+  .section-title {
+    font-size: 3.2rem;
+  }
   .nav .nav-link__item {
     font-size: 2.7rem;
   }
@@ -1014,19 +1158,19 @@ nav .nav-link__contact::before {
     margin: 5em 0;
   }
   .hero-img .item1 {
-    height: 60vh;
+    height: 55vh;
   }
   .hero-img .item2 {
-    height: 60vh;
+    height: 55vh;
   }
   .hero-img .item3 {
-    height: 60vh;
+    height: 55vh;
   }
   .hero-img .item4 {
-    height: 60vh;
+    height: 55vh;
   }
   .hero-img .item5 {
-    height: 60vh;
+    height: 55vh;
   }
   .hero-img h1 {
     font-size: 3.5rem;
@@ -1040,12 +1184,18 @@ nav .nav-link__contact::before {
   }
   .projects {
     height: 700px;
+    width: auto;
   }
   .projects__popup-section {
     width: 900px;
+    height: auto;
+  }
+  .projects__popup-section-img {
+    width: 900px;
+    height: auto;
   }
   .projects__popup-section-project-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .projects__popup-section-resize {
     width: 35px;
@@ -1091,7 +1241,7 @@ nav .nav-link__contact::before {
     margin-left: 10px;
   }
   nav .nav-link__item {
-    margin-left: 2em;
+    margin-left: 1em;
   }
   .brand h2 {
     margin: -1.25em -2em;
