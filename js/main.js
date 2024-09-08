@@ -1,5 +1,6 @@
 const allNavItems = document.querySelectorAll('.nav-link');
 const navList = document.querySelector('.navbar-collapse');
+const url = 'https://kreskawnetrza.pl/mail.php';
 
 allNavItems.forEach((item) =>
 	item.addEventListener('click', () => {
@@ -7,18 +8,14 @@ allNavItems.forEach((item) =>
 	})
 );
 
-const offersStageOneButton = document.querySelector('.offers-stage-one-button');
-const offersStageTwoButton = document.querySelector('.offers-stage-two-button');
-const offersStageThreeButton = document.querySelector(
-	'.offers-stage-three-button'
-);
-const offersStageFourButton = document.querySelector(
-	'.offers-stage-four-button'
-);
-const offersStageFiveButton = document.querySelector(
-	'.offers-stage-five-button'
-);
-const offersStageSixButton = document.querySelector('.offers-stage-six-button');
+const stageOneButton = document.querySelector('.stages-stage-one-button');
+const stageTwoButton = document.querySelector('.stages-stage-two-button');
+const stageThreeButton = document.querySelector('.stages-stage-three-button');
+const stageFourButton = document.querySelector('.stages-stage-four-button');
+const stageFiveButton = document.querySelector('.stages-stage-five-button');
+const stageSixButton = document.querySelector('.stages-stage-six-button');
+const stageSevenButton = document.querySelector('.stages-stage-seven-button');
+const stageEightButton = document.querySelector('.stages-stage-eight-button');
 
 const stageOne = document.querySelector('.stage-one');
 const stageTwo = document.querySelector('.stage-two');
@@ -26,33 +23,42 @@ const stageThree = document.querySelector('.stage-three');
 const stageFour = document.querySelector('.stage-four');
 const stageFive = document.querySelector('.stage-five');
 const stageSix = document.querySelector('.stage-six');
+const stageSeven = document.querySelector('.stage-seven');
+const stageEight = document.querySelector('.stage-eight');
 
 const footerYearMobile = document.querySelector('.footer__year-mobile');
 const footerYearDesktop = document.querySelector('.footer__year-desktop');
 
-const username = document.querySelector('#username');
+const name = document.querySelector('#name');
 const email = document.querySelector('#email');
-const message = document.querySelector('#msg');
+const message = document.querySelector('#message');
 const sendBtn = document.querySelector('.send');
 const popup = document.querySelector('.popup');
 
-const handleOffersStage = () => {
+const handleStageOne = () => {
 	stageOne.classList.toggle('hide');
+	stageOne.classList.toggle('active');
 };
-const handleOffersStageTwo = () => {
+const handleStageTwo = () => {
 	stageTwo.classList.toggle('hide');
 };
-const handleOffersStageThree = () => {
+const handleStageThree = () => {
 	stageThree.classList.toggle('hide');
 };
-const handleOffersStageFour = () => {
+const handleStageFour = () => {
 	stageFour.classList.toggle('hide');
 };
-const handleOffersStageFive = () => {
+const handleStageFive = () => {
 	stageFive.classList.toggle('hide');
 };
-const handleOffersStageSix = () => {
+const handleStageSix = () => {
 	stageSix.classList.toggle('hide');
+};
+const handleStageSeven = () => {
+	stageSeven.classList.toggle('hide');
+};
+const handleStageEight = () => {
+	stageEight.classList.toggle('hide');
 };
 
 const handleCurrentYear = () => {
@@ -85,7 +91,7 @@ const checkForm = (input) => {
 };
 
 const checkLength = (input) => {
-	if (!input.value) showError(username, 'Podaj nazwę użytkownika');
+	if (!input.value) showError(name, 'Podaj swoje imię');
 };
 
 const validateEmail = (email) => {
@@ -117,22 +123,88 @@ const checkErrors = () => {
 	}
 };
 
+async function makeRequest(data) {
+	const rest = await fetch(url, {
+		method: post,
+		body: data,
+	});
+	if (rest.ok) {
+		return rest.json();
+	}
+	return Promise.reject('${res.status: ${res.statusText}');
+}
+
+function showSubmitError() {
+	formMessage.innerHTML = 'Wysłanie wiadomości się nie powiodło';
+}
+
+function showSubmitSuccess() {
+	const div = document.createElement('div');
+	div.classList.add('contact-form-popup');
+	form.after(div);
+	div.innerHTML = `
+		<strong>Wiadomość została wysłana</strong>
+		<span>Dziękujemy za kontakt. Postaramy się odpowiedzieć jak najszybciej
+	`;
+	form.remove();
+}
+
+function afterSubmit(res) {
+	if (res.errors) {
+		const selectors = res.errors.map((el) => `[name ="${el}"]`);
+		const fieldsWithErrors = form.querySelectorAll(selectors.join(','));
+		for (const field of fieldsWithErrors) {
+			field.classList.add('is-invalid');
+		}
+	} else {
+		if (res.status === 'success') {
+			showSubmitSuccess();
+		}
+		if (res.status === 'error') {
+			showSubmitError(res.status);
+		}
+	}
+}
+
+async function submitForm() {
+	let formErrors = checkErrors();
+
+	if (!formErrors) {
+		const formData = new FormData(form);
+		send.disabled = true;
+		submitForm.classList.add('loading');
+
+		try {
+			const response = await makeRequest(formData);
+			afterSubmit(response);
+		} catch (err) {
+			showSubmitError();
+		}
+
+		submit.disabled = false;
+		submit.classList.remove('loading');
+	}
+}
+
 if (sendBtn) {
 	sendBtn.addEventListener('click', (e) => {
 		e.preventDefault();
 
-		checkForm([username, email, message]);
-		checkLength(username, 3);
+		checkForm([name, email, message]);
+		checkLength(name, 3);
 		validateEmail(email);
 		checkMessage(message, 1);
 		checkErrors();
+		submitForm();
 	});
 }
 
 handleCurrentYear();
-offersStageOneButton.addEventListener('click', handleOffersStage);
-offersStageTwoButton.addEventListener('click', handleOffersStageTwo);
-offersStageThreeButton.addEventListener('click', handleOffersStageThree);
-offersStageFourButton.addEventListener('click', handleOffersStageFour);
-offersStageFiveButton.addEventListener('click', handleOffersStageFive);
-offersStageSixButton.addEventListener('click', handleOffersStageSix);
+stageOneButton.addEventListener('click', handleStageOne);
+stageTwoButton.addEventListener('click', handleStageTwo);
+stageThreeButton.addEventListener('click', handleStageThree);
+stageFourButton.addEventListener('click', handleStageFour);
+stageFiveButton.addEventListener('click', handleStageFive);
+stageSixButton.addEventListener('click', handleStageSix);
+stageSevenButton.addEventListener('click', handleStageSeven);
+stageEightButton.addEventListener('click', handleStageEight);
