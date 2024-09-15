@@ -499,17 +499,17 @@ nav {
 		margin: 4em 1em;
 		background-color: rgba($color: colors.$main-color, $alpha: 0.9);
 		max-height: 700px;
-	}
-
-	p {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		text-align: center;
-		font-family: 'Montserrat', sans-serif;
-		font-size: 1rem;
-		padding: 1em 0 0;
-		max-height: 700px;
+		&-text{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			font-family: 'Montserrat', sans-serif;
+			margin: 2em 0;
+			font-size: 1rem;
+			padding: 1em 0 0;
+			max-height: 700px;
+		}
 	}
 }
 
@@ -782,6 +782,14 @@ nav {
 		}
 	}
 
+	.studio{
+		&__info{
+			&-text{
+				font-size: 1.2rem;
+			}
+		}
+	}
+
 	.contact {
 		margin: 2em 6em;
 	}
@@ -1045,6 +1053,14 @@ nav {
 				font-size: 2.2rem;
 			}
 			&-text {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	.studio{
+		&__info{
+			&-text{
 				font-size: 1.4rem;
 			}
 		}

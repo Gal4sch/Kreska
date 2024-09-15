@@ -719,12 +719,13 @@ nav .nav-link__contact::before {
   background-color: rgba(228, 211, 207, 0.9);
   max-height: 700px;
 }
-.studio p {
+.studio__info-text {
   position: relative;
   display: flex;
   justify-content: center;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+  margin: 2em 0;
   font-size: 1rem;
   padding: 1em 0 0;
   max-height: 700px;
@@ -941,6 +942,9 @@ nav .nav-link__contact::before {
   .stages__popup-info-text {
     font-size: 1.2rem;
   }
+  .studio__info-text {
+    font-size: 1.2rem;
+  }
   .contact {
     margin: 2em 6em;
   }
@@ -1138,6 +1142,9 @@ nav .nav-link__contact::before {
     font-size: 2.2rem;
   }
   .stages__popup-info-text {
+    font-size: 1.4rem;
+  }
+  .studio__info-text {
     font-size: 1.4rem;
   }
   .contact {
