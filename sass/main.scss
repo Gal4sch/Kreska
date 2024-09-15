@@ -456,7 +456,7 @@ nav {
 			transition: width 0.3s;
 			text-align: justify;
 			&::after {
-				display: block;
+				display: flex;
 				position: relative;
 				left: -30px;
 				width: 150px;
@@ -474,21 +474,12 @@ nav {
 				transition: color 0.3s;
 			}
 
-			&-header:hover {
-				color: colors.$secondary-color;
-			}
 			&-text {
 				font-size: 1rem;
 				padding-bottom: 10px;
 			}
 			&-eight {
 				font-family: 'Montserrat', sans-serif;
-			}
-		}
-		&-info:hover,
-		&-info:active {
-			&::after {
-				width: 200px;
 			}
 		}
 	}
@@ -508,17 +499,17 @@ nav {
 		margin: 4em 1em;
 		background-color: rgba($color: colors.$main-color, $alpha: 0.9);
 		max-height: 700px;
-	}
-
-	p {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		text-align: center;
-		font-family: 'Montserrat', sans-serif;
-		font-size: 1.4rem;
-		padding: 1em 0 0;
-		max-height: 700px;
+		&-text{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			font-family: 'Montserrat', sans-serif;
+			margin: 2em 0;
+			font-size: 1rem;
+			padding: 1em 0 0;
+			max-height: 700px;
+		}
 	}
 }
 
@@ -695,6 +686,42 @@ nav {
 // MEDIA
 // ======================================
 
+@media (hover: none), (pointer: coarse) {
+	.stages {
+		&__popup {
+			&-info {
+				&-header:active {
+					color: colors.$secondary-color;
+				}
+			}
+
+			&-info:active {
+				&::after {
+					width: 200px;
+				}
+			}
+		}
+	}
+}
+
+@media (hover: hover), (pointer: fine) {
+	.stages {
+		&__popup {
+			&-info {
+				&-header:hover {
+					color: colors.$secondary-color;
+				}
+			}
+
+			&-info:hover {
+				&::after {
+					width: 200px;
+				}
+			}
+		}
+	}
+}
+
 @media (min-width: 576px) {
 	.hero-img {
 		padding: 2em 3em;
@@ -750,6 +777,14 @@ nav {
 				font-size: 2rem;
 			}
 			&-text {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	.studio{
+		&__info{
+			&-text{
 				font-size: 1.2rem;
 			}
 		}
@@ -889,12 +924,6 @@ nav {
 		}
 	}
 
-	.stages {
-		&__popup-info-text {
-			font-size: 1.4rem;
-		}
-	}
-
 	.contact {
 		margin: 2em 8em;
 	}
@@ -1024,6 +1053,14 @@ nav {
 				font-size: 2.2rem;
 			}
 			&-text {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	.studio{
+		&__info{
+			&-text{
 				font-size: 1.4rem;
 			}
 		}
