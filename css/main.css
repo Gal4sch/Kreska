@@ -63,8 +63,9 @@
   }
 }
 .hero__text-info {
-  margin: 2em 4em;
-  padding: 0 2em;
+  margin: 2em 2em 0;
+  padding: 0 1em;
+  font-size: 1rem;
 }
 .hero__text-info-one {
   margin-bottom: 2em;
@@ -110,6 +111,9 @@
 }
 
 @media (min-width: 576px) {
+  .hero__text-info {
+    font-size: 1.2rem;
+  }
   .project__box-choose {
     font-size: 1.4rem;
   }
@@ -126,6 +130,9 @@
   }
 }
 @media (min-width: 992px) {
+  .hero__text-info {
+    font-size: 1.4rem;
+  }
   .project__boxes {
     margin: 0 3em 6em;
   }
@@ -191,6 +198,11 @@
   }
 }
 @media (min-width: 1200px) {
+  .hero__text-info {
+    margin: 2em 8em 0;
+    padding: 0 4em;
+    font-size: 1.6rem;
+  }
   .project__img {
     margin-bottom: 3em;
   }
@@ -667,7 +679,7 @@ nav .nav-link__contact::before {
   text-align: justify;
 }
 .stages__popup-info::after {
-  display: block;
+  display: flex;
   position: relative;
   left: -30px;
   width: 150px;
@@ -684,18 +696,12 @@ nav .nav-link__contact::before {
   cursor: pointer;
   transition: color 0.3s;
 }
-.stages__popup-info-header:hover {
-  color: #b67162;
-}
 .stages__popup-info-text {
   font-size: 1rem;
   padding-bottom: 10px;
 }
 .stages__popup-info-eight {
   font-family: "Montserrat", sans-serif;
-}
-.stages__popup-info:hover::after, .stages__popup-info:active::after {
-  width: 200px;
 }
 
 .studio {
@@ -719,7 +725,7 @@ nav .nav-link__contact::before {
   justify-content: center;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1rem;
   padding: 1em 0 0;
   max-height: 700px;
 }
@@ -881,6 +887,22 @@ nav .nav-link__contact::before {
   margin-left: 5px;
 }
 
+@media (hover: none), (pointer: coarse) {
+  .stages__popup-info-header:active {
+    color: #b67162;
+  }
+  .stages__popup-info:active::after {
+    width: 200px;
+  }
+}
+@media (hover: hover), (pointer: fine) {
+  .stages__popup-info-header:hover {
+    color: #b67162;
+  }
+  .stages__popup-info:hover::after {
+    width: 200px;
+  }
+}
 @media (min-width: 576px) {
   .hero-img {
     padding: 2em 3em;
@@ -1019,9 +1041,6 @@ nav .nav-link__contact::before {
   .projects__popup-info-text {
     font-size: 1.4rem;
     padding: 0.5em;
-  }
-  .stages__popup-info-text {
-    font-size: 1.4rem;
   }
   .contact {
     margin: 2em 8em;

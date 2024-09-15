@@ -3,8 +3,9 @@
 .hero {
 	&__text {
 		&-info {
-			margin: 2em 4em;
-			padding: 0 2em;
+			margin: 2em 2em 0;
+			padding: 0 1em;
+			font-size: 1rem;
 			&-one {
 				margin-bottom: 2em;
 			}
@@ -53,6 +54,14 @@
 }
 
 @media (min-width: 576px) {
+	.hero{
+		&__text{
+			&-info{
+				font-size: 1.2rem;
+			}
+		}
+	}
+
 	.project {
 		&__box {
 			&-choose {
@@ -77,6 +86,15 @@
 }
 
 @media (min-width: 992px) {
+
+	.hero{
+		&__text{
+			&-info{
+				font-size: 1.4rem;
+			}
+		}
+	}
+
 	.project {
 		&__boxes {
 			margin: 0 3em 6em;
@@ -153,6 +171,17 @@
 }
 
 @media (min-width: 1200px) {
+
+	.hero{
+		&__text{
+			&-info{
+				margin: 2em 8em 0;
+				padding: 0 4em;
+				font-size: 1.6rem;
+			}
+		}
+	}
+
 	.project {
 		&__img {
 			margin-bottom: 3em;
