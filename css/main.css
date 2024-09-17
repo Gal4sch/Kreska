@@ -300,7 +300,7 @@ body {
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 1em;
 }
 
@@ -308,7 +308,7 @@ body {
   margin: 0 auto;
   width: 50px;
   height: 3px;
-  background-color: #e4d3cf;
+  background-color: #b67162;
 }
 
 .build {
@@ -374,9 +374,10 @@ body {
 .brand__social a {
   margin: 10px;
   color: #000;
+  transition: color 0.3s;
 }
 .brand__social a:hover {
-  color: #9e9d89;
+  color: #b67162;
 }
 
 nav {
@@ -494,7 +495,7 @@ nav .nav-link__contact::before {
 }
 .hero-img h1 {
   text-transform: uppercase;
-  font-size: 2.3rem;
+  font-size: 2rem;
   margin: 1em 0 0.5em 0;
 }
 .hero-img .item1 {
@@ -565,7 +566,7 @@ nav .nav-link__contact::before {
   transform: translate(-50%);
   font-size: 3rem;
   margin: 0;
-  color: #e4d3cf;
+  color: #b67162;
 }
 
 .hide {
@@ -589,7 +590,7 @@ nav .nav-link__contact::before {
 }
 .projects__popup-section-img {
   position: relative;
-  width: 240px;
+  width: 290px;
   height: auto;
   box-shadow: 3px 3px 5px black;
 }
@@ -665,6 +666,59 @@ nav .nav-link__contact::before {
   font-size: 1rem;
 }
 
+.offers {
+  position: relative;
+  height: 80vh;
+  background-image: url(../img/home_Gdansk_Grobla/Image47.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.offers__top {
+  display: none;
+}
+.offers__info-left {
+  padding: 2em;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 40vh;
+  width: auto;
+}
+.offers__info-left-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 2em 0;
+  padding: 0 3em;
+  font-size: 1.2rem;
+  width: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.offers__info-right {
+  padding: 2em;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 40vh;
+  width: auto;
+}
+.offers__info-right-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 2em 0;
+  padding: 0 3em;
+  font-size: 1.2rem;
+  width: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.offers__bottom {
+  display: none;
+}
+
 .stages {
   padding: 2em 0 2em 0;
 }
@@ -673,7 +727,6 @@ nav .nav-link__contact::before {
   padding: 0 80px;
 }
 .stages__popup-info {
-  font-family: "Montserrat", sans-serif;
   margin: 1em 0 2em;
   transition: width 0.3s;
   text-align: justify;
@@ -687,21 +740,16 @@ nav .nav-link__contact::before {
   top: 10px;
   margin-bottom: 1em;
   background-color: #000;
-  transition: width 0.3s;
   content: "";
 }
 .stages__popup-info-header {
   font-size: 1.2rem;
   padding-bottom: 10px;
   cursor: pointer;
-  transition: color 0.3s;
 }
 .stages__popup-info-text {
   font-size: 1rem;
   padding-bottom: 10px;
-}
-.stages__popup-info-eight {
-  font-family: "Montserrat", sans-serif;
 }
 
 .studio {
@@ -716,7 +764,7 @@ nav .nav-link__contact::before {
 .studio__info {
   padding: 2em;
   margin: 4em 1em;
-  background-color: rgba(228, 211, 207, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   max-height: 700px;
 }
 .studio__info-text {
@@ -724,7 +772,6 @@ nav .nav-link__contact::before {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
   margin: 2em 0;
   font-size: 1rem;
   padding: 1em 0 0;
@@ -768,6 +815,23 @@ nav .nav-link__contact::before {
   max-width: 100%;
   width: 100%;
   min-height: 200px;
+}
+.contact__form-checkbox {
+  position: relative;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.contact__form-checkbox-input {
+  margin-right: 10px;
+}
+.contact__form-privacy {
+  position: relative;
+  text-decoration: none;
+  color: #b67162;
+  transition: color 0.3s;
+}
+.contact__form-privacy:hover {
+  color: #9e9d89;
 }
 .contact__form-btn {
   position: relative;
@@ -827,13 +891,14 @@ nav .nav-link__contact::before {
 .contact__form-box .error-text {
   visibility: hidden;
   padding: 0;
-  margin: 0 0 0 10px;
+  margin: 5px 0 0 10px;
   font-size: 1.4rem;
   color: #000;
 }
 
 .contact__form-box.error .error-text {
   visibility: visible;
+  color: #b67162;
 }
 
 .contact__form-box.error input {
@@ -859,13 +924,19 @@ nav .nav-link__contact::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  width: 100px;
+  height: 70px;
+  background-image: url("../img/KRESKA_100x70.png");
+  transition: background-image 0.3s;
+}
+.footer__box-brand:hover {
+  background-image: url("../img/KRESKA_100x70_grey.png");
 }
 .footer__box-copy-mobile {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0 10px;
   padding: 0 10px;
 }
@@ -879,16 +950,22 @@ nav .nav-link__contact::before {
   text-decoration: none;
   color: #000;
   margin: 0 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .footer__box-privacy:hover {
-  color: #292929;
+  color: #545454;
 }
 .footer__year {
   margin-left: 5px;
 }
 
 @media (hover: none), (pointer: coarse) {
+  .stages__popup-info::after {
+    transition: width 0.5s;
+  }
+  .stages__popup-info-header {
+    transition: color 0.5s;
+  }
   .stages__popup-info-header:active {
     color: #b67162;
   }
@@ -897,6 +974,12 @@ nav .nav-link__contact::before {
   }
 }
 @media (hover: hover), (pointer: fine) {
+  .stages__popup-info::after {
+    transition: width 0.3s;
+  }
+  .stages__popup-info-header {
+    transition: color 0.3s;
+  }
   .stages__popup-info-header:hover {
     color: #b67162;
   }
@@ -947,6 +1030,9 @@ nav .nav-link__contact::before {
   }
   .contact {
     margin: 2em 6em;
+  }
+  .contact__form-checkbox {
+    font-size: 1.4rem;
   }
 }
 @media (min-width: 768px) {
@@ -1080,9 +1166,6 @@ nav .nav-link__contact::before {
     left: 0.7em;
     font-size: 1.8rem;
   }
-  .section-title {
-    font-size: 3rem;
-  }
   .hero-img {
     margin: 6em 0 0;
     padding: 4em 8em 4em;
@@ -1139,10 +1222,10 @@ nav .nav-link__contact::before {
     font-size: 1.7rem;
   }
   .stages__popup-info-header {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
   .stages__popup-info-text {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .studio__info-text {
     font-size: 1.4rem;
@@ -1152,6 +1235,9 @@ nav .nav-link__contact::before {
   }
   .contact__form-btn {
     font-size: 2rem;
+  }
+  .contact__form-checkbox {
+    font-size: 1.6rem;
   }
   .contact__form-popup {
     z-index: 1;
@@ -1170,9 +1256,6 @@ nav .nav-link__contact::before {
   }
 }
 @media (min-width: 1200px) {
-  .section-title {
-    font-size: 3.2rem;
-  }
   .nav .nav-link__item {
     font-size: 2.7rem;
   }
@@ -1227,6 +1310,67 @@ nav .nav-link__contact::before {
     width: 35px;
     height: 35px;
   }
+  .offers {
+    position: relative;
+    height: 100%;
+    background-image: url(../img/home_Gdansk_Grobla/Image47.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .offers__top {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 5em;
+    background-color: white;
+  }
+  .offers__info-left {
+    padding: 2em;
+    position: relative;
+    background-color: white;
+    height: 50vh;
+    width: 50%;
+  }
+  .offers__info-left-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2em 0;
+    padding: 0 3em;
+    font-size: 1.6rem;
+    width: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .offers__info-right {
+    position: relative;
+    padding: 2em;
+    background-color: white;
+    height: 50vh;
+    width: 50%;
+    left: 50%;
+  }
+  .offers__info-right-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2em 0;
+    padding: 0 3em;
+    font-size: 1.6rem;
+    width: 550px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .offers__bottom {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 5em;
+    background-color: white;
+  }
   .contact-title {
     display: none;
   }
@@ -1249,7 +1393,7 @@ nav .nav-link__contact::before {
     margin: 1px auto;
     width: 100px;
     height: 3px;
-    background-color: #e4d3cf;
+    background-color: #b67162;
   }
   .contact__wrapper-slogan-text {
     display: flex;
@@ -1279,7 +1423,7 @@ nav .nav-link__contact::before {
   }
   .hero-img {
     margin-top: 5em;
-    padding: 2.5em 8em;
+    padding: 0 8em;
   }
   .hero-img .item1 {
     height: 64vh;

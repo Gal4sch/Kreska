@@ -29,9 +29,10 @@ const stageEight = document.querySelector('.stage-eight');
 const footerYearMobile = document.querySelector('.footer__year-mobile');
 const footerYearDesktop = document.querySelector('.footer__year-desktop');
 
-const name = document.querySelector('#name');
+const username = document.querySelector('#name');
 const email = document.querySelector('#email');
 const message = document.querySelector('#message');
+const privacy = document.querySelector('#privacy');
 const sendBtn = document.querySelector('.send');
 const popup = document.querySelector('.popup');
 
@@ -91,7 +92,7 @@ const checkForm = (input) => {
 };
 
 const checkLength = (input) => {
-	if (!input.value) showError(name, 'Podaj swoje imię');
+	if (!input.value) showError(username, 'Podaj swoje imię');
 };
 
 const validateEmail = (email) => {
@@ -106,6 +107,10 @@ const validateEmail = (email) => {
 };
 const checkMessage = (input, min) => {
 	if (input.value.length < min) showError(message, 'Wprowadź treść wiadomości');
+};
+
+const verifacateCheckbox = (input) => {
+	if (!input.checked) showError(privacy, 'Zaakceptuj politykę prywatności');
 };
 
 const checkErrors = () => {
@@ -174,15 +179,26 @@ async function submitForm() {
 		send.disabled = true;
 		submitForm.classList.add('loading');
 
-		try {
-			const response = await makeRequest(formData);
-			afterSubmit(response);
-		} catch (err) {
-			showSubmitError();
-		}
-
-		submit.disabled = false;
-		submit.classList.remove('loading');
+		grecaptcha.enterprise.ready(function () {
+			grecaptcha.enterprise
+				.execute('6LclkUQqAAAAALs3C9MAv-n1sweZTd2YRcIHTbcm', {
+					action: 'submit',
+				})
+				.then(async (token) => {
+					formData.append('token', token);
+					try {
+						const response = await makeRequest(formData);
+						afterSubmit(response);
+					} catch (err) {
+						showSubmitError();
+					}
+					console.log(token);
+					document.getElementById('g-recaptcha-response').value = token;
+					submit.disabled = false;
+					submit.classList.remove('loading');
+					// Add your logic to submit to your backend server here.
+				});
+		});
 	}
 }
 
@@ -190,10 +206,11 @@ if (sendBtn) {
 	sendBtn.addEventListener('click', (e) => {
 		e.preventDefault();
 
-		checkForm([name, email, message]);
-		checkLength(name, 3);
+		checkForm([username, email, message, privacy]);
+		checkLength(username, 3);
 		validateEmail(email);
 		checkMessage(message, 1);
+		verifacateCheckbox(privacy);
 		checkErrors();
 		submitForm();
 	});
