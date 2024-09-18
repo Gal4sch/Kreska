@@ -346,7 +346,8 @@ nav {
 
 .projects {
 	position: relative;
-	height: 300px;
+	height: 400px;
+	width: auto;
 
 	&__popup {
 		position: absolute;
@@ -354,14 +355,14 @@ nav {
 		transform: translate(-50%);
 		margin-top: 2em;
 		&-section {
-			height: auto;
 			color: #fff;
-
 			&-img {
 				position: relative;
-				width: 290px;
-				height: auto;
-				box-shadow: 3px 3px 5px black;
+				height: 250px;
+				width: auto;
+				box-shadow: 3px 3px 15px #828282;
+				border: 1em solid #fff;
+				border-radius: 10px;
 			}
 			&-project {
 				&-title {
@@ -377,17 +378,17 @@ nav {
 				}
 				&-one {
 					position: absolute;
-					top: 20%;
-					left: 18%;
+					top: 35%;
+					left: 22%;
 				}
 				&-two {
 					position: absolute;
-					top: 22%;
-					left: 65%;
+					top: 35%;
+					left: 70%;
 				}
 				&-three {
 					position: absolute;
-					top: 57%;
+					top: 53%;
 					left: 75%;
 				}
 				&-four {
@@ -397,8 +398,8 @@ nav {
 				}
 				&-five {
 					position: absolute;
-					top: 60%;
-					left: 22.5%;
+					top: 55%;
+					left: 25%;
 				}
 			}
 
@@ -447,7 +448,7 @@ nav {
 
 .offers {
 	position: relative;
-	height: 80vh;
+	height: 100%;
 	background-image: url(../img/home_Gdansk_Grobla/Image47.jpg);
 	background-size: cover;
 	background-position: center;
@@ -459,18 +460,17 @@ nav {
 
 	&__info {
 		&-left {
-			padding: 2em;
+			padding: 1em;
 			position: relative;
 			background-color: rgba(white, $alpha: 0.8);
-			height: 40vh;
 			width: auto;
 			&-text {
 				position: relative;
 				display: flex;
 				justify-content: center;
 				text-align: center;
-				margin: 2em 0;
-				padding: 0 3em;
+				margin: 1em 0 0;
+				padding: 1em 3em 0;
 				font-size: 1.2rem;
 				width: 350px;
 				left: 50%;
@@ -479,17 +479,16 @@ nav {
 		}
 
 		&-right {
-			padding: 2em;
+			padding: 1em 1em 2em;
 			position: relative;
 			background-color: rgba(white, $alpha: 0.8);
-			height: 40vh;
 			width: auto;
 			&-text {
 				position: relative;
 				display: flex;
 				justify-content: center;
 				text-align: center;
-				margin: 2em 0;
+				margin: 1em 0;
 				padding: 0 3em;
 				font-size: 1.2rem;
 				width: 350px;
@@ -602,6 +601,9 @@ nav {
 
 		&-checkbox {
 			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			margin-top: 10px;
 			font-size: 1.2rem;
 			&-input {
@@ -708,7 +710,7 @@ nav {
 	&__box {
 		width: 100%;
 		padding: 1em 0;
-		background-color: colors.$third-color;
+		background-color: #ebebeb;
 		font-family: 'Montserrat', sans-serif;
 
 		display: flex;
@@ -831,18 +833,38 @@ nav {
 	}
 
 	.projects {
-		height: 450px;
+		height: 600px;
 
 		&__popup {
 			&-section {
 				&-img {
-					width: 360px;
-					height: auto;
+					height: 420px;
+					width: auto;
 				}
 
 				&-project {
 					&-title {
 						font-size: 1.2rem;
+					}
+					&-one {
+						top: 35%;
+						left: 22%;
+					}
+					&-two {
+						top: 35%;
+						left: 70%;
+					}
+					&-three {
+						top: 55%;
+						left: 75%;
+					}
+					&-four {
+						top: 50%;
+						left: 47%;
+					}
+					&-five {
+						top: 59%;
+						left: 25%;
 					}
 				}
 
@@ -859,6 +881,25 @@ nav {
 				&-text {
 					font-size: 1.5rem;
 					margin: 0.5em 0;
+				}
+			}
+		}
+	}
+
+	.offers {
+		&__info {
+			&-left {
+				&-text {
+					width: 500px;
+					font-size: 1.4rem;
+				}
+			}
+		}
+		&__info {
+			&-right {
+				&-text {
+					width: 500px;
+					font-size: 1.4rem;
 				}
 			}
 		}
@@ -966,26 +1007,24 @@ nav {
 	}
 
 	.projects {
+		height: 800px;
 		&__popup {
-			display: flex;
-
 			&-section {
-				width: 500px;
 				&-img {
-					width: 500px;
+					height: 550px;
 				}
 
 				&-project {
 					&-title {
-						font-size: 1.2rem;
+						font-size: 1.6rem;
 					}
 
 					&-one {
-						top: 25%;
+						top: 37%;
 						left: 23%;
 					}
 					&-two {
-						top: 35%;
+						top: 37%;
 						left: 65%;
 					}
 					&-three {
@@ -997,8 +1036,8 @@ nav {
 						left: 47%;
 					}
 					&-five {
-						top: 68%;
-						left: 22.5%;
+						top: 59%;
+						left: 25%;
 					}
 				}
 
@@ -1017,6 +1056,23 @@ nav {
 				&-text {
 					font-size: 1.4rem;
 					padding: 0.5em;
+				}
+			}
+		}
+	}
+
+	.offers {
+		&__info {
+			&-left {
+				&-text {
+					width: 600px;
+				}
+			}
+		}
+		&__info {
+			&-right {
+				&-text {
+					width: 600px;
 				}
 			}
 		}
@@ -1108,18 +1164,15 @@ nav {
 	}
 
 	.projects {
-		height: 600px;
-		width: auto;
+		height: 900px;
 		&__popup {
 			&-section {
-				width: 700px;
 				&-img {
-					width: 700px;
-					height: auto;
+					height: 700px;
 				}
 				&-project {
 					&-title {
-						font-size: 1.4rem;
+						font-size: 1.8rem;
 					}
 				}
 
@@ -1141,6 +1194,24 @@ nav {
 		}
 	}
 
+	.offers {
+		&__info {
+			&-left {
+				&-text {
+					width: 700px;
+					font-size: 1.6rem;
+				}
+			}
+		}
+		&__info {
+			&-right {
+				&-text {
+					width: 700px;
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
 	.stages {
 		&__popup-info {
 			&-header {
@@ -1155,7 +1226,7 @@ nav {
 	.studio {
 		&__info {
 			&-text {
-				font-size: 1.4rem;
+				font-size: 1.6rem;
 			}
 		}
 	}
@@ -1240,20 +1311,11 @@ nav {
 	}
 
 	.projects {
-		height: 700px;
-		width: auto;
+		height: 1000px;
 		&__popup {
 			&-section {
-				width: 900px;
-				height: auto;
 				&-img {
-					width: 900px;
-					height: auto;
-				}
-				&-project {
-					&-title {
-						font-size: 1.6rem;
-					}
+					height: 800px;
 				}
 
 				&-resize {
