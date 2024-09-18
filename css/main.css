@@ -576,7 +576,8 @@ nav .nav-link__contact::before {
 
 .projects {
   position: relative;
-  height: 300px;
+  height: 400px;
+  width: auto;
 }
 .projects__popup {
   position: absolute;
@@ -585,14 +586,15 @@ nav .nav-link__contact::before {
   margin-top: 2em;
 }
 .projects__popup-section {
-  height: auto;
   color: #fff;
 }
 .projects__popup-section-img {
   position: relative;
-  width: 290px;
-  height: auto;
-  box-shadow: 3px 3px 5px black;
+  height: 250px;
+  width: auto;
+  box-shadow: 3px 3px 15px #828282;
+  border: 1em solid #fff;
+  border-radius: 10px;
 }
 .projects__popup-section-project-title {
   position: absolute;
@@ -607,17 +609,17 @@ nav .nav-link__contact::before {
 }
 .projects__popup-section-project-one {
   position: absolute;
-  top: 20%;
-  left: 18%;
+  top: 35%;
+  left: 22%;
 }
 .projects__popup-section-project-two {
   position: absolute;
-  top: 22%;
-  left: 65%;
+  top: 35%;
+  left: 70%;
 }
 .projects__popup-section-project-three {
   position: absolute;
-  top: 57%;
+  top: 53%;
   left: 75%;
 }
 .projects__popup-section-project-four {
@@ -627,8 +629,8 @@ nav .nav-link__contact::before {
 }
 .projects__popup-section-project-five {
   position: absolute;
-  top: 60%;
-  left: 22.5%;
+  top: 55%;
+  left: 25%;
 }
 .projects__popup-section-resize {
   position: relative;
@@ -668,7 +670,7 @@ nav .nav-link__contact::before {
 
 .offers {
   position: relative;
-  height: 80vh;
+  height: 100%;
   background-image: url(../img/home_Gdansk_Grobla/Image47.jpg);
   background-size: cover;
   background-position: center;
@@ -678,10 +680,9 @@ nav .nav-link__contact::before {
   display: none;
 }
 .offers__info-left {
-  padding: 2em;
+  padding: 1em;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
-  height: 40vh;
   width: auto;
 }
 .offers__info-left-text {
@@ -689,18 +690,17 @@ nav .nav-link__contact::before {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin: 2em 0;
-  padding: 0 3em;
+  margin: 1em 0 0;
+  padding: 1em 3em 0;
   font-size: 1.2rem;
   width: 350px;
   left: 50%;
   transform: translateX(-50%);
 }
 .offers__info-right {
-  padding: 2em;
+  padding: 1em 1em 2em;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
-  height: 40vh;
   width: auto;
 }
 .offers__info-right-text {
@@ -708,7 +708,7 @@ nav .nav-link__contact::before {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin: 2em 0;
+  margin: 1em 0;
   padding: 0 3em;
   font-size: 1.2rem;
   width: 350px;
@@ -818,6 +818,9 @@ nav .nav-link__contact::before {
 }
 .contact__form-checkbox {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 10px;
   font-size: 1.2rem;
 }
@@ -915,7 +918,7 @@ nav .nav-link__contact::before {
 .footer__box {
   width: 100%;
   padding: 1em 0;
-  background-color: #9e9d89;
+  background-color: #ebebeb;
   font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: space-around;
@@ -999,14 +1002,34 @@ nav .nav-link__contact::before {
     padding: 10px 20px;
   }
   .projects {
-    height: 450px;
+    height: 600px;
   }
   .projects__popup-section-img {
-    width: 360px;
-    height: auto;
+    height: 420px;
+    width: auto;
   }
   .projects__popup-section-project-title {
     font-size: 1.2rem;
+  }
+  .projects__popup-section-project-one {
+    top: 35%;
+    left: 22%;
+  }
+  .projects__popup-section-project-two {
+    top: 35%;
+    left: 70%;
+  }
+  .projects__popup-section-project-three {
+    top: 55%;
+    left: 75%;
+  }
+  .projects__popup-section-project-four {
+    top: 50%;
+    left: 47%;
+  }
+  .projects__popup-section-project-five {
+    top: 59%;
+    left: 25%;
   }
   .projects__popup-section-resize {
     width: 15px;
@@ -1018,6 +1041,14 @@ nav .nav-link__contact::before {
   .projects__popup-info-text {
     font-size: 1.5rem;
     margin: 0.5em 0;
+  }
+  .offers__info-left-text {
+    width: 500px;
+    font-size: 1.4rem;
+  }
+  .offers__info-right-text {
+    width: 500px;
+    font-size: 1.4rem;
   }
   .stages__popup-info-header {
     font-size: 2rem;
@@ -1085,24 +1116,21 @@ nav .nav-link__contact::before {
   .hero-img .hero-text .btn {
     font-size: 1.7rem;
   }
-  .projects__popup {
-    display: flex;
-  }
-  .projects__popup-section {
-    width: 500px;
+  .projects {
+    height: 800px;
   }
   .projects__popup-section-img {
-    width: 500px;
+    height: 550px;
   }
   .projects__popup-section-project-title {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
   .projects__popup-section-project-one {
-    top: 25%;
+    top: 37%;
     left: 23%;
   }
   .projects__popup-section-project-two {
-    top: 35%;
+    top: 37%;
     left: 65%;
   }
   .projects__popup-section-project-three {
@@ -1114,8 +1142,8 @@ nav .nav-link__contact::before {
     left: 47%;
   }
   .projects__popup-section-project-five {
-    top: 68%;
-    left: 22.5%;
+    top: 59%;
+    left: 25%;
   }
   .projects__popup-section-resize {
     width: 20px;
@@ -1131,6 +1159,12 @@ nav .nav-link__contact::before {
   .projects__popup-info-text {
     font-size: 1.4rem;
     padding: 0.5em;
+  }
+  .offers__info-left-text {
+    width: 600px;
+  }
+  .offers__info-right-text {
+    width: 600px;
   }
   .contact {
     margin: 2em 8em;
@@ -1195,18 +1229,13 @@ nav .nav-link__contact::before {
     margin: 3em 0 1em;
   }
   .projects {
-    height: 600px;
-    width: auto;
-  }
-  .projects__popup-section {
-    width: 700px;
+    height: 900px;
   }
   .projects__popup-section-img {
-    width: 700px;
-    height: auto;
+    height: 700px;
   }
   .projects__popup-section-project-title {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
   .projects__popup-section-resize {
     width: 25px;
@@ -1221,6 +1250,14 @@ nav .nav-link__contact::before {
   .projects__popup-info-text {
     font-size: 1.7rem;
   }
+  .offers__info-left-text {
+    width: 700px;
+    font-size: 1.6rem;
+  }
+  .offers__info-right-text {
+    width: 700px;
+    font-size: 1.6rem;
+  }
   .stages__popup-info-header {
     font-size: 2.4rem;
   }
@@ -1228,7 +1265,7 @@ nav .nav-link__contact::before {
     font-size: 1.6rem;
   }
   .studio__info-text {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .contact {
     margin: 4em 8em;
@@ -1292,19 +1329,10 @@ nav .nav-link__contact::before {
     max-width: 450px;
   }
   .projects {
-    height: 700px;
-    width: auto;
-  }
-  .projects__popup-section {
-    width: 900px;
-    height: auto;
+    height: 1000px;
   }
   .projects__popup-section-img {
-    width: 900px;
-    height: auto;
-  }
-  .projects__popup-section-project-title {
-    font-size: 1.6rem;
+    height: 800px;
   }
   .projects__popup-section-resize {
     width: 35px;
