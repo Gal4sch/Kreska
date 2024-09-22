@@ -1,0 +1,62 @@
+@use 'colors' as colors;
+
+.privacy__wrapper {
+	position: relative;
+	margin: 1em 2em;
+	padding: 0 2em;
+	z-index: 1;
+
+	ol {
+		margin: 2em 1em 1em;
+		li {
+			position: relative;
+			text-align: justify;
+			font-size: 1.4rem;
+		}
+	}
+	p {
+		position: relative;
+		text-align: justify;
+		font-size: 1.4rem;
+		margin: 1em 2em 4em;
+	}
+
+	a {
+		text-decoration: none;
+		color: colors.$secondary-color;
+	}
+
+	a:hover {
+		color: #885448;
+	}
+}
+
+@media (min-width: 768px) {
+	.privacy__wrapper{
+		margin: 2em 4em;
+		ol{
+			li{
+				font-size: 1.6rem;
+			}
+		}
+
+		p{
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.privacy__wrapper{
+		margin: 3em 6em;
+		ol{
+			li{
+				font-size: 1.8rem;
+			}
+		}
+
+		p{
+			font-size: 1.8rem;
+		}
+	}
+}

@@ -1,0 +1,250 @@
+@use 'colors' as colors;
+
+.hero {
+	&__text {
+		&-info {
+			margin: 2em 2em 0;
+			padding: 0 1em;
+			font-size: 1rem;
+			&-one {
+				margin-bottom: 2em;
+			}
+			&-three {
+				margin-top: 2em;
+			}
+		}
+	}
+}
+
+.project {
+	&__boxes {
+		margin: 0 2em 4em;
+	}
+	position: relative;
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 0 1.5em;
+		&-choose {
+			display: flex;
+			font-family: 'Montserrat', 'sans-serif';
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+			font-size: 1.1rem;
+			&-next {
+				color: colors.$black;
+				text-decoration: none;
+				transition: scale 0.3s;
+			}
+			&-next:hover {
+				scale: 0.95;
+			}
+		}
+	}
+	&__img {
+		width: 100%;
+		transition: scale 0.3s;
+		margin-bottom: 1em;
+	}
+
+	&__img:hover {
+		scale: 1.01;
+	}
+}
+
+@media (min-width: 576px) {
+	.hero{
+		&__text{
+			&-info{
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	.project {
+		&__box {
+			&-choose {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.project {
+		&__boxes {
+			margin: 2em 4em 6em;
+		}
+		&__box {
+			margin: 0 0;
+		}
+		&__img {
+			margin-bottom: 2em;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+
+	.hero{
+		&__text{
+			&-info{
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	.project {
+		&__boxes {
+			margin: 0 3em 6em;
+		}
+
+		&__box {
+			&-resize {
+				position: relative;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			&-choose{
+				font-size: 1.6rem;
+			}
+		}
+
+		&__img {
+			&-one {
+				position: relative;
+				height: 220px;
+				width: auto;
+			}
+			&-two {
+				position: relative;
+				height: 220px;
+				width: auto;
+			}
+			&-three {
+				position: relative;
+			}
+			&-four {
+				position: relative;
+				height: 220px;
+				width: auto;
+			}
+			&-five {
+				position: relative;
+				height: 220px;
+				width: auto;
+			}
+			&-six {
+				position: relative;
+				height: 220px;
+				width: auto;
+			}
+			&-seven {
+				position: relative;
+			}
+			&-eight {
+				position: relative;
+				width: 400px;
+				height: auto;
+			}
+			&-nine {
+				position: relative;
+				width: 400px;
+				height: auto;
+			}
+
+			&-eleven {
+				position: relative;
+				width: 400px;
+				height: auto;
+			}
+			&-twelve {
+				position: relative;
+				width: 400px;
+				height: auto;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.hero{
+		&__text{
+			&-info{
+				margin: 2em 8em 0;
+				padding: 0 4em;
+				font-size: 1.6rem;
+			}
+		}
+	}
+
+	.project {
+		&__img {
+			margin-bottom: 3em;
+			&-one {
+				height: 275px;
+			}
+			&-two {
+				height: 275px;
+			}
+			&-four {
+				height: 265px;
+			}
+			&-five {
+				height: 265px;
+			}
+			&-six {
+				height: 265px;
+			}
+			&-eight {
+				width: 500px;
+			}
+			&-nine {
+				width: 500px;
+			}
+			&-eleven {
+				width: 500px;
+			}
+			&-twelve {
+				width: 500px;
+			}
+		}
+	}
+}
+@media (min-width: 1400px) {
+	.project {
+		&__img {
+			&-one {
+				height: 330px;
+			}
+			&-two {
+				height: 330px;
+			}
+			&-four {
+				height: 315px;
+			}
+			&-five {
+				height: 315px;
+			}
+			&-six {
+				height: 315px;
+			}
+			&-eight {
+				width: 580px;
+			}
+			&-nine {
+				width: 580px;
+			}
+			&-eleven {
+				width: 580px;
+			}
+			&-twelve {
+				width: 580px;
+			}
+		}
+	}
+}

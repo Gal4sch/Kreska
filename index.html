@@ -2,33 +2,38 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/icon.svg" type="image/x-icon" />
     <title>Kreska</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/8b7ee2cf3e.js" crossorigin="anonymous"></script>
+    <script
+        src="https://www.google.com/recaptcha/enterprise.js?render=6LcO6UIqAAAAAG4IWY5eS5OWOJyW8iWHaWi0fCxN"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Sulphur+Point:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-
+<body ontouchstart="">
     <div class="loading">
         <div class="loading__brand">
-            <img src="./img/KRESKA.svg" alt="Kreska">
+            <img class="loading__brand-img" src="./img/KRESKA.svg" alt="Kreska">
             <p class="loading__brand-title">Projektowanie historii z duszą.</p>
         </div>
     </div>
 
     <nav class="navbar nav navbar-expand-lg position-fixed top-0 w-100 py-3 navbar-bg-color">
         <div class="container nav-link">
-            <a href="#" class="navbar-brand"><img src="./img/KRESKA.svg" alt="Logo firmy"></a>
+            <a href="index.html" class="navbar-brand"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
@@ -36,7 +41,8 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto nav-link__items">
                     <a href="#projects" class="nav-link__item nav-link__projects">projekty</a>
-                    <a href="#offer" class="nav-link__item nav-link__offer">oferta</a>
+                    <a href="#offers" class="nav-link__item nav-link__stages">oferta</a>
+                    <a href="#stages" class="nav-link__item nav-link__stages">etapy</a>
                     <a href="#studio" class="nav-link__item nav-link__studio">studio</a>
                     <a href="#contact" class="nav-link__item nav-link__contact">kontakt</a>
                 </div>
@@ -46,41 +52,36 @@
 
     <div id="brand" class="brand">
         <div id="social" class="brand__social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <!-- <a href="https://www.instagram.com/kreska_projektowanie_wnetrz?igsh=cGpkNGpwcWR3ZmZ5" target="_blank"><i
+                    class="fab fa-facebook-f"></i></a> -->
+            <a href="https://www.instagram.com/kreska_projektowanie_wnetrz?igsh=cGpkNGpwcWR3ZmZ5" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="https://pin.it/4GziA6Umc" target="_blank"><i class="fab fa-pinterest"></i></a>
         </div>
         <div id="slogan" class="brand__slogan">
             <h2 class="brand__slogan-title">Projektowanie historii z duszą.</h2>
         </div>
     </div>
-    <div class="hero-before"></div>
 
     <header class="hero-img">
+
         <div class="hero-carousel">
             <div class="item1">
-                <!-- <img src="./img/Kreska_projekt_1c.png" alt="design"> -->
             </div>
             <div class="item2">
-                <!-- <img src="./img/Kreska_projekt_1e.png" alt="design"> -->
             </div>
             <div class="item3">
-                <!-- <img src="./img/Kreska_projekt_3a.png" alt="design"> -->
             </div>
             <div class="item4">
-                <!-- <img src="./img/Kreska_projekt_1d.png" alt="design"> -->
             </div>
             <div class="item5">
-                <!-- <img src="./img/Kreska_projekt_2b.png" alt="design"> -->
             </div>
         </div>
-        <div class="hero-text text-center" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="500">
+        <div class="hero-text text-center">
             <h1>projektowanie wnętrz</h1>
             <a href="#contact" class="btn btn-outline-light mt-2 text-uppercase">zamów projekt</a>
         </div>
-        <a href="#offer" data-aos="fade-up" data-aos-delay="3200" data-aos-duration="500"><i
-                class="fa-solid fa-chevron-down bounce-top"></i></a>
-
+        <a href="#offers"><i class="fa-solid fa-chevron-down bounce-top"></i></a>
     </header>
 
     <main class="main">
@@ -88,117 +89,327 @@
         <section id="projects" class="projects bg-light  p-5">
             <div class="container">
 
-                <h2 class="section-title" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">projekty
+                <h2 class="section-title projects-title">projekty
                 </h2>
-                <div class="underline" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500"></div>
 
-                <div class="projects__box">
-                    <div class="projects__box-img" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500">
-                        <a href="#projects-one"><img src="./img/Kreska_projekt_1a.png" alt="design"
-                                class="projects__img"></a>
-                        <h3 class="projects__title projects__title-left">
-                            Projekt nr 1</h3>
+                <div class="projects__popup">
+                    <div class="projects__popup-section projects__popup-border">
+                        <img src="./img/Image251.jpg" alt="projects" class="projects__popup-section-img">
+                        <div class="projects__popup-section-project">
+                            <div class="projects__popup-section-project-one">
+                                <a href="project_one.html">
+                                    <p class="projects__popup-section-resize">
+                                    </p>
+                                </a>
+                                <p class="projects__popup-section-project-title">Mieszkanie Gdańsk</p>
+                            </div>
+                            <div class="projects__popup-section-project-two">
+                                <a href="project_two.html">
+                                    <p class="projects__popup-section-resize"></p>
+                                </a>
+                                <p class="projects__popup-section-project-title">Bliźniak Łomianki</p>
+                            </div>
+                            <div class="projects__popup-section-project-three">
+                                <a href="project_three.html">
+                                    <p class="projects__popup-section-resize">
+                                    </p>
+                                </a>
+                                <p class="projects__popup-section-project-title">Gdańsk Grobla</p>
+                            </div>
+                            <div class="projects__popup-section-project-four">
+                                <a href="project_four.html">
+                                    <p class="projects__popup-section-resize"></p>
+                                </a>
+                                <p class="projects__popup-section-project-title">Warszawa Ursus</p>
+                            </div>
+                            <div class="projects__popup-section-project-five">
+                                <a href="project_five.html">
+                                    <p class="projects__popup-section-resize"></p>
+                                </a>
+                                <p class="projects__popup-section-project-title">Warszawa Bliźniak</p>
+                            </div>
+                        </div>
+
                     </div>
-
                 </div>
+        </section>
 
-                <div class="projects__box">
+        <section id="offers" class="offers">
 
-                    <div class="projects__box-img projects__box-img--right" data-aos="fade-up" data-aos-delay="500"
-                        data-aos-duration="500">
-                        <a href="#projects-two"><img src="./img/Kreska_projekt_2a.png" alt="design"
-                                class="projects__img"></a>
-                        <h3 class="projects__title projects__title-right">
-                            Projekt nr 2</h3>
+            <div class="offers__top"></div>
+
+            <div class="offers__info-left">
+                <h2 class="section-title">oferta
+                </h2>
+
+                <p class="offers__info-left-text">Moją misją jest tworzenie wnętrz, które promieniują ciepłem i
+                    gościnnością, w
+                    pełni oddając unikalną dynamikę życia mieszkańców. Wierzę, że dom to nie tylko miejsce, ale
+                    przede wszystkim atmosfera, która inspiruje i daje poczucie bezpieczeństwa.
+                </p>
+                <p class="offers__info-left-text">
+                    Każdy projekt, który realizuję, jest starannie zaplanowany, aby połączyć estetykę z
+                    funkcjonalnością. Zrozumienie indywidualnych potrzeb naszych klientów pozwala mi tworzyć
+                    przestrzenie, które są nie tylko piękne, ale także praktyczne, sprzyjające codziennym
+                    aktywnościom i rytuałom.
+                </p>
+            </div>
+
+            <div class="offers__info-right">
+                <p class="offers__info-right-text">
+                    Dążę do tego, aby nasze wnętrza były tłem dla codziennych chwil, wypełnione ciepłem i
+                    przytulnością, które sprawiają, że każdy dzień staje się wyjątkowy.
+                </p>
+                <p class="offers__info-right-text">
+                    Dążę do tego, aby nasze wnętrza były tłem dla codziennych chwil, wypełnione ciepłem i
+                    przytulnością, które sprawiają, że każdy dzień staje się wyjątkowy.
+                </p>
+                <p class="offers__info-right-text">
+                    Dążę do tego, aby nasze wnętrza były tłem dla codziennych chwil, wypełnione ciepłem i
+                    przytulnością, które sprawiają, że każdy dzień staje się wyjątkowy.
+                </p>
+            </div>
+
+            <!-- <div class="offers__bottom"></div> -->
+
+        </section>
+
+        <section id="stages" class="stages bg-light">
+            <div class="container">
+                <div class="stages__box">
+                    <div>
+                        <h2 class="section-title">etapy
+                        </h2>
                     </div>
-                </div>
+                    <div class="stages__popup">
+                        <div class="stages__popup-info" aria-haspopup="true">
+                            <div class="stages__popup-info-one">
+                                <h3 class="stages__popup-info-header stages-stage-one-button" aria-haspopup="true">01.
+                                    Pierwsze spotkanie:
+                                    Poznajmy się!</h3>
+                                <div class="stage-one">
+                                    <p class="stages__popup-info-text">To Twój pierwszy krok w naszej wspólnej podróży.
+                                        Podczas tego spotkania porozmawiam o Twoich marzeniach, stylu życia, estetyce i
+                                        budżecie. </p>
+                                    <p class="stages__popup-info-text">Chcę Cię dobrze poznać, by móc stworzyć wnętrze
+                                        idealnie dopasowane do
+                                        Twoich oczekiwań i możliwości. To właśnie tutaj zrodzą się pierwsze pomysły,
+                                        które
+                                        będą fundamentem całego projektu.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stages__popup-info">
+                            <div class="stages__popup-info-two">
+                                <h3 class="stages__popup-info-header stages-stage-two-button">02. Inwentaryzacja:
+                                    Zaczynam
+                                    od szczegółów</h3>
+                                <div class="stage-two hide">
+                                    <p class="stages__popup-info-text ">Zanim przystąpię do projektowania, dokładnie
+                                        mierzę
+                                        przestrzeń, którą mam zaaranżować. Zbieram też dokumentację fotograficzną, aby
+                                        każdy
+                                        detal był uwzględniony.</p>
+                                    <p class="stages__popup-info-text">Jeśli Twój dom jest jeszcze na etapie budowy,
+                                        bazuję
+                                        na planach architektonicznych. Dzięki temu, projekt będzie odzwierciedlał
+                                        rzeczywiste wymiary i możliwości przestrzeni.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stages__popup-info">
 
+                            <div class="stages__popup-info-three">
+                                <h3 class="stages__popup-info-header stages-stage-three-button">03. Koncepcja:
+                                    Funkcjonalność przede wszystkim</h3>
+                                <div class="stage-three hide">
+                                    <p class="stages__popup-info-text">To moment, w którym analizuję całą przestrzeń i
+                                        staram się maksymalnie wykorzystać jej potencjał. Przedstawię Ci kilka
+                                        propozycji
+                                        układów funkcjonalnych, dopasowanych do Twoich potrzeb i codziennych zwyczajów.
+                                    </p>
+                                    <p class="stages__popup-info-text">Moim celem jest stworzenie wnętrza, gdzie każda
+                                        strefa idealnie ze sobą współgra. Otrzymasz różne opcje w formie prostych
+                                        planów,
+                                        abyś mógł wybrać tę najlepszą dla siebie.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stages__popup-info">
 
-                <div class="projects__box">
-                    <div class="projects__box-img" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500">
-                        <a href="#projects-three"><img src="./img/Kreska_projekt_3a.png" alt="design"
-                                class="projects__img"></a>
-                        <h3 class="projects__title projects__title-left">
-                            Projekt nr 3</h3>
+                            <div class="stages__popup-info-four">
+                                <h3 class="stages__popup-info-header stages-stage-four-button">04. Wizualizacje: Twoje
+                                    wnętrze w 3D</h3>
+                                <div class="stage-four hide">
+                                    <p class="stages__popup-info-text">Po zatwierdzeniu układu funkcjonalnego,
+                                        przechodzę do
+                                        tworzenia fotorealistycznych wizualizacji. Spośród wielu dostępnych materiałów i
+                                        elementów wybieram te, które najlepiej oddają zamierzony efekt.</p>
+                                    <p class="stages__popup-info-text">Dzięki wizualizacjom zobaczysz swoje przyszłe
+                                        wnętrze
+                                        w najdrobniejszych szczegółach, zanim jeszcze zacznę je realizować.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stages__popup-info">
+
+                            <div class="stages__popup-info-five">
+                                <h3 class="stages__popup-info-header stages-stage-five-button">05. Drugie spotkanie:
+                                    Wybór
+                                    materiałów w praktyce</h3>
+                                <div class="stage-five hide">
+                                    <p class="stages__popup-info-text">Kiedy wizualizacje są gotowe i zaakceptowane,
+                                        spotykam się z Tobą, aby wspólnie wybrać materiały wykończeniowe. W przyjaznej
+                                        atmosferze showroomu dobieramy detale, które w pełni oddają charakter Twojego
+                                        projektu, jednocześnie dbając o ustalony budżet</p>
+                                    <p class="stages__popup-info-text">Po spotkaniu przygotuję dla Ciebie zestawienie
+                                        wszystkich materiałów wraz z ich ilościami i cenami, a także będę monitorować
+                                        realizację zamówień.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stages__popup-info">
+
+                            <div class="stages__popup-info-six">
+                                <h3 class="stages__popup-info-header stages-stage-six-button">06. Projekt wykonawczy:
+                                    Czas
+                                    na szczegóły techniczne</h3>
+                                <div class="stage-six hide">
+                                    <p class="stages__popup-info-text">Na tym etapie tworzę szczegółowe rysunki dla
+                                        wykonawców – zarówno dla ekipy budowlanej, jak i stolarzy. To kluczowy element
+                                        projektu, który zawiera wszystkie niezbędne informacje, aby prace przebiegały
+                                        sprawnie i zgodnie z założeniami. </p>
+                                    <p class="stages__popup-info-text">Dzięki temu mogę mieć pewność, że efekt końcowy
+                                        będzie dokładnie taki, jak planowałem. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stages__popup-info">
+                            <div class="stages__popup-info-seven">
+                                <h3 class="stages__popup-info-header stages-stage-seven-button">07. Nadzór autorski:
+                                    Czuwam
+                                    nad realizacją</h3>
+                                <div class="stage-seven hide">
+                                    <p class="stages__popup-info-text">Jeśli zdecydujesz się na kompleksowy projekt
+                                        wnętrz,
+                                        zapewniam częściowy nadzór autorski, obejmujący maksymalnie dwa dodatkowe
+                                        spotkania
+                                        na miejscu inwestycji.</p>
+                                    <p class="stages__popup-info-text">W przypadku projektów realizowanych w Krakowie,
+                                        Warszawie i okolicach, mogę zaoferować pełen nadzór nad pracami, współpracując z
+                                        zaufanymi wykonawcami.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stages__popup-info-eight">
+                            <h3 class="stages__popup-info-header stages-stage-eight-button">08. Realizacja: Spełnienie
+                                marzeń</h3>
+                            <div class="stage-eight hide">
+                                <p class="stages__popup-info-text">To najpiękniejszy moment całego procesu – kiedy Twoje
+                                    wymarzone wnętrze staje się rzeczywistością. Spotykam się z Tobą, aby wspólnie
+                                    cieszyć się z efektu mojej pracy i podziwiać zrealizowany projekt.</p>
+                                <p class="stages__popup-info-text"> To chwila, która przypomina, jak satysfakcjonujące
+                                    jest widzieć, jak nasze wspólne wysiłki przekształcają przestrzeń w idealny dom,
+                                    dokładnie taki, jaki sobie wyobrażałeś.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="offer" class="offer p-5">
-            <div class="container">
-                <div>
-                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">oferta
-                    </h2>
-                    <p class="underline" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500"></p>
-                </div>
-                <div class="offer__popup" data-aos="fade-up" data-aos-delay="700" data-aos-duration="500">
-                    <div class="offer__popup-section">
-                        <img src="./img/home-plan.jpg" alt="offer" class="offer__popup-section-img">
-                        <p class="offer__popup-section-coffee"><i class="fa-solid fa-mug-hot"></i></p>
-                        <p class="offer__popup-section-title">Etap 1</p>
-                        <p class="offer__popup-section-ruler"><i class="fa-solid fa-ruler-vertical"></i></p>
-                        <p class="offer__popup-section-title2">Etap 2</p>
-                        <p class="offer__popup-section-house"><i class="fa-solid fa-house"></i></i></p>
-                        <p class="offer__popup-section-title3">Etap 3</p>
-                        <p class="offer__popup-section-furniture"><i class="fa-solid fa-couch"></i></p>
-                        <p class="offer__popup-section-title4">Etap 4</p>
-                        <p class="offer__popup-section-brick"><i class="fa-solid fa-trowel-bricks"></i></p>
-                        <p class="offer__popup-section-title5">Etap 5</p>
-                        <p class="offer__popup-section-key"><i class="fa-solid fa-key"></i></p>
-                        <p class="offer__popup-section-title6">Etap 6</p>
-                    </div>
-
-                    <p class="offer__popup-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia impedit
-                        laboriosam ut unde earum corporis voluptates quaerat recusandae fugiat saepe.</p>
-                </div>
             </div>
         </section>
 
         <section id="studio" class="studio p-5">
             <div class="container">
-                <div class="studio__info" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500">
+                <div class="studio__info">
                     <h2 class="section-title">studio
                     </h2>
-                    <p class="studio-info">Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Quis fuga ducimus adipisci sint, deleniti sequi
-                        doloremque officiis suscipit quidem impedit quisquam ipsum laudantium placeat architecto tempora
-                        nesciunt sed quas vel.</p>
+                    <p class="studio__info-text">Moją misją jest tworzenie wnętrz, które promieniują ciepłem i
+                        gościnnością, w
+                        pełni oddając unikalną dynamikę życia mieszkańców. Wierzę, że dom to nie tylko miejsce, ale
+                        przede wszystkim atmosfera, która inspiruje i daje poczucie bezpieczeństwa.
+                    </p>
+                    <p class="studio__info-text">
+                        Każdy projekt, który realizuję, jest starannie zaplanowany, aby połączyć estetykę z
+                        funkcjonalnością. Zrozumienie indywidualnych potrzeb naszych klientów pozwala mi tworzyć
+                        przestrzenie, które są nie tylko piękne, ale także praktyczne, sprzyjające codziennym
+                        aktywnościom i rytuałom.
+                    </p>
+                    <p class="studio__info-text">
+                        Dążę do tego, aby nasze wnętrza były tłem dla codziennych chwil, wypełnione ciepłem i
+                        przytulnością, które sprawiają, że każdy dzień staje się wyjątkowy.
+                    </p>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">kontakt
-                </h2>
-                <div class="underline"></div>
-
-                <form action="" class="contact_form">
-
-                    <div class="contact__form-top">
-                        <label for="name" class="contact__form-label"></label>
-                        <input type="text" class="contact__form-input" id="name" placeholder="Imię i nazwisko">
-
-                        <label for="e-mail" class="contact__form-label"></label>
-                        <input type="email" class="contact__form-input" placeholder="Adres e-mail">
+            <div class="contact__wrapper">
+                <div class="container wrapper">
+                    <div class="contact-title">
+                        <h2 class="section-title">kontakt
+                        </h2>
                     </div>
-                    <label for="msg" class="contact__form-label"></label>
-                    <textarea id="msg" class="contact__form-textarea" placeholder="Wiadomość"></textarea>
 
-                    <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
+                    <form class="contact__form " action="https://kreskawnetrza.pl/mail.php" method="POST">
+                        <div class="contact__form-box">
+                            <label for="name" class="contact__form-label"></label>
+                            <input class="contact__form-input" type="text" id="name" name="name" placeholder="Imię*">
+                            <p class="contact__form-error-text error-text">error</p>
+                        </div>
 
-                </form>
+                        <div class="contact__form-box">
+                            <label for="email" class="contact__form-label"></label>
+                            <input class="contact__form-input" type="email" name="email" id="email"
+                                placeholder="Adres e-mail*">
+                            <p class="contact__form-error-text error-text">error</p>
+                        </div>
+                        <div class="contact__form-box">
+                            <label for="message" class="contact__form-label"></label>
+                            <textarea class="contact__form-textarea" type="text" name="message" id="message"
+                                placeholder="Wiadomość*"></textarea>
+                            <p class="contact__form-error-text error-text">error</p>
+                        </div>
 
+                        <div class="contact__form-box contact__form-checkbox">
+                            <input type="checkbox" name="privacy" id="privacy" class="contact__form-checkbox-input">
+                            <label for="privacy">Wysyłając wiadomość akceptujesz <a href="privacy.html"
+                                    class="contact__form-privacy">politykę prywatności</a></label>
+                            <p class="contact__form-error-text error-text">error</p>
+                        </div>
+
+                        <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+                        <input type="hidden" name="action" value="validate_captcha">
+                        <button type="submit" class="contact__form-btn send">Wyślij</button>
+                        <div class="contact__form-popup popup">
+                            <p class="contact__form-popup-text">Wiadomość została wysłana!</p>
+                            <p class="contact__form-popup-text">Dziękujemy za kontakt.</p>
+                            <p class="contact__form-popup-text">Postaramy się odpowiedzieć jak najszybciej.</p>
+
+                            <button class="contact__form-popup-close close">ok</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact__wrapper-slogan">
+                    <h3 class="contact__wrapper-slogan-title">Skontaktuj się ze mną!</h3>
+                    <p class="contact__wrapper-slogan-underline"></p>
+                    <p class="contact__wrapper-slogan-text">Zaprojektuję dla Ciebie wymarzoną przestrzeń do życia!</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer bg-light">
         <div class="footer__box">
-            <a href="#" class="footer__box-brand"><img src="./img/KRESKA.svg" alt="Logo firmy"></a>
-            <p class="footer__box-copy"><strong>© 2024</strong></p>
-            <a href="#privacy" class="footer__box-privacy"><strong>Polityka prywatności</strong></a>
+            <a href="index.html" class="footer__box-brand"></a>
+            <p class="footer__box-copy-mobile"><strong>&copy; <span class="footer__year-mobile"></span> Kreska </strong>
+            </p>
+            <p class="footer__box-copy-desktop"><strong>Copyright &copy; <span class="footer__year-desktop"></span>
+                    Kreska -
+                    Wszelkie prawa zastrzeżone. </strong></p>
+            <a href="privacy.html" class="footer__box-privacy"><strong>Polityka prywatności</strong></a>
         </div>
     </footer>
 
@@ -209,7 +420,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./js/aos.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/main.js"></script>
 </body>
