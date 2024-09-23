@@ -295,13 +295,13 @@ body {
 }
 
 .section-title {
+  margin-top: 1em;
   position: relative;
   display: flex;
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
-  margin-top: 1em;
 }
 
 .underline {
@@ -592,9 +592,7 @@ nav .nav-link__contact::before {
   position: relative;
   height: 250px;
   width: auto;
-  box-shadow: 3px 3px 15px #828282;
-  border: 1em solid #fff;
-  border-radius: 10px;
+  box-shadow: 3px 3px 10px #828282;
 }
 .projects__popup-section-project-title {
   position: absolute;
@@ -676,49 +674,63 @@ nav .nav-link__contact::before {
   background-position: center;
   background-attachment: fixed;
 }
-.offers__top {
-  display: none;
-}
-.offers__info-left {
-  padding: 1em;
+.offers__info {
   position: relative;
+  padding: 2em;
   background-color: rgba(255, 255, 255, 0.8);
   width: auto;
 }
-.offers__info-left-text {
+.offers__info-table {
   position: relative;
+  margin: 2em 0;
   display: flex;
   justify-content: center;
-  text-align: center;
-  margin: 1em 0 0;
-  padding: 1em 3em 0;
-  font-size: 1.2rem;
-  width: 350px;
+  align-items: center;
+  width: 65vw;
   left: 50%;
   transform: translateX(-50%);
+  text-align: center;
 }
-.offers__info-right {
-  padding: 1em 1em 2em;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.8);
-  width: auto;
-}
-.offers__info-right-text {
-  position: relative;
+.offers__info-table-horizontal {
   display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+.offers__info-table-header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100px;
+  width: 130px;
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #b8b8b8;
+}
+.offers__info-table-header-title-border {
+  margin-bottom: 0;
+}
+.offers__info-table-header-title-zoom {
+  transition: scale 0.3s;
+}
+.offers__info-table-header-text {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
-  margin: 1em 0;
-  padding: 0 3em;
+  height: 40px;
+  width: 130px;
   font-size: 1.2rem;
-  width: 350px;
-  left: 50%;
-  transform: translateX(-50%);
+  padding: 5px 10px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #b8b8b8;
 }
-.offers__bottom {
-  display: none;
+.offers__info-table-header-text-border {
+  margin-bottom: 0;
+  transition: scale 0.3s;
 }
-
+.offers__info-table-header-text:last-child {
+  border-bottom: none;
+}
 .stages {
   padding: 2em 0 2em 0;
 }
@@ -963,6 +975,12 @@ nav .nav-link__contact::before {
 }
 
 @media (hover: none), (pointer: coarse) {
+  .offers__info-table-header-title-zoom:active {
+    scale: 1.2;
+  }
+  .offers__info-table-header-text-border:active {
+    scale: 1.2;
+  }
   .stages__popup-info::after {
     transition: width 0.5s;
   }
@@ -1042,14 +1060,6 @@ nav .nav-link__contact::before {
     font-size: 1.5rem;
     margin: 0.5em 0;
   }
-  .offers__info-left-text {
-    width: 500px;
-    font-size: 1.4rem;
-  }
-  .offers__info-right-text {
-    width: 500px;
-    font-size: 1.4rem;
-  }
   .stages__popup-info-header {
     font-size: 2rem;
   }
@@ -1066,7 +1076,7 @@ nav .nav-link__contact::before {
     font-size: 1.4rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) and (min-width: 768px) {
   .loading img {
     width: 300px;
   }
@@ -1160,12 +1170,14 @@ nav .nav-link__contact::before {
     font-size: 1.4rem;
     padding: 0.5em;
   }
-  .offers__info-left-text {
-    width: 600px;
+  .offers__info-table-header-title {
+    font-size: 1.4rem;
   }
-  .offers__info-right-text {
-    width: 600px;
+  .offers__info-table-header-text {
+    font-size: 1.4rem;
   }
+}
+@media (min-width: 576px) {
   .contact {
     margin: 2em 8em;
   }
@@ -1248,14 +1260,6 @@ nav .nav-link__contact::before {
     font-size: 2.6rem;
   }
   .projects__popup-info-text {
-    font-size: 1.7rem;
-  }
-  .offers__info-left-text {
-    width: 700px;
-    font-size: 1.6rem;
-  }
-  .offers__info-right-text {
-    width: 700px;
     font-size: 1.6rem;
   }
   .stages__popup-info-header {
@@ -1338,66 +1342,21 @@ nav .nav-link__contact::before {
     width: 35px;
     height: 35px;
   }
-  .offers {
-    position: relative;
-    height: 100%;
-    background-image: url(../img/home_Gdansk_Grobla/Image47.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  .offers__top {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 5em;
-    background-color: white;
-  }
-  .offers__info-left {
-    padding: 2em;
-    position: relative;
-    background-color: white;
-    height: 50vh;
-    width: 50%;
-  }
-  .offers__info-left-text {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 2em 0;
-    padding: 0 3em;
+  .offers__info-table-header-title {
     font-size: 1.6rem;
-    width: 600px;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 150px;
+    width: 250px;
   }
-  .offers__info-right {
-    position: relative;
-    padding: 2em;
-    background-color: white;
-    height: 50vh;
-    width: 50%;
-    left: 50%;
+  .offers__info-table-header-title-zoom:hover {
+    scale: 1.2;
   }
-  .offers__info-right-text {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 2em 0;
-    padding: 0 3em;
+  .offers__info-table-header-text {
+    height: 50px;
+    width: 250px;
     font-size: 1.6rem;
-    width: 550px;
-    left: 50%;
-    transform: translateX(-50%);
   }
-  .offers__bottom {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 5em;
-    background-color: white;
+  .offers__info-table-header-text-border:hover {
+    scale: 1.2;
   }
   .contact-title {
     display: none;
