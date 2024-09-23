@@ -711,7 +711,7 @@ nav .nav-link__contact::before {
   margin-bottom: 0;
 }
 .offers__info-table-header-title-zoom {
-  transition: scale 0.3s;
+  transition: scale 0.3s, color 0.3s;
 }
 .offers__info-table-header-text {
   display: flex;
@@ -726,7 +726,7 @@ nav .nav-link__contact::before {
 }
 .offers__info-table-header-text-border {
   margin-bottom: 0;
-  transition: scale 0.3s;
+  transition: scale 0.3s, color 0.3s;
 }
 .offers__info-table-header-text:last-child {
   border-bottom: none;
@@ -977,9 +977,11 @@ nav .nav-link__contact::before {
 @media (hover: none), (pointer: coarse) {
   .offers__info-table-header-title-zoom:active {
     scale: 1.2;
+    color: #b67162;
   }
   .offers__info-table-header-text-border:active {
     scale: 1.2;
+    color: #b67162;
   }
   .stages__popup-info::after {
     transition: width 0.5s;
@@ -1343,20 +1345,22 @@ nav .nav-link__contact::before {
     height: 35px;
   }
   .offers__info-table-header-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     height: 150px;
     width: 250px;
   }
   .offers__info-table-header-title-zoom:hover {
     scale: 1.2;
+    color: #b67162;
   }
   .offers__info-table-header-text {
     height: 50px;
     width: 250px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   .offers__info-table-header-text-border:hover {
     scale: 1.2;
+    color: #b67162;
   }
   .contact-title {
     display: none;

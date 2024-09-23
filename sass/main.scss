@@ -488,7 +488,7 @@ nav {
 						margin-bottom: 0;
 					}
 					&-zoom {
-						transition: scale 0.3s;
+						transition: scale 0.3s, color 0.3s;
 					}
 				}
 
@@ -504,7 +504,7 @@ nav {
 					border-bottom: 1px solid colors.$border;
 					&-border {
 						margin-bottom: 0;
-						transition: scale 0.3s;
+						transition: scale 0.3s, color 0.3s;
 					}
 				}
 				&-text:last-child {
@@ -798,11 +798,13 @@ nav {
 					&-title {
 						&-zoom:active {
 							scale: 1.2;
+							color: colors.$secondary-color;
 						}
 					}
 					&-text {
 						&-border:active {
 							scale: 1.2;
+							color: colors.$secondary-color;
 						}
 					}
 				}
@@ -1331,19 +1333,21 @@ nav {
 			&-table {
 				&-header {
 					&-title {
-						font-size: 1.6rem;
+						font-size: 1.8rem;
 						height: 150px;
 						width: 250px;
 						&-zoom:hover {
 							scale: 1.2;
+							color: colors.$secondary-color;
 						}
 					}
 					&-text {
 						height: 50px;
 						width: 250px;
-						font-size: 1.6rem;
+						font-size: 1.8rem;
 						&-border:hover {
 							scale: 1.2;
+							color: colors.$secondary-color;
 						}
 					}
 				}
