@@ -547,7 +547,8 @@
                     <form class="contact__form " action="https://kreskawnetrza.pl/mail.php" method="POST">
                         <div class="contact__form-box">
                             <label for="name" class="contact__form-label"></label>
-                            <input class="contact__form-input" type="text" id="name" name="name" placeholder="Imię*">
+                            <input class="contact__form-input" type="text" id="name" name="name"
+                                placeholder="Imię i nazwisko*">
                             <p class="contact__form-error-text error-text">error</p>
                         </div>
 
@@ -557,6 +558,37 @@
                                 placeholder="Adres e-mail*">
                             <p class="contact__form-error-text error-text">error</p>
                         </div>
+                        <div class="contact__form-box">
+                            <label for="telefon" class="contact__form-label"></label>
+                            <input class="contact__form-input" type="telefon" name="telefon" id="telefon"
+                                placeholder="Telefon*">
+                            <p class="contact__form-error-text error-text">error</p>
+                        </div>
+                        <div class="contact__form-box">
+                            <label for="mieszkanie" class="contact__form-label"></label>
+                            <input class="contact__form-input" type="mieszkanie" name="mieszkanie" id="mieszkanie"
+                                placeholder="Metraż mieszkania">
+                            <p class="contact__form-error-text error-text">error</p>
+                        </div>
+                        <div class="contact__form-box">
+                            <label for="lokalizacja" class="contact__form-label"></label>
+                            <input class="contact__form-input" type="lokalizacja" name="lokalizacja" id="lokalizacja"
+                                placeholder="lokalizacja inwestycji">
+                            <p class="contact__form-error-text error-text">error</p>
+                        </div>
+                        <fieldset>
+                            <legend>Rynek:</legend>
+
+                            <div>
+                                <input type="radio" id="pierwotny" name="drone" value="pierwotny" />
+                                <label for="pierwotny">Pierwotny</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="wtorny" name="drone" value="wtorny" />
+                                <label for="wtorny">Wtórny</label>
+                            </div>
+                        </fieldset>
                         <div class="contact__form-box">
                             <label for="message" class="contact__form-label"></label>
                             <textarea class="contact__form-textarea" type="text" name="message" id="message"

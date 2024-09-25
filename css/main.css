@@ -700,14 +700,13 @@ nav .nav-link__contact::before {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100px;
+  height: 90px;
   width: 130px;
-  font-size: 1rem;
-  padding: 5px 10px;
   margin-bottom: 0;
   border-bottom: 1px solid #b8b8b8;
 }
 .offers__info-table-header-title-border {
+  font-size: 1.2rem;
   margin-bottom: 0;
 }
 .offers__info-table-header-title-zoom {
@@ -717,14 +716,12 @@ nav .nav-link__contact::before {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 40px;
+  height: 50px;
   width: 130px;
-  font-size: 1.2rem;
-  padding: 5px 10px;
-  margin-bottom: 0;
   border-bottom: 1px solid #b8b8b8;
 }
 .offers__info-table-header-text-border {
+  font-size: 1.2rem;
   margin-bottom: 0;
   transition: scale 0.3s, color 0.3s;
 }
@@ -976,11 +973,11 @@ nav .nav-link__contact::before {
 
 @media (hover: none), (pointer: coarse) {
   .offers__info-table-header-title-zoom:active {
-    scale: 1.2;
+    scale: 1.1;
     color: #b67162;
   }
   .offers__info-table-header-text-border:active {
-    scale: 1.2;
+    scale: 1.1;
     color: #b67162;
   }
   .stages__popup-info::after {
@@ -1061,6 +1058,9 @@ nav .nav-link__contact::before {
   .projects__popup-info-text {
     font-size: 1.5rem;
     margin: 0.5em 0;
+  }
+  .offers__info-table-header-title {
+    height: 80px;
   }
   .stages__popup-info-header {
     font-size: 2rem;
@@ -1172,10 +1172,10 @@ nav .nav-link__contact::before {
     font-size: 1.4rem;
     padding: 0.5em;
   }
-  .offers__info-table-header-title {
+  .offers__info-table-header-title-border {
     font-size: 1.4rem;
   }
-  .offers__info-table-header-text {
+  .offers__info-table-header-text-border {
     font-size: 1.4rem;
   }
 }
@@ -1345,21 +1345,25 @@ nav .nav-link__contact::before {
     height: 35px;
   }
   .offers__info-table-header-title {
-    font-size: 1.8rem;
-    height: 150px;
+    height: 100px;
     width: 250px;
   }
   .offers__info-table-header-title-zoom:hover {
-    scale: 1.2;
+    scale: 1.05;
     color: #b67162;
+  }
+  .offers__info-table-header-title-border {
+    font-size: 1.8rem;
   }
   .offers__info-table-header-text {
     height: 50px;
     width: 250px;
-    font-size: 1.8rem;
+  }
+  .offers__info-table-header-text-border {
+    font-size: 1.6rem;
   }
   .offers__info-table-header-text-border:hover {
-    scale: 1.2;
+    scale: 1.05;
     color: #b67162;
   }
   .contact-title {
